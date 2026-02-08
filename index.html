@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="max-image-preview:large">
+    <title>전생 직업 테스트 - 나의 전생은? | Past Life Job Test</title>
+    <meta name="description" content="10문항으로 알아보는 나의 전생 직업! 기사단장, 해적 선장, 르네상스 화가... 8가지 전생 유형과 궁합까지. 지금 테스트해보세요!">
+    <meta name="keywords" content="전생 테스트, 전생 직업, 심리테스트, 전생 궁합, past life test, 성격 테스트, 바이럴 테스트">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="전생 직업 테스트 - 나의 전생은?">
+    <meta property="og:description" content="10문항으로 알아보는 나의 전생 직업! 기사단장, 해적 선장, 르네상스 화가... 8가지 전생 유형과 궁합까지.">
+    <meta property="og:url" content="https://swp1234.github.io/past-life/">
+    <meta property="og:site_name" content="FireTools">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="전생 직업 테스트 - 나의 전생은?">
+    <meta name="twitter:description" content="10문항으로 알아보는 나의 전생 직업! 8가지 전생 유형과 궁합까지.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "전생 직업 테스트",
+        "description": "10문항으로 알아보는 나의 전생 직업! 기사단장, 해적 선장, 르네상스 화가... 8가지 전생 유형과 궁합까지.",
+        "url": "https://swp1234.github.io/past-life/",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+        "inLanguage": "ko",
+        "author": { "@type": "Organization", "name": "FireTools" }
+    }
+    </script>
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8GSWM40TV');
+    </script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1420">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="icon-192.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Ad -->
+        <div class="ad-banner" id="ad-top">AD AREA</div>
+
+        <!-- Intro Screen -->
+        <div class="screen active" id="screen-intro">
+            <div class="intro-icon">🗡️</div>
+            <h1 class="intro-title">전생 직업 테스트</h1>
+            <p class="intro-subtitle">당신은 전생에 어떤 삶을 살았을까요?<br>10가지 질문으로 알아보는 나의 전생!</p>
+            <div class="intro-tags">
+                <span class="intro-tag">🗡️ 기사</span>
+                <span class="intro-tag">📜 학자</span>
+                <span class="intro-tag">🎨 화가</span>
+                <span class="intro-tag">🏴‍☠️ 해적</span>
+                <span class="intro-tag">🔮 사제</span>
+                <span class="intro-tag">🧭 탐험가</span>
+            </div>
+            <p class="intro-count" id="participant-count">45,820명 참여</p>
+            <button class="btn btn-primary" id="btn-start">테스트 시작하기</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="screen" id="screen-quiz">
+            <div class="progress-bar-wrap">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="question-counter" id="question-counter">1 / 10</div>
+            <div class="question-text" id="question-text"></div>
+            <div class="answers" id="answers"></div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div class="screen" id="screen-loading">
+            <div class="loading-icon">🔮</div>
+            <div class="loading-text">전생의 기억을 탐색 중...</div>
+            <div class="loading-sub">시간의 흐름을 거슬러 올라가고 있습니다</div>
+            <div class="loading-bar-wrap">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="screen" id="screen-result">
+            <div class="result-label">당신의 전생은...</div>
+            <div class="result-emoji" id="result-emoji"></div>
+            <h2 class="result-type" id="result-type"></h2>
+            <div class="result-era" id="result-era"></div>
+            <p class="result-desc" id="result-desc"></p>
+            <div class="result-quote" id="result-quote"></div>
+
+            <!-- Stats -->
+            <div class="result-stats">
+                <div class="stat-card">
+                    <span class="stat-label">강점</span>
+                    <div class="stat-value" id="result-strengths"></div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">약점</span>
+                    <div class="stat-value" id="result-weaknesses"></div>
+                </div>
+            </div>
+
+            <!-- Compatibility -->
+            <div class="compat-section">
+                <div class="compat-title">전생 궁합 TOP 3</div>
+                <div class="compat-list" id="compat-list"></div>
+            </div>
+
+            <!-- Canvas Result Image -->
+            <div class="result-image-wrap">
+                <canvas id="resultCanvas"></canvas>
+            </div>
+
+            <!-- Buttons -->
+            <div class="btn-group">
+                <button class="btn btn-share" id="btn-share">결과 공유하기</button>
+                <button class="btn btn-secondary" id="btn-save">이미지 저장</button>
+            </div>
+
+            <!-- Premium -->
+            <div class="premium-section">
+                <div class="premium-title">전생의 상세 이야기</div>
+                <p class="premium-desc">당신의 전생에서 일어난 드라마틱한 이야기와<br>현생에 대한 조언을 확인하세요</p>
+                <button class="btn btn-gold" id="btn-premium">상세 이야기 보기</button>
+                <div class="premium-content" id="premium-content">
+                    <div class="premium-story" id="premium-story"></div>
+                    <div class="premium-modern-title">현생에서의 당신</div>
+                    <div class="premium-modern" id="premium-modern"></div>
+                </div>
+            </div>
+
+            <!-- Recommend -->
+            <div class="compat-section">
+                <div class="compat-title">이것도 해보세요</div>
+                <div class="compat-list" id="recommend-list"></div>
+            </div>
+
+            <!-- Retry -->
+            <div class="btn-group">
+                <button class="btn btn-primary" id="btn-retry">다시 테스트하기</button>
+            </div>
+        </div>
+
+        <!-- Bottom Ad -->
+        <div class="ad-banner" id="ad-bottom">AD AREA</div>
+    </div>
+
+    <!-- Ad Overlay -->
+    <div class="ad-overlay" id="ad-overlay">
+        <p>잠시 후 상세 이야기가 공개됩니다</p>
+        <div class="ad-countdown" id="ad-timer">5</div>
+        <p>광고 영역</p>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
+    </script>
+</body>
+</html>
