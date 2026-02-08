@@ -275,7 +275,7 @@
         ctx.fillStyle = 'rgba(201, 169, 110, 0.3)';
         ctx.font = '12px sans-serif';
         ctx.fillText('전생 직업 테스트', W / 2, 690);
-        ctx.fillText('swp1234.github.io/past-life', W / 2, 710);
+        ctx.fillText('dopabrain.com/past-life', W / 2, 710);
 
         // Best compatibility
         const myCompat = COMPATIBILITY[t.id];
@@ -347,7 +347,7 @@
             .replace('{era}', t.era)
             .replace('{quote}', t.quote);
 
-        const url = 'https://swp1234.github.io/past-life/';
+        const url = 'https://dopabrain.com/past-life/';
 
         if (navigator.share) {
             navigator.share({ title: '전생 직업 테스트', text, url }).catch(() => {});
@@ -386,10 +386,10 @@
         const wrap = $('recommend-list');
         if (!wrap) return;
         const items = [
-            { emoji: '🌡️', name: '감정 온도계 테스트', url: 'https://swp1234.github.io/emotion-temp/' },
-            { emoji: '💕', name: 'MBTI 연애 궁합', url: 'https://swp1234.github.io/mbti-love/' },
-            { emoji: '🧠', name: 'HSP 민감성 테스트', url: 'https://swp1234.github.io/hsp-test/' },
-            { emoji: '💕', name: '사랑 주파수 테스트', url: 'https://swp1234.github.io/love-frequency/' }
+            { emoji: '🌡️', name: '감정 온도계 테스트', url: 'https://dopabrain.com/emotion-temp/' },
+            { emoji: '💕', name: 'MBTI 연애 궁합', url: 'https://dopabrain.com/mbti-love/' },
+            { emoji: '🧠', name: 'HSP 민감성 테스트', url: 'https://dopabrain.com/hsp-test/' },
+            { emoji: '💕', name: '사랑 주파수 테스트', url: 'https://dopabrain.com/love-frequency/' }
         ];
         wrap.innerHTML = items.map(it =>
             `<a href="${it.url}" class="compat-item" style="text-decoration:none;color:inherit">
