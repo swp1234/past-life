@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "Past Life Job Test - Who Were You?",
+    "description": "Discover your past life occupation in just 10 questions! Knight, Pirate Captain, Renaissance Painter... 8 types and compatibility. Take the test now!"
+  },
+  "intro": {
+    "title": "Past Life Job Test",
+    "subtitle": "What kind of life did you live in your past?<br>Discover your past life in 10 questions!",
+    "participantCount": "participants",
+    "startButton": "Start Test",
+    "tags": {
+      "knight": "🗡️ Knight",
+      "scholar": "📜 Scholar",
+      "painter": "🎨 Painter",
+      "pirate": "🏴‍☠️ Pirate",
+      "priest": "🔮 Priest",
+      "explorer": "🧭 Explorer"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "Exploring past life memories...",
+    "subText": "Traversing through the flow of time"
+  },
+  "result": {
+    "label": "Your past life was...",
+    "strengthLabel": "Strengths",
+    "weaknessLabel": "Weaknesses",
+    "compatibilityTitle": "Top 3 Past Life Compatibility",
+    "premiumTitle": "Your Past Life Story",
+    "premiumDesc": "Discover the dramatic story of your past life<br>and advice for your current life",
+    "premiumButton": "Read Full Story",
+    "modernLifeTitle": "Who You Are Now",
+    "recommendTitle": "You Might Also Like",
+    "compatibilityPercent": "% compatibility"
+  },
+  "buttons": {
+    "share": "Share Results",
+    "save": "Save Image",
+    "retry": "Try Again"
+  },
+  "ad": {
+    "waitText": "Detailed story will be revealed shortly"
+  }
+}

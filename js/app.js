@@ -33,9 +33,11 @@
             count++;
             localStorage.setItem('pastlife_count', String(count));
             const display = 45820 + count;
-            $('participant-count').textContent = display.toLocaleString() + '명 참여';
+            const numEl = $('participant-count-num');
+            if (numEl) numEl.textContent = display.toLocaleString();
         } catch (e) {
-            $('participant-count').textContent = '45,820명 참여';
+            const numEl = $('participant-count-num');
+            if (numEl) numEl.textContent = '45820';
         }
     }
 
@@ -64,7 +66,8 @@
         const total = QUESTIONS.length;
 
         $('progress-bar').style.width = ((state.currentQ / total) * 100) + '%';
-        $('question-counter').textContent = (state.currentQ + 1) + ' / ' + total;
+        const qcurrent = $('question-current');
+        if (qcurrent) qcurrent.textContent = (state.currentQ + 1);
         $('question-text').textContent = q.question;
 
         const wrap = $('answers');
@@ -157,12 +160,13 @@
             const other = TYPES.find(x => x.id === id);
             if (!other) return;
             const color = score >= 80 ? '#27AE60' : score >= 60 ? '#F39C12' : '#E74C3C';
+            const compatLabel = typeof i18n !== 'undefined' ? i18n.t('result.compatibilityPercent') : '% 궁합';
             compatList.innerHTML += `
                 <div class="compat-item">
                     <span class="compat-emoji">${other.emoji}</span>
                     <div class="compat-info">
                         <div class="compat-name">${other.name}</div>
-                        <div class="compat-score" style="color:${color}">${score}% 궁합</div>
+                        <div class="compat-score" style="color:${color}">${score}${compatLabel}</div>
                     </div>
                     <div class="compat-bar-bg">
                         <div class="compat-bar" style="width:${score}%;background:${color}"></div>
@@ -225,7 +229,8 @@
         ctx.textAlign = 'center';
         ctx.fillStyle = 'rgba(201, 169, 110, 0.6)';
         ctx.font = '14px Georgia, serif';
-        ctx.fillText('당신의 전생은...', W / 2, 80);
+        const titleText = typeof i18n !== 'undefined' ? i18n.t('result.label') : '당신의 전생은...';
+        ctx.fillText(titleText, W / 2, 80);
 
         // Emoji
         ctx.font = '80px serif';
@@ -274,7 +279,8 @@
         // Watermark
         ctx.fillStyle = 'rgba(201, 169, 110, 0.3)';
         ctx.font = '12px sans-serif';
-        ctx.fillText('전생 직업 테스트', W / 2, 690);
+        const appTitle = typeof i18n !== 'undefined' ? i18n.t('app.title').split(' - ')[0] : '전생 직업 테스트';
+        ctx.fillText(appTitle, W / 2, 690);
         ctx.fillText('dopabrain.com/past-life', W / 2, 710);
 
         // Best compatibility
@@ -287,7 +293,8 @@
             if (bestType) {
                 ctx.fillStyle = 'rgba(201, 169, 110, 0.4)';
                 ctx.font = '13px sans-serif';
-                ctx.fillText('최고 궁합: ' + bestType.emoji + ' ' + bestType.name + ' (' + best[1] + '%)', W / 2, 750);
+                // Note: Canvas text will be in the current language from i18n
+                ctx.fillText(bestType.emoji + ' ' + bestType.name + ' (' + best[1] + '%)', W / 2, 750);
             }
         }
     }

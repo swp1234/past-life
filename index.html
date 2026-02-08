@@ -56,27 +56,40 @@
     <link rel="apple-touch-icon" href="icon-192.svg">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/i18n.js"></script>
 </head>
 <body>
     <div class="app-container">
         <!-- Top Ad -->
         <div class="ad-banner" id="ad-top">AD AREA</div>
 
+        <!-- 언어 선택기 -->
+        <div class="language-selector">
+            <button class="lang-btn" id="lang-toggle" title="Select Language">🌐</button>
+            <div class="lang-menu hidden" id="lang-menu">
+                <button class="lang-option" data-lang="ko">한국어</button>
+                <button class="lang-option" data-lang="en">English</button>
+                <button class="lang-option" data-lang="zh">简体中文</button>
+                <button class="lang-option" data-lang="hi">हिन्दी</button>
+                <button class="lang-option" data-lang="ru">Русский</button>
+            </div>
+        </div>
+
         <!-- Intro Screen -->
         <div class="screen active" id="screen-intro">
             <div class="intro-icon">🗡️</div>
-            <h1 class="intro-title">전생 직업 테스트</h1>
-            <p class="intro-subtitle">당신은 전생에 어떤 삶을 살았을까요?<br>10가지 질문으로 알아보는 나의 전생!</p>
+            <h1 class="intro-title" data-i18n="intro.title">전생 직업 테스트</h1>
+            <p class="intro-subtitle" data-i18n="intro.subtitle">당신은 전생에 어떤 삶을 살았을까요?<br>10가지 질문으로 알아보는 나의 전생!</p>
             <div class="intro-tags">
-                <span class="intro-tag">🗡️ 기사</span>
-                <span class="intro-tag">📜 학자</span>
-                <span class="intro-tag">🎨 화가</span>
-                <span class="intro-tag">🏴‍☠️ 해적</span>
-                <span class="intro-tag">🔮 사제</span>
-                <span class="intro-tag">🧭 탐험가</span>
+                <span class="intro-tag" data-i18n="intro.tags.knight">🗡️ 기사</span>
+                <span class="intro-tag" data-i18n="intro.tags.scholar">📜 학자</span>
+                <span class="intro-tag" data-i18n="intro.tags.painter">🎨 화가</span>
+                <span class="intro-tag" data-i18n="intro.tags.pirate">🏴‍☠️ 해적</span>
+                <span class="intro-tag" data-i18n="intro.tags.priest">🔮 사제</span>
+                <span class="intro-tag" data-i18n="intro.tags.explorer">🧭 탐험가</span>
             </div>
-            <p class="intro-count" id="participant-count">45,820명 참여</p>
-            <button class="btn btn-primary" id="btn-start">테스트 시작하기</button>
+            <p class="intro-count"><span id="participant-count-num">45820</span><span data-i18n="intro.participantCount">명 참여</span></p>
+            <button class="btn btn-primary" id="btn-start" data-i18n="intro.startButton">테스트 시작하기</button>
         </div>
 
         <!-- Quiz Screen -->
@@ -84,7 +97,7 @@
             <div class="progress-bar-wrap">
                 <div class="progress-bar" id="progress-bar"></div>
             </div>
-            <div class="question-counter" id="question-counter">1 / 10</div>
+            <div class="question-counter"><span id="question-current">1</span><span data-i18n="quiz.questionCounter"> / 10</span></div>
             <div class="question-text" id="question-text"></div>
             <div class="answers" id="answers"></div>
         </div>
@@ -92,8 +105,8 @@
         <!-- Loading Screen -->
         <div class="screen" id="screen-loading">
             <div class="loading-icon">🔮</div>
-            <div class="loading-text">전생의 기억을 탐색 중...</div>
-            <div class="loading-sub">시간의 흐름을 거슬러 올라가고 있습니다</div>
+            <div class="loading-text" data-i18n="loading.mainText">전생의 기억을 탐색 중...</div>
+            <div class="loading-sub" data-i18n="loading.subText">시간의 흐름을 거슬러 올라가고 있습니다</div>
             <div class="loading-bar-wrap">
                 <div class="loading-bar"></div>
             </div>
@@ -101,7 +114,7 @@
 
         <!-- Result Screen -->
         <div class="screen" id="screen-result">
-            <div class="result-label">당신의 전생은...</div>
+            <div class="result-label" data-i18n="result.label">당신의 전생은...</div>
             <div class="result-emoji" id="result-emoji"></div>
             <h2 class="result-type" id="result-type"></h2>
             <div class="result-era" id="result-era"></div>
@@ -111,18 +124,18 @@
             <!-- Stats -->
             <div class="result-stats">
                 <div class="stat-card">
-                    <span class="stat-label">강점</span>
+                    <span class="stat-label" data-i18n="result.strengthLabel">강점</span>
                     <div class="stat-value" id="result-strengths"></div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-label">약점</span>
+                    <span class="stat-label" data-i18n="result.weaknessLabel">약점</span>
                     <div class="stat-value" id="result-weaknesses"></div>
                 </div>
             </div>
 
             <!-- Compatibility -->
             <div class="compat-section">
-                <div class="compat-title">전생 궁합 TOP 3</div>
+                <div class="compat-title" data-i18n="result.compatibilityTitle">전생 궁합 TOP 3</div>
                 <div class="compat-list" id="compat-list"></div>
             </div>
 
@@ -133,31 +146,31 @@
 
             <!-- Buttons -->
             <div class="btn-group">
-                <button class="btn btn-share" id="btn-share">결과 공유하기</button>
-                <button class="btn btn-secondary" id="btn-save">이미지 저장</button>
+                <button class="btn btn-share" id="btn-share" data-i18n="buttons.share">결과 공유하기</button>
+                <button class="btn btn-secondary" id="btn-save" data-i18n="buttons.save">이미지 저장</button>
             </div>
 
             <!-- Premium -->
             <div class="premium-section">
-                <div class="premium-title">전생의 상세 이야기</div>
-                <p class="premium-desc">당신의 전생에서 일어난 드라마틱한 이야기와<br>현생에 대한 조언을 확인하세요</p>
-                <button class="btn btn-gold" id="btn-premium">상세 이야기 보기</button>
+                <div class="premium-title" data-i18n="result.premiumTitle">전생의 상세 이야기</div>
+                <p class="premium-desc" data-i18n="result.premiumDesc">당신의 전생에서 일어난 드라마틱한 이야기와<br>현생에 대한 조언을 확인하세요</p>
+                <button class="btn btn-gold" id="btn-premium" data-i18n="result.premiumButton">상세 이야기 보기</button>
                 <div class="premium-content" id="premium-content">
                     <div class="premium-story" id="premium-story"></div>
-                    <div class="premium-modern-title">현생에서의 당신</div>
+                    <div class="premium-modern-title" data-i18n="result.modernLifeTitle">현생에서의 당신</div>
                     <div class="premium-modern" id="premium-modern"></div>
                 </div>
             </div>
 
             <!-- Recommend -->
             <div class="compat-section">
-                <div class="compat-title">이것도 해보세요</div>
+                <div class="compat-title" data-i18n="result.recommendTitle">이것도 해보세요</div>
                 <div class="compat-list" id="recommend-list"></div>
             </div>
 
             <!-- Retry -->
             <div class="btn-group">
-                <button class="btn btn-primary" id="btn-retry">다시 테스트하기</button>
+                <button class="btn btn-primary" id="btn-retry" data-i18n="buttons.retry">다시 테스트하기</button>
             </div>
         </div>
 
@@ -167,7 +180,7 @@
 
     <!-- Ad Overlay -->
     <div class="ad-overlay" id="ad-overlay">
-        <p>잠시 후 상세 이야기가 공개됩니다</p>
+        <p data-i18n="ad.waitText">잠시 후 상세 이야기가 공개됩니다</p>
         <div class="ad-countdown" id="ad-timer">5</div>
         <p>광고 영역</p>
     </div>
@@ -178,6 +191,28 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js').catch(() => {});
         }
+
+        // Initialize i18n system
+        (async function initI18n() {
+            await i18n.loadTranslations(i18n.getCurrentLanguage());
+            i18n.updateUI();
+            const langToggle = document.getElementById('lang-toggle');
+            const langMenu = document.getElementById('lang-menu');
+            const langOptions = document.querySelectorAll('.lang-option');
+            document.querySelector(`[data-lang="${i18n.getCurrentLanguage()}"]`)?.classList.add('active');
+            langToggle?.addEventListener('click', () => langMenu.classList.toggle('hidden'));
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.language-selector')) langMenu?.classList.add('hidden');
+            });
+            langOptions.forEach(opt => {
+                opt.addEventListener('click', async () => {
+                    await i18n.setLanguage(opt.getAttribute('data-lang'));
+                    langOptions.forEach(o => o.classList.remove('active'));
+                    opt.classList.add('active');
+                    langMenu.classList.add('hidden');
+                });
+            });
+        })();
     </script>
 </body>
 </html>
