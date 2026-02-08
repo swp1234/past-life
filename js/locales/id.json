@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "Tes Pekerjaan Kehidupan Lampau - Siapa Anda?",
+    "description": "Temukan pekerjaan kehidupan lampau Anda hanya dalam 10 pertanyaan! Ksatria, Kapten Bajak Laut, Seniman Renaisans... 8 jenis dan kompatibilitas. Ambil tesnya sekarang!"
+  },
+  "intro": {
+    "title": "Tes Pekerjaan Kehidupan Lampau",
+    "subtitle": "Kehidupan apa yang Anda jalani di masa lalu?<br>Temukan kehidupan lampau Anda dalam 10 pertanyaan!",
+    "participantCount": "peserta",
+    "startButton": "Mulai Tes",
+    "tags": {
+      "knight": "🗡️ Ksatria",
+      "scholar": "📜 Cendekiawan",
+      "painter": "🎨 Pelukis",
+      "pirate": "🏴‍☠️ Bajak Laut",
+      "priest": "🔮 Pendeta",
+      "explorer": "🧭 Penjelajah"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "Menjelajahi kenangan kehidupan lampau...",
+    "subText": "Melintasi aliran waktu"
+  },
+  "result": {
+    "label": "Kehidupan lampau Anda adalah...",
+    "strengthLabel": "Kekuatan",
+    "weaknessLabel": "Kelemahan",
+    "compatibilityTitle": "3 Kompatibilitas Kehidupan Lampau Teratas",
+    "premiumTitle": "Cerita Kehidupan Lampau Anda",
+    "premiumDesc": "Temukan cerita dramatis kehidupan lampau Anda<br>dan saran untuk kehidupan saat ini",
+    "premiumButton": "Baca Cerita Lengkap",
+    "modernLifeTitle": "Siapa Anda Sekarang",
+    "recommendTitle": "Anda Mungkin Juga Menyukai",
+    "compatibilityPercent": "% kompatibilitas"
+  },
+  "buttons": {
+    "share": "Bagikan Hasil",
+    "save": "Simpan Gambar",
+    "retry": "Coba Lagi"
+  },
+  "ad": {
+    "waitText": "Cerita terperinci akan diungkapkan segera"
+  }
+}

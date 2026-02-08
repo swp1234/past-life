@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "Teste de Profissão de Vidas Passadas - Quem Você Era?",
+    "description": "Descubra sua ocupação em vidas passadas em apenas 10 questões! Cavaleiro, Capitão Pirata, Pintor da Renascença... 8 tipos e compatibilidade. Faça o teste agora!"
+  },
+  "intro": {
+    "title": "Teste de Profissão de Vidas Passadas",
+    "subtitle": "Que tipo de vida você viveu no passado?<br>Descubra sua vida passada em 10 questões!",
+    "participantCount": "participantes",
+    "startButton": "Começar Teste",
+    "tags": {
+      "knight": "🗡️ Cavaleiro",
+      "scholar": "📜 Estudioso",
+      "painter": "🎨 Pintor",
+      "pirate": "🏴‍☠️ Pirata",
+      "priest": "🔮 Sacerdote",
+      "explorer": "🧭 Explorador"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "Explorando memórias de vidas passadas...",
+    "subText": "Viajando através do fluxo do tempo"
+  },
+  "result": {
+    "label": "Sua vida passada era...",
+    "strengthLabel": "Pontos Fortes",
+    "weaknessLabel": "Pontos Fracos",
+    "compatibilityTitle": "Top 3 Compatibilidade de Vidas Passadas",
+    "premiumTitle": "Sua História de Vidas Passadas",
+    "premiumDesc": "Descubra a história dramática de sua vida passada<br>e conselhos para sua vida atual",
+    "premiumButton": "Ler História Completa",
+    "modernLifeTitle": "Quem Você É Agora",
+    "recommendTitle": "Você Também Pode Gostar",
+    "compatibilityPercent": "% compatibilidade"
+  },
+  "buttons": {
+    "share": "Compartilhar Resultados",
+    "save": "Salvar Imagem",
+    "retry": "Tentar Novamente"
+  },
+  "ad": {
+    "waitText": "A história detalhada será revelada em breve"
+  }
+}

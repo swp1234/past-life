@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "Test de Métier de Vie Antérieure - Qui Étais-tu?",
+    "description": "Découvre ta profession de vie antérieure en 10 questions seulement! Chevalier, Capitaine Pirate, Peintre de la Renaissance... 8 types et compatibilité. Fais le test maintenant!"
+  },
+  "intro": {
+    "title": "Test de Métier de Vie Antérieure",
+    "subtitle": "Quel genre de vie as-tu vécue dans tes vies antérieures?<br>Découvre ta vie antérieure en 10 questions!",
+    "participantCount": "participants",
+    "startButton": "Commencer le Test",
+    "tags": {
+      "knight": "🗡️ Chevalier",
+      "scholar": "📜 Érudit",
+      "painter": "🎨 Peintre",
+      "pirate": "🏴‍☠️ Pirate",
+      "priest": "🔮 Prêtre",
+      "explorer": "🧭 Explorateur"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "Exploration des souvenirs de vies antérieures...",
+    "subText": "Traverse le flux du temps"
+  },
+  "result": {
+    "label": "Ta vie antérieure était...",
+    "strengthLabel": "Forces",
+    "weaknessLabel": "Faiblesses",
+    "compatibilityTitle": "Top 3 Compatibilité de Vies Antérieures",
+    "premiumTitle": "Ton Histoire de Vie Antérieure",
+    "premiumDesc": "Découvre l'histoire dramatique de ta vie antérieure<br>et des conseils pour ta vie actuelle",
+    "premiumButton": "Lire l'Histoire Complète",
+    "modernLifeTitle": "Qui Tu Es Maintenant",
+    "recommendTitle": "Tu Pourrais aussi Aimer",
+    "compatibilityPercent": "% de compatibilité"
+  },
+  "buttons": {
+    "share": "Partager les Résultats",
+    "save": "Enregistrer l'Image",
+    "retry": "Réessayer"
+  },
+  "ad": {
+    "waitText": "L'histoire détaillée sera révélée bientôt"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "Prueba de Trabajo de Vida Pasada - ¿Quién Eras?",
+    "description": "¡Descubre tu ocupación de vida pasada en solo 10 preguntas! Caballero, Capitán Pirata, Pintor del Renacimiento... 8 tipos y compatibilidad. ¡Haz la prueba ahora!"
+  },
+  "intro": {
+    "title": "Prueba de Trabajo de Vida Pasada",
+    "subtitle": "¿Qué tipo de vida viviste en tu pasado?<br>¡Descubre tu vida pasada en 10 preguntas!",
+    "participantCount": "participantes",
+    "startButton": "Iniciar Prueba",
+    "tags": {
+      "knight": "🗡️ Caballero",
+      "scholar": "📜 Erudito",
+      "painter": "🎨 Pintor",
+      "pirate": "🏴‍☠️ Pirata",
+      "priest": "🔮 Sacerdote",
+      "explorer": "🧭 Explorador"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "Explorando recuerdos de vidas pasadas...",
+    "subText": "Atravesando el flujo del tiempo"
+  },
+  "result": {
+    "label": "Tu vida pasada fue...",
+    "strengthLabel": "Fortalezas",
+    "weaknessLabel": "Debilidades",
+    "compatibilityTitle": "Top 3 Compatibilidad de Vida Pasada",
+    "premiumTitle": "Tu Historia de Vida Pasada",
+    "premiumDesc": "Descubre la historia dramática de tu vida pasada<br>y consejos para tu vida actual",
+    "premiumButton": "Leer Historia Completa",
+    "modernLifeTitle": "Quién Eres Ahora",
+    "recommendTitle": "También Te Puede Gustar",
+    "compatibilityPercent": "% compatibilidad"
+  },
+  "buttons": {
+    "share": "Compartir Resultados",
+    "save": "Guardar Imagen",
+    "retry": "Intentar de Nuevo"
+  },
+  "ad": {
+    "waitText": "La historia detallada será revelada en breve"
+  }
+}

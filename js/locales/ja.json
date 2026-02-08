@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "前世の職業テスト - あなたは誰でしたか？",
+    "description": "たった10個の質問であなたの前世の職業を発見！騎士、海賊キャプテン、ルネサンス時代の画家...8つのタイプと相性。今すぐテストしてみてください！"
+  },
+  "intro": {
+    "title": "前世の職業テスト",
+    "subtitle": "前世ではどんな人生を送っていましたか？<br>10個の質問であなたの前世を発見しましょう！",
+    "participantCount": "人が参加",
+    "startButton": "テストを開始",
+    "tags": {
+      "knight": "🗡️ 騎士",
+      "scholar": "📜 学者",
+      "painter": "🎨 画家",
+      "pirate": "🏴‍☠️ 海賊",
+      "priest": "🔮 司祭",
+      "explorer": "🧭 探検家"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "前世の思い出を探索中...",
+    "subText": "時間の流れを遡っています"
+  },
+  "result": {
+    "label": "あなたの前世は...",
+    "strengthLabel": "強み",
+    "weaknessLabel": "弱み",
+    "compatibilityTitle": "トップ3前世相性",
+    "premiumTitle": "あなたの前世物語",
+    "premiumDesc": "あなたの前世のドラマチックな物語を発見<br>と現在の人生へのアドバイス",
+    "premiumButton": "フル物語を読む",
+    "modernLifeTitle": "今のあなた",
+    "recommendTitle": "あなたも好きかもしれません",
+    "compatibilityPercent": "％相性"
+  },
+  "buttons": {
+    "share": "結果をシェア",
+    "save": "画像を保存",
+    "retry": "もう一度試す"
+  },
+  "ad": {
+    "waitText": "詳しい物語はまもなく表示されます"
+  }
+}

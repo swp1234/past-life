@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "Geçmiş Hayat Mesleği Testi - Kim Oldun?",
+    "description": "Sadece 10 soruda geçmiş hayatındaki mesleği keşfet! Şövalye, Korsan Kaptanı, Rönesans Ressam... 8 tip ve uyumluluk. Hemen testi al!"
+  },
+  "intro": {
+    "title": "Geçmiş Hayat Mesleği Testi",
+    "subtitle": "Geçmiş hayatında nasıl bir hayat yaşadın?<br>10 soruda geçmiş hayatını keşfet!",
+    "participantCount": "katılımcı",
+    "startButton": "Testi Başlat",
+    "tags": {
+      "knight": "🗡️ Şövalye",
+      "scholar": "📜 Bilgin",
+      "painter": "🎨 Ressam",
+      "pirate": "🏴‍☠️ Korsan",
+      "priest": "🔮 Rahip",
+      "explorer": "🧭 Kaşif"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "Geçmiş hayat anıları araştırılıyor...",
+    "subText": "Zamanın akışı içinde geziniyor"
+  },
+  "result": {
+    "label": "Geçmiş hayatın...",
+    "strengthLabel": "Güçlü Yönler",
+    "weaknessLabel": "Zayıf Yönler",
+    "compatibilityTitle": "İlk 3 Geçmiş Hayat Uyumu",
+    "premiumTitle": "Geçmiş Hayat Hikayesi",
+    "premiumDesc": "Geçmiş hayatının dramatik hikayesini keşfet<br>ve şu anki hayatına tavsiyeler al",
+    "premiumButton": "Tam Hikayeyi Oku",
+    "modernLifeTitle": "Şu Anda Kim Olduğun",
+    "recommendTitle": "Ayrıca Beğenebilirsin",
+    "compatibilityPercent": "% uyumluluk"
+  },
+  "buttons": {
+    "share": "Sonuçları Paylaş",
+    "save": "Resmi Kaydet",
+    "retry": "Tekrar Dene"
+  },
+  "ad": {
+    "waitText": "Detaylı hikaye kısa sürede ortaya çıkacak"
+  }
+}

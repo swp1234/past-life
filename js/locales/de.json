@@ -1,0 +1,47 @@
+{
+  "app": {
+    "title": "Früheres Leben Beruf Test - Wer warst du?",
+    "description": "Entdecke deinen früheren Beruf in nur 10 Fragen! Ritter, Piratenkaptän, Renaissance-Maler... 8 Typen und Kompatibilität. Mach den Test jetzt!"
+  },
+  "intro": {
+    "title": "Früheres Leben Beruf Test",
+    "subtitle": "Welche Art von Leben hast du in deiner Vergangenheit gelebt?<br>Entdecke dein früheres Leben in 10 Fragen!",
+    "participantCount": "Teilnehmer",
+    "startButton": "Test starten",
+    "tags": {
+      "knight": "🗡️ Ritter",
+      "scholar": "📜 Gelehrter",
+      "painter": "🎨 Maler",
+      "pirate": "🏴‍☠️ Pirat",
+      "priest": "🔮 Priester",
+      "explorer": "🧭 Erforscher"
+    }
+  },
+  "quiz": {
+    "questionCounter": "/ 10"
+  },
+  "loading": {
+    "mainText": "Erkunde Erinnerungen an früheres Leben...",
+    "subText": "Reise durch den Fluss der Zeit"
+  },
+  "result": {
+    "label": "Dein früheres Leben war...",
+    "strengthLabel": "Stärken",
+    "weaknessLabel": "Schwächen",
+    "compatibilityTitle": "Top 3 Kompatibilität früheres Leben",
+    "premiumTitle": "Deine Geschichte des früheren Lebens",
+    "premiumDesc": "Entdecke die dramatische Geschichte deines früheren Lebens<br>und Rat für dein heutiges Leben",
+    "premiumButton": "Vollständige Geschichte lesen",
+    "modernLifeTitle": "Wer du jetzt bist",
+    "recommendTitle": "Dir könnten auch diese gefallen",
+    "compatibilityPercent": "% Kompatibilität"
+  },
+  "buttons": {
+    "share": "Ergebnisse teilen",
+    "save": "Bild speichern",
+    "retry": "Nochmal versuchen"
+  },
+  "ad": {
+    "waitText": "Detaillierte Geschichte wird in Kürze enthüllt"
+  }
+}
