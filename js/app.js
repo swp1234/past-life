@@ -393,17 +393,20 @@
         const wrap = $('recommend-list');
         if (!wrap) return;
         const items = [
+            { emoji: '🎮', name: '아이들 클리커 게임', url: 'https://dopabrain.com/idle-clicker-game/' },
+            { emoji: '😊', name: '이모지 머지 게임', url: 'https://dopabrain.com/emoji-merge/' },
+            { emoji: '🏃', name: '지그재그 러너 게임', url: 'https://dopabrain.com/zigzag-runner/' },
+            { emoji: '💕', name: '사랑 주파수 테스트', url: 'https://dopabrain.com/love-frequency/' },
             { emoji: '🌡️', name: '감정 온도계 테스트', url: 'https://dopabrain.com/emotion-temp/' },
             { emoji: '💕', name: 'MBTI 연애 궁합', url: 'https://dopabrain.com/mbti-love/' },
-            { emoji: '🧠', name: 'HSP 민감성 테스트', url: 'https://dopabrain.com/hsp-test/' },
-            { emoji: '💕', name: '사랑 주파수 테스트', url: 'https://dopabrain.com/love-frequency/' }
+            { emoji: '🎰', name: '로또 번호 생성기', url: 'https://dopabrain.com/lottery-generator/' },
+            { emoji: '🎵', name: '화이트 노이즈 플레이어', url: 'https://dopabrain.com/white-noise/' }
         ];
         wrap.innerHTML = items.map(it =>
-            `<a href="${it.url}" class="compat-item" style="text-decoration:none;color:inherit">
+            `<a href="${it.url}" class="compat-item" style="text-decoration:none;color:inherit" target="_blank">
                 <span class="compat-emoji">${it.emoji}</span>
                 <div class="compat-info">
                     <div class="compat-name">${it.name}</div>
-                    <div class="compat-score" style="color:var(--primary)">바로 해보기 →</div>
                 </div>
             </a>`
         ).join('');
