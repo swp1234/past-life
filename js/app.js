@@ -399,6 +399,7 @@
             { emoji: '💕', name: '사랑 주파수 테스트', url: 'https://dopabrain.com/love-frequency/' },
             { emoji: '🌡️', name: '감정 온도계 테스트', url: 'https://dopabrain.com/emotion-temp/' },
             { emoji: '💕', name: 'MBTI 연애 궁합', url: 'https://dopabrain.com/mbti-love/' },
+            { emoji: '🧠', name: '두뇌 유형 테스트', url: 'https://dopabrain.com/brain-type/' },
             { emoji: '🎰', name: '로또 번호 생성기', url: 'https://dopabrain.com/lottery-generator/' },
             { emoji: '🎵', name: '화이트 노이즈 플레이어', url: 'https://dopabrain.com/white-noise/' }
         ];
