@@ -6,8 +6,10 @@
   "intro": {
     "title": "Prueba de Trabajo de Vida Pasada",
     "subtitle": "¿Qué tipo de vida viviste en tu pasado?<br>¡Descubre tu vida pasada en 10 preguntas!",
+    "quickTest": "¡Completa en 30 segundos!",
     "participantCount": "participantes",
-    "startButton": "Iniciar Prueba",
+    "startButton": "Comenzar Ahora",
+    "ctaSub": "Comparte tus resultados en redes sociales",
     "tags": {
       "knight": "🗡️ Caballero",
       "scholar": "📜 Erudito",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "La historia detallada será revelada en breve"
+  },
+  "game": {
+    "back": "Inicio DopaBrain"
   }
 }

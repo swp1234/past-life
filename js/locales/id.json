@@ -6,8 +6,10 @@
   "intro": {
     "title": "Tes Pekerjaan Kehidupan Lampau",
     "subtitle": "Kehidupan apa yang Anda jalani di masa lalu?<br>Temukan kehidupan lampau Anda dalam 10 pertanyaan!",
+    "quickTest": "Selesai dalam 30 detik!",
     "participantCount": "peserta",
-    "startButton": "Mulai Tes",
+    "startButton": "Mulai Sekarang",
+    "ctaSub": "Bagikan hasil Anda di media sosial",
     "tags": {
       "knight": "🗡️ Ksatria",
       "scholar": "📜 Cendekiawan",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "Cerita terperinci akan diungkapkan segera"
+  },
+  "game": {
+    "back": "Beranda DopaBrain"
   }
 }

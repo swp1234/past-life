@@ -6,8 +6,10 @@
   "intro": {
     "title": "Teste de Profissão de Vidas Passadas",
     "subtitle": "Que tipo de vida você viveu no passado?<br>Descubra sua vida passada em 10 questões!",
+    "quickTest": "Completa em 30 segundos!",
     "participantCount": "participantes",
-    "startButton": "Começar Teste",
+    "startButton": "Começar Agora",
+    "ctaSub": "Compartilhe seus resultados nas redes sociais",
     "tags": {
       "knight": "🗡️ Cavaleiro",
       "scholar": "📜 Estudioso",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "A história detalhada será revelada em breve"
+  },
+  "game": {
+    "back": "DopaBrain Início"
   }
 }

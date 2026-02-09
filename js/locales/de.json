@@ -6,8 +6,10 @@
   "intro": {
     "title": "Früheres Leben Beruf Test",
     "subtitle": "Welche Art von Leben hast du in deiner Vergangenheit gelebt?<br>Entdecke dein früheres Leben in 10 Fragen!",
+    "quickTest": "In 30 Sekunden abgeschlossen!",
     "participantCount": "Teilnehmer",
-    "startButton": "Test starten",
+    "startButton": "Jetzt Testen",
+    "ctaSub": "Teilen Sie Ihre Ergebnisse auf Social Media",
     "tags": {
       "knight": "🗡️ Ritter",
       "scholar": "📜 Gelehrter",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "Detaillierte Geschichte wird in Kürze enthüllt"
+  },
+  "game": {
+    "back": "DopaBrain Startseite"
   }
 }

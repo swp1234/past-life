@@ -6,8 +6,10 @@
   "intro": {
     "title": "Test de Métier de Vie Antérieure",
     "subtitle": "Quel genre de vie as-tu vécue dans tes vies antérieures?<br>Découvre ta vie antérieure en 10 questions!",
+    "quickTest": "Complété en 30 secondes!",
     "participantCount": "participants",
-    "startButton": "Commencer le Test",
+    "startButton": "Commencer Maintenant",
+    "ctaSub": "Partagez vos résultats sur les réseaux sociaux",
     "tags": {
       "knight": "🗡️ Chevalier",
       "scholar": "📜 Érudit",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "L'histoire détaillée sera révélée bientôt"
+  },
+  "game": {
+    "back": "Accueil DopaBrain"
   }
 }

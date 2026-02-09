@@ -160,7 +160,7 @@
             const other = TYPES.find(x => x.id === id);
             if (!other) return;
             const color = score >= 80 ? '#27AE60' : score >= 60 ? '#F39C12' : '#E74C3C';
-            const compatLabel = typeof i18n !== 'undefined' ? i18n.t('result.compatibilityPercent') : '% 궁합';
+            const compatLabel = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('result.compatibilityPercent') : '% 궁합';
             compatList.innerHTML += `
                 <div class="compat-item">
                     <span class="compat-emoji">${other.emoji}</span>
@@ -229,7 +229,7 @@
         ctx.textAlign = 'center';
         ctx.fillStyle = 'rgba(201, 169, 110, 0.6)';
         ctx.font = '14px Georgia, serif';
-        const titleText = typeof i18n !== 'undefined' ? i18n.t('result.label') : '당신의 전생은...';
+        const titleText = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('result.label') : '당신의 전생은...';
         ctx.fillText(titleText, W / 2, 80);
 
         // Emoji
@@ -279,7 +279,7 @@
         // Watermark
         ctx.fillStyle = 'rgba(201, 169, 110, 0.3)';
         ctx.font = '12px sans-serif';
-        const appTitle = typeof i18n !== 'undefined' ? i18n.t('app.title').split(' - ')[0] : '전생 직업 테스트';
+        const appTitle = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('app.title').split(' - ')[0] : '전생 직업 테스트';
         ctx.fillText(appTitle, W / 2, 690);
         ctx.fillText('dopabrain.com/past-life', W / 2, 710);
 

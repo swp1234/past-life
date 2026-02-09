@@ -6,8 +6,10 @@
   "intro": {
     "title": "Past Life Job Test",
     "subtitle": "What kind of life did you live in your past?<br>Discover your past life in 10 questions!",
+    "quickTest": "Complete in 30 seconds!",
     "participantCount": "participants",
-    "startButton": "Start Test",
+    "startButton": "Take the Test Now",
+    "ctaSub": "Share your results on social media",
     "tags": {
       "knight": "🗡️ Knight",
       "scholar": "📜 Scholar",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "Detailed story will be revealed shortly"
+  },
+  "game": {
+    "back": "DopaBrain Home"
   }
 }

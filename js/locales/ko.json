@@ -6,8 +6,10 @@
   "intro": {
     "title": "전생 직업 테스트",
     "subtitle": "당신은 전생에 어떤 삶을 살았을까요?<br>10가지 질문으로 알아보는 나의 전생!",
+    "quickTest": "30초에 완료!",
     "participantCount": "명 참여",
-    "startButton": "테스트 시작하기",
+    "startButton": "지금 테스트하기",
+    "ctaSub": "결과는 SNS에서 공유 가능합니다",
     "tags": {
       "knight": "🗡️ 기사",
       "scholar": "📜 학자",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "잠시 후 상세 이야기가 공개됩니다"
+  },
+  "game": {
+    "back": "DopaBrain 홈"
   }
 }

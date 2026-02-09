@@ -6,8 +6,10 @@
   "intro": {
     "title": "前世の職業テスト",
     "subtitle": "前世ではどんな人生を送っていましたか？<br>10個の質問であなたの前世を発見しましょう！",
+    "quickTest": "30秒で完了！",
     "participantCount": "人が参加",
-    "startButton": "テストを開始",
+    "startButton": "今すぐテストする",
+    "ctaSub": "結果をSNSで共有できます",
     "tags": {
       "knight": "🗡️ 騎士",
       "scholar": "📜 学者",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "詳しい物語はまもなく表示されます"
+  },
+  "game": {
+    "back": "DopaBrain ホーム"
   }
 }

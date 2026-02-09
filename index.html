@@ -56,7 +56,6 @@
     <link rel="apple-touch-icon" href="icon-192.svg">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/i18n.js"></script>
 </head>
 <body>
     <div class="app-container">
@@ -87,6 +86,19 @@
             <div class="intro-icon">🗡️</div>
             <h1 class="intro-title" data-i18n="intro.title">전생 직업 테스트</h1>
             <p class="intro-subtitle" data-i18n="intro.subtitle">당신은 전생에 어떤 삶을 살았을까요?<br>10가지 질문으로 알아보는 나의 전생!</p>
+
+            <!-- Trust & Urgency Signals -->
+            <div class="intro-signals">
+                <div class="signal-item">
+                    <span class="signal-emoji">⚡</span>
+                    <span class="signal-text" data-i18n="intro.quickTest">30초에 완료!</span>
+                </div>
+                <div class="signal-item">
+                    <span class="signal-emoji">👥</span>
+                    <span class="signal-text"><span id="participant-count-num">45820</span><span data-i18n="intro.participantCount">명 참여</span></span>
+                </div>
+            </div>
+
             <div class="intro-tags">
                 <span class="intro-tag" data-i18n="intro.tags.knight">🗡️ 기사</span>
                 <span class="intro-tag" data-i18n="intro.tags.scholar">📜 학자</span>
@@ -95,8 +107,9 @@
                 <span class="intro-tag" data-i18n="intro.tags.priest">🔮 사제</span>
                 <span class="intro-tag" data-i18n="intro.tags.explorer">🧭 탐험가</span>
             </div>
-            <p class="intro-count"><span id="participant-count-num">45820</span><span data-i18n="intro.participantCount">명 참여</span></p>
-            <button class="btn btn-primary" id="btn-start" data-i18n="intro.startButton">테스트 시작하기</button>
+
+            <button class="btn btn-primary btn-large" id="btn-start" data-i18n="intro.startButton">지금 테스트하기</button>
+            <p class="intro-cta-sub" data-i18n="intro.ctaSub">결과는 SNS에서 공유 가능합니다</p>
         </div>
 
         <!-- Quiz Screen -->
@@ -200,6 +213,7 @@
         </a>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
     <script>
@@ -208,26 +222,41 @@
         }
 
         // Initialize i18n system
-        (async function initI18n() {
-            await i18n.loadTranslations(i18n.getCurrentLanguage());
-            i18n.updateUI();
-            const langToggle = document.getElementById('lang-toggle');
-            const langMenu = document.getElementById('lang-menu');
-            const langOptions = document.querySelectorAll('.lang-option');
-            document.querySelector(`[data-lang="${i18n.getCurrentLanguage()}"]`)?.classList.add('active');
-            langToggle?.addEventListener('click', () => langMenu.classList.toggle('hidden'));
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.language-selector')) langMenu?.classList.add('hidden');
-            });
-            langOptions.forEach(opt => {
-                opt.addEventListener('click', async () => {
-                    await i18n.setLanguage(opt.getAttribute('data-lang'));
-                    langOptions.forEach(o => o.classList.remove('active'));
-                    opt.classList.add('active');
-                    langMenu.classList.add('hidden');
-                });
-            });
-        })();
+        async function initI18nSystem() {
+            try {
+                await i18n.loadTranslations(i18n.getCurrentLanguage());
+                i18n.updateUI();
+
+                const langToggle = document.getElementById('lang-toggle');
+                const langMenu = document.getElementById('lang-menu');
+                const langOptions = document.querySelectorAll('.lang-option');
+
+                if (langToggle && langMenu) {
+                    document.querySelector(`[data-lang="${i18n.getCurrentLanguage()}"]`)?.classList.add('active');
+                    langToggle.addEventListener('click', () => langMenu.classList.toggle('hidden'));
+                    document.addEventListener('click', (e) => {
+                        if (!e.target.closest('.language-selector')) langMenu?.classList.add('hidden');
+                    });
+                    langOptions.forEach(opt => {
+                        opt.addEventListener('click', async () => {
+                            await i18n.setLanguage(opt.getAttribute('data-lang'));
+                            langOptions.forEach(o => o.classList.remove('active'));
+                            opt.classList.add('active');
+                            langMenu.classList.add('hidden');
+                        });
+                    });
+                }
+            } catch (e) {
+                console.error('i18n initialization failed:', e);
+            }
+        }
+
+        // Wait for DOM and then initialize i18n
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initI18nSystem);
+        } else {
+            initI18nSystem();
+        }
     </script>
 </body>
 </html>

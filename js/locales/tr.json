@@ -6,8 +6,10 @@
   "intro": {
     "title": "Geçmiş Hayat Mesleği Testi",
     "subtitle": "Geçmiş hayatında nasıl bir hayat yaşadın?<br>10 soruda geçmiş hayatını keşfet!",
+    "quickTest": "30 saniyede tamamla!",
     "participantCount": "katılımcı",
-    "startButton": "Testi Başlat",
+    "startButton": "Şimdi Başla",
+    "ctaSub": "Sonuçlarınızı sosyal medyada paylaşın",
     "tags": {
       "knight": "🗡️ Şövalye",
       "scholar": "📜 Bilgin",
@@ -43,5 +45,8 @@
   },
   "ad": {
     "waitText": "Detaylı hikaye kısa sürede ortaya çıkacak"
+  },
+  "game": {
+    "back": "DopaBrain Anasayfa"
   }
 }
