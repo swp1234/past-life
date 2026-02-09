@@ -59,6 +59,13 @@
         resetScores();
         showScreen('quiz');
         renderQuestion();
+        // GA4: 테스트 시작
+        if (typeof gtag === 'function') {
+            gtag('event', 'test_start', {
+                app_name: 'past-life',
+                content_type: 'test'
+            });
+        }
     }
 
     function renderQuestion() {
@@ -125,6 +132,15 @@
             }
         });
         state.resultType = TYPES.find(t => t.id === maxType);
+
+        // GA4: 테스트 완료
+        if (typeof gtag === 'function' && state.resultType) {
+            gtag('event', 'test_complete', {
+                app_name: 'past-life',
+                result_type: state.resultType.id,
+                result_name: state.resultType.name
+            });
+        }
     }
 
     function renderResult() {
