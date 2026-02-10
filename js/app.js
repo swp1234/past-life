@@ -110,7 +110,7 @@
             } else {
                 showLoading();
             }
-        }, 400);
+        }, 150);
     }
 
     function showLoading() {
