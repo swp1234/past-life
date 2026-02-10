@@ -439,5 +439,12 @@
         ).join('');
     }
 
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', () => {
+        init();
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 300);
+        }
+    });
 })();
