@@ -38,10 +38,29 @@
     "recommendTitle": "Tu Pourrais aussi Aimer",
     "compatibilityPercent": "% de compatibilité"
   },
+  "canvas": {
+    "strengthPrefix": "Forces: "
+  },
+  "share": {
+    "title": "Test de Métier de Vie Antérieure",
+    "copied": "Résultat copié dans le presse-papiers!",
+    "copyPrompt": "Copiez le texte ci-dessous:"
+  },
   "buttons": {
     "share": "Partager les Résultats",
     "save": "Enregistrer l'Image",
     "retry": "Réessayer"
+  },
+  "recommendations": {
+    "idleClicker": "Jeu Idle Clicker",
+    "emojiMerge": "Jeu Emoji Merge",
+    "zigzagRunner": "Jeu Zigzag Runner",
+    "loveFrequency": "Test Love Frequency",
+    "emotionTemp": "Test Emotion Temperature",
+    "mbtiLove": "Compatibilité MBTI Love",
+    "brainType": "Test Brain Type",
+    "lottery": "Générateur de Numéros de Loterie",
+    "whiteNoise": "Lecteur de Bruit Blanc"
   },
   "ad": {
     "waitText": "L'histoire détaillée sera révélée bientôt"

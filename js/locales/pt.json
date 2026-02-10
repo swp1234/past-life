@@ -38,10 +38,29 @@
     "recommendTitle": "Você Também Pode Gostar",
     "compatibilityPercent": "% compatibilidade"
   },
+  "canvas": {
+    "strengthPrefix": "Pontos Fortes: "
+  },
+  "share": {
+    "title": "Teste de Profissão de Vidas Passadas",
+    "copied": "Resultado copiado para a área de transferência!",
+    "copyPrompt": "Copie o texto abaixo:"
+  },
   "buttons": {
     "share": "Compartilhar Resultados",
     "save": "Salvar Imagem",
     "retry": "Tentar Novamente"
+  },
+  "recommendations": {
+    "idleClicker": "Jogo Idle Clicker",
+    "emojiMerge": "Jogo Emoji Merge",
+    "zigzagRunner": "Jogo Zigzag Runner",
+    "loveFrequency": "Teste Love Frequency",
+    "emotionTemp": "Teste Emotion Temperature",
+    "mbtiLove": "Compatibilidade MBTI Love",
+    "brainType": "Teste Brain Type",
+    "lottery": "Gerador de Números de Loteria",
+    "whiteNoise": "Reprodutor de Ruído Branco"
   },
   "ad": {
     "waitText": "A história detalhada será revelada em breve"

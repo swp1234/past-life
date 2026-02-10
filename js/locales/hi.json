@@ -38,10 +38,29 @@
     "recommendTitle": "आपको भी पसंद आ सकता है",
     "compatibilityPercent": "% संगतता"
   },
+  "canvas": {
+    "strengthPrefix": "शक्तियां: "
+  },
+  "share": {
+    "title": "पूर्वजन्म कार्य परीक्षण",
+    "copied": "परिणाम क्लिपबोर्ड पर कॉपी किया गया!",
+    "copyPrompt": "नीचे दिया गया पाठ कॉपी करें:"
+  },
   "buttons": {
     "share": "परिणाम साझा करें",
     "save": "छवि सहेजें",
     "retry": "फिर से प्रयास करें"
+  },
+  "recommendations": {
+    "idleClicker": "आइडल क्लिकर गेम",
+    "emojiMerge": "इमोजी मर्ज गेम",
+    "zigzagRunner": "जिगजैग रनर गेम",
+    "loveFrequency": "लव फ्रीक्वेंसी टेस्ट",
+    "emotionTemp": "इमोशन टेम्परेचर टेस्ट",
+    "mbtiLove": "MBTI प्रेम संगतता",
+    "brainType": "ब्रेन टाइप टेस्ट",
+    "lottery": "लॉटरी नंबर जनरेटर",
+    "whiteNoise": "व्हाइट नॉइज प्लेयर"
   },
   "ad": {
     "waitText": "विस्तृत कहानी शीघ्र ही प्रकट होगी"

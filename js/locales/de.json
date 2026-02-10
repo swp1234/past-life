@@ -38,10 +38,29 @@
     "recommendTitle": "Dir könnten auch diese gefallen",
     "compatibilityPercent": "% Kompatibilität"
   },
+  "canvas": {
+    "strengthPrefix": "Stärken: "
+  },
+  "share": {
+    "title": "Früheres Leben Beruf Test",
+    "copied": "Ergebnis in die Zwischenablage kopiert!",
+    "copyPrompt": "Kopieren Sie den folgenden Text:"
+  },
   "buttons": {
     "share": "Ergebnisse teilen",
     "save": "Bild speichern",
     "retry": "Nochmal versuchen"
+  },
+  "recommendations": {
+    "idleClicker": "Idle Clicker Spiel",
+    "emojiMerge": "Emoji Merge Spiel",
+    "zigzagRunner": "Zigzag Runner Spiel",
+    "loveFrequency": "Love Frequency Test",
+    "emotionTemp": "Emotion Temperature Test",
+    "mbtiLove": "MBTI Love Kompatibilität",
+    "brainType": "Brain Type Test",
+    "lottery": "Lotterienummern-Generator",
+    "whiteNoise": "Weißrausch-Player"
   },
   "ad": {
     "waitText": "Detaillierte Geschichte wird in Kürze enthüllt"

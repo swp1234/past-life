@@ -38,10 +38,29 @@
     "recommendTitle": "이것도 해보세요",
     "compatibilityPercent": "% 궁합"
   },
+  "canvas": {
+    "strengthPrefix": "강점: "
+  },
+  "share": {
+    "title": "전생 직업 테스트",
+    "copied": "결과가 클립보드에 복사되었습니다!",
+    "copyPrompt": "아래 텍스트를 복사하세요:"
+  },
   "buttons": {
     "share": "결과 공유하기",
     "save": "이미지 저장",
     "retry": "다시 테스트하기"
+  },
+  "recommendations": {
+    "idleClicker": "아이들 클리커 게임",
+    "emojiMerge": "이모지 머지 게임",
+    "zigzagRunner": "지그재그 러너 게임",
+    "loveFrequency": "사랑 주파수 테스트",
+    "emotionTemp": "감정 온도계 테스트",
+    "mbtiLove": "MBTI 연애 궁합",
+    "brainType": "두뇌 유형 테스트",
+    "lottery": "로또 번호 생성기",
+    "whiteNoise": "화이트 노이즈 플레이어"
   },
   "ad": {
     "waitText": "잠시 후 상세 이야기가 공개됩니다"

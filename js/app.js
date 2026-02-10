@@ -283,7 +283,8 @@
         // Strengths
         ctx.fillStyle = 'rgba(201, 169, 110, 0.5)';
         ctx.font = '13px sans-serif';
-        ctx.fillText('강점: ' + t.strengths.join(' · '), W / 2, 610);
+        const strengthPrefix = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('canvas.strengthPrefix') : '강점: ';
+        ctx.fillText(strengthPrefix + t.strengths.join(' · '), W / 2, 610);
 
         // Divider bottom
         ctx.beginPath();
@@ -371,15 +372,18 @@
             .replace('{quote}', t.quote);
 
         const url = 'https://dopabrain.com/past-life/';
+        const shareTitle = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('share.title') : '전생 직업 테스트';
+        const copiedMsg = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('share.copied') : '결과가 클립보드에 복사되었습니다!';
+        const copyPromptMsg = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('share.copyPrompt') : '아래 텍스트를 복사하세요:';
 
         if (navigator.share) {
-            navigator.share({ title: '전생 직업 테스트', text, url }).catch(() => {});
+            navigator.share({ title: shareTitle, text, url }).catch(() => {});
         } else {
             const full = text + '\n' + url;
             navigator.clipboard.writeText(full).then(() => {
-                alert('결과가 클립보드에 복사되었습니다!');
+                alert(copiedMsg);
             }).catch(() => {
-                prompt('아래 텍스트를 복사하세요:', full);
+                prompt(copyPromptMsg, full);
             });
         }
 
@@ -408,16 +412,22 @@
     function renderRecommend() {
         const wrap = $('recommend-list');
         if (!wrap) return;
+
+        // Get i18n names if available
+        const getName = (key) => {
+            return (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('recommendations.' + key) : key;
+        };
+
         const items = [
-            { emoji: '🎮', name: '아이들 클리커 게임', url: 'https://dopabrain.com/idle-clicker-game/' },
-            { emoji: '😊', name: '이모지 머지 게임', url: 'https://dopabrain.com/emoji-merge/' },
-            { emoji: '🏃', name: '지그재그 러너 게임', url: 'https://dopabrain.com/zigzag-runner/' },
-            { emoji: '💕', name: '사랑 주파수 테스트', url: 'https://dopabrain.com/love-frequency/' },
-            { emoji: '🌡️', name: '감정 온도계 테스트', url: 'https://dopabrain.com/emotion-temp/' },
-            { emoji: '💕', name: 'MBTI 연애 궁합', url: 'https://dopabrain.com/mbti-love/' },
-            { emoji: '🧠', name: '두뇌 유형 테스트', url: 'https://dopabrain.com/brain-type/' },
-            { emoji: '🎰', name: '로또 번호 생성기', url: 'https://dopabrain.com/lottery-generator/' },
-            { emoji: '🎵', name: '화이트 노이즈 플레이어', url: 'https://dopabrain.com/white-noise/' }
+            { emoji: '🎮', name: getName('idleClicker'), url: 'https://dopabrain.com/idle-clicker-game/' },
+            { emoji: '😊', name: getName('emojiMerge'), url: 'https://dopabrain.com/emoji-merge/' },
+            { emoji: '🏃', name: getName('zigzagRunner'), url: 'https://dopabrain.com/zigzag-runner/' },
+            { emoji: '💕', name: getName('loveFrequency'), url: 'https://dopabrain.com/love-frequency/' },
+            { emoji: '🌡️', name: getName('emotionTemp'), url: 'https://dopabrain.com/emotion-temp/' },
+            { emoji: '💕', name: getName('mbtiLove'), url: 'https://dopabrain.com/mbti-love/' },
+            { emoji: '🧠', name: getName('brainType'), url: 'https://dopabrain.com/brain-type/' },
+            { emoji: '🎰', name: getName('lottery'), url: 'https://dopabrain.com/lottery-generator/' },
+            { emoji: '🎵', name: getName('whiteNoise'), url: 'https://dopabrain.com/white-noise/' }
         ];
         wrap.innerHTML = items.map(it =>
             `<a href="${it.url}" class="compat-item" style="text-decoration:none;color:inherit" target="_blank">

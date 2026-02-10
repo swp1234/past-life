@@ -38,10 +38,29 @@
     "recommendTitle": "Вам также может понравиться",
     "compatibilityPercent": "% совместимость"
   },
+  "canvas": {
+    "strengthPrefix": "Сильные стороны: "
+  },
+  "share": {
+    "title": "Тест работы прошлой жизни",
+    "copied": "Результат скопирован в буфер обмена!",
+    "copyPrompt": "Скопируйте текст ниже:"
+  },
   "buttons": {
     "share": "Поделиться результатами",
     "save": "Сохранить изображение",
     "retry": "Попробовать снова"
+  },
+  "recommendations": {
+    "idleClicker": "Игра Idle Clicker",
+    "emojiMerge": "Игра Emoji Merge",
+    "zigzagRunner": "Игра Zigzag Runner",
+    "loveFrequency": "Тест Love Frequency",
+    "emotionTemp": "Тест Emotion Temperature",
+    "mbtiLove": "MBTI Love Compatibility",
+    "brainType": "Тест Brain Type",
+    "lottery": "Генератор номеров лотереи",
+    "whiteNoise": "Плеер белого шума"
   },
   "ad": {
     "waitText": "Подробная история откроется в ближайшее время"

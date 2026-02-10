@@ -38,10 +38,29 @@
     "recommendTitle": "Anda Mungkin Juga Menyukai",
     "compatibilityPercent": "% kompatibilitas"
   },
+  "canvas": {
+    "strengthPrefix": "Kekuatan: "
+  },
+  "share": {
+    "title": "Tes Pekerjaan Kehidupan Lampau",
+    "copied": "Hasil disalin ke papan klip!",
+    "copyPrompt": "Salin teks di bawah ini:"
+  },
   "buttons": {
     "share": "Bagikan Hasil",
     "save": "Simpan Gambar",
     "retry": "Coba Lagi"
+  },
+  "recommendations": {
+    "idleClicker": "Game Idle Clicker",
+    "emojiMerge": "Game Emoji Merge",
+    "zigzagRunner": "Game Zigzag Runner",
+    "loveFrequency": "Tes Love Frequency",
+    "emotionTemp": "Tes Emotion Temperature",
+    "mbtiLove": "Kompatibilitas MBTI Love",
+    "brainType": "Tes Brain Type",
+    "lottery": "Generator Angka Lotere",
+    "whiteNoise": "Pemain Kebisingan Putih"
   },
   "ad": {
     "waitText": "Cerita terperinci akan diungkapkan segera"

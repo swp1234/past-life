@@ -38,10 +38,29 @@
     "recommendTitle": "あなたも好きかもしれません",
     "compatibilityPercent": "％相性"
   },
+  "canvas": {
+    "strengthPrefix": "強み: "
+  },
+  "share": {
+    "title": "前世の職業テスト",
+    "copied": "結果がクリップボードにコピーされました！",
+    "copyPrompt": "以下のテキストをコピーしてください："
+  },
   "buttons": {
     "share": "結果をシェア",
     "save": "画像を保存",
     "retry": "もう一度試す"
+  },
+  "recommendations": {
+    "idleClicker": "アイドルクリッカーゲーム",
+    "emojiMerge": "絵文字マージゲーム",
+    "zigzagRunner": "ジグザグランナーゲーム",
+    "loveFrequency": "ラブフリークエンシーテスト",
+    "emotionTemp": "エモーション温度テスト",
+    "mbtiLove": "MBTI恋愛相性",
+    "brainType": "脳タイプテスト",
+    "lottery": "宝くじ番号生成器",
+    "whiteNoise": "ホワイトノイズプレーヤー"
   },
   "ad": {
     "waitText": "詳しい物語はまもなく表示されます"

@@ -38,10 +38,29 @@
     "recommendTitle": "You Might Also Like",
     "compatibilityPercent": "% compatibility"
   },
+  "canvas": {
+    "strengthPrefix": "Strengths: "
+  },
+  "share": {
+    "title": "Past Life Job Test",
+    "copied": "Result copied to clipboard!",
+    "copyPrompt": "Copy the text below:"
+  },
   "buttons": {
     "share": "Share Results",
     "save": "Save Image",
     "retry": "Try Again"
+  },
+  "recommendations": {
+    "idleClicker": "Idle Clicker Game",
+    "emojiMerge": "Emoji Merge Game",
+    "zigzagRunner": "Zigzag Runner Game",
+    "loveFrequency": "Love Frequency Test",
+    "emotionTemp": "Emotion Temperature Test",
+    "mbtiLove": "MBTI Love Compatibility",
+    "brainType": "Brain Type Test",
+    "lottery": "Lottery Number Generator",
+    "whiteNoise": "White Noise Player"
   },
   "ad": {
     "waitText": "Detailed story will be revealed shortly"

@@ -38,10 +38,29 @@
     "recommendTitle": "您可能也会喜欢",
     "compatibilityPercent": "% 兼容性"
   },
+  "canvas": {
+    "strengthPrefix": "优势: "
+  },
+  "share": {
+    "title": "前世职业测试",
+    "copied": "结果已复制到剪贴板！",
+    "copyPrompt": "复制下面的文本："
+  },
   "buttons": {
     "share": "分享结果",
     "save": "保存图像",
     "retry": "再试一次"
+  },
+  "recommendations": {
+    "idleClicker": "闲置点击游戏",
+    "emojiMerge": "表情合并游戏",
+    "zigzagRunner": "之字形赛跑者游戏",
+    "loveFrequency": "爱频率测试",
+    "emotionTemp": "情感温度测试",
+    "mbtiLove": "MBTI爱情兼容性",
+    "brainType": "脑类型测试",
+    "lottery": "彩票号码生成器",
+    "whiteNoise": "白噪音播放器"
   },
   "ad": {
     "waitText": "详细故事即将公开"

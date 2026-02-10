@@ -38,10 +38,29 @@
     "recommendTitle": "También Te Puede Gustar",
     "compatibilityPercent": "% compatibilidad"
   },
+  "canvas": {
+    "strengthPrefix": "Fortalezas: "
+  },
+  "share": {
+    "title": "Prueba de Trabajo de Vida Pasada",
+    "copied": "¡Resultado copiado al portapapeles!",
+    "copyPrompt": "Copia el texto a continuación:"
+  },
   "buttons": {
     "share": "Compartir Resultados",
     "save": "Guardar Imagen",
     "retry": "Intentar de Nuevo"
+  },
+  "recommendations": {
+    "idleClicker": "Juego Idle Clicker",
+    "emojiMerge": "Juego Emoji Merge",
+    "zigzagRunner": "Juego Zigzag Runner",
+    "loveFrequency": "Prueba Love Frequency",
+    "emotionTemp": "Prueba Emotion Temperature",
+    "mbtiLove": "Compatibilidad MBTI Love",
+    "brainType": "Prueba Brain Type",
+    "lottery": "Generador de Números de Lotería",
+    "whiteNoise": "Reproductor de Ruido Blanco"
   },
   "ad": {
     "waitText": "La historia detallada será revelada en breve"

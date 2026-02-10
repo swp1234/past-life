@@ -38,10 +38,29 @@
     "recommendTitle": "Ayrıca Beğenebilirsin",
     "compatibilityPercent": "% uyumluluk"
   },
+  "canvas": {
+    "strengthPrefix": "Güçlü Yönler: "
+  },
+  "share": {
+    "title": "Geçmiş Hayat Mesleği Testi",
+    "copied": "Sonuç panoya kopyalandı!",
+    "copyPrompt": "Aşağıdaki metni kopyalayın:"
+  },
   "buttons": {
     "share": "Sonuçları Paylaş",
     "save": "Resmi Kaydet",
     "retry": "Tekrar Dene"
+  },
+  "recommendations": {
+    "idleClicker": "Idle Clicker Oyunu",
+    "emojiMerge": "Emoji Merge Oyunu",
+    "zigzagRunner": "Zigzag Runner Oyunu",
+    "loveFrequency": "Love Frequency Testi",
+    "emotionTemp": "Emotion Temperature Testi",
+    "mbtiLove": "MBTI Love Uyumu",
+    "brainType": "Brain Type Testi",
+    "lottery": "Piyango Numarası Oluşturucu",
+    "whiteNoise": "Beyaz Gürültü Çaları"
   },
   "ad": {
     "waitText": "Detaylı hikaye kısa sürede ortaya çıkacak"
