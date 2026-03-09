@@ -1,55 +1,271 @@
 {
   "app": {
-    "title": "Past Life Job Test - Who Were You?",
-    "description": "Discover your past life occupation in just 10 questions! Knight, Pirate Captain, Renaissance Painter... 8 types and compatibility. Take the test now!"
+    "title": "Past Life Test - Time Portal Journey",
+    "description": "Open the Time Portal and travel through 6 historical eras. From Ancient Egypt to the Modern Age, your choices reveal your past life occupation!",
+    "skipLink": "Skip to main",
+    "loading": "Loading..."
   },
   "intro": {
-    "title": "Past Life Job Test",
-    "subtitle": "What kind of life did you live in your past?<br>Discover your past life in 10 questions!",
-    "quickTest": "Complete in 30 seconds!",
-    "participantCount": "participants",
-    "startButton": "Take the Test Now",
-    "ctaSub": "Share your results on social media",
-    "tags": {
-      "knight": "🗡️ Knight",
-      "scholar": "📜 Scholar",
-      "painter": "🎨 Painter",
-      "pirate": "🏴‍☠️ Pirate",
-      "priest": "🔮 Priest",
-      "explorer": "🧭 Explorer"
+    "title": "Time Portal Journey",
+    "subtitle": "Step through the Time Portal.<br>Your choices across the ages will reveal who you were.",
+    "quickTest": "6 eras to travel",
+    "participantCount": " traveled",
+    "startButton": "Enter the Portal",
+    "ctaSub": "Share your past life with friends",
+    "era1": "Ancient Egypt",
+    "era2": "Medieval Europe",
+    "era3": "Renaissance",
+    "era4": "Age of Exploration",
+    "era5": "Industrial Age",
+    "era6": "Early Modern",
+    "discover1": "\uD83C\uDF0A Travel through 6 historical eras",
+    "discover2": "\u2694\uFE0F Make pivotal choices at each stop",
+    "discover3": "\uD83D\uDC51 Discover your past life occupation"
+  },
+  "eras": {
+    "egypt": {
+      "year": "3000 BC",
+      "title": "Ancient Egypt",
+      "scene": "Moonlight pours between the stone pillars of a great temple. The Pharaoh's coronation ceremony is about to begin. Thousands of eyes are fixed on you.",
+      "choiceAIcon": "\uD83D\uDD25",
+      "choiceA": "Lead the ritual",
+      "choiceBIcon": "\uD83D\uDCDC",
+      "choiceB": "Record the knowledge"
+    },
+    "medieval": {
+      "year": "1200 AD",
+      "title": "Medieval Europe",
+      "scene": "Mist clings to the castle walls. In the distance, war trumpets sound, while roses bloom in the courtyard. A moment of choice arrives.",
+      "choiceAIcon": "\u2694\uFE0F",
+      "choiceA": "Take up the sword",
+      "choiceBIcon": "\uD83C\uDF3F",
+      "choiceB": "Tend the garden"
+    },
+    "renaissance": {
+      "year": "1500 AD",
+      "title": "Renaissance",
+      "scene": "A Florentine workshop fills with the scent of paint. Through the window, expedition ships prepare to sail toward new continents.",
+      "choiceAIcon": "\uD83C\uDFA8",
+      "choiceA": "Create art",
+      "choiceBIcon": "\uD83D\uDCB0",
+      "choiceB": "Fund the expedition"
+    },
+    "exploration": {
+      "year": "1700 AD",
+      "title": "Age of Exploration",
+      "scene": "Sails flutter on a ship docked at harbor. An unknown world waits beyond the sea, while at the observatory, a new constellation has been discovered.",
+      "choiceAIcon": "\u2693",
+      "choiceA": "Set sail",
+      "choiceBIcon": "\u2B50",
+      "choiceB": "Map the stars"
+    },
+    "industrial": {
+      "year": "1850 AD",
+      "title": "Industrial Revolution",
+      "scene": "Steam engines roar and smoke rises from factory chimneys. Meanwhile, in the countryside, people still believe in the healing power of nature.",
+      "choiceAIcon": "\u2699\uFE0F",
+      "choiceA": "Build the machine",
+      "choiceBIcon": "\uD83D\uDC9A",
+      "choiceB": "Heal the people"
+    },
+    "modern": {
+      "year": "1920 AD",
+      "title": "Early Modern Age",
+      "scene": "Jazz music fills a dazzling city night. Theater lights shine bright, while in a quiet cafe, someone writes words that will change the world.",
+      "choiceAIcon": "\uD83C\uDFAD",
+      "choiceA": "Perform on stage",
+      "choiceBIcon": "\u270D\uFE0F",
+      "choiceB": "Write in solitude"
     }
   },
-  "quiz": {
-    "questionCounter": "/ 10"
+  "transition": {
+    "traveling": "Traveling through time..."
   },
-  "loading": {
-    "mainText": "Exploring past life memories...",
-    "subText": "Traversing through the flow of time"
+  "reveal": {
+    "closing": "The portal closes...",
+    "past": "Your past life is revealed"
   },
   "result": {
-    "label": "Your past life was...",
+    "label": "In a past life, you were...",
     "strengthLabel": "Strengths",
     "weaknessLabel": "Weaknesses",
-    "compatibilityTitle": "Top 3 Past Life Compatibility",
-    "premiumTitle": "Your Past Life Story",
-    "premiumDesc": "Discover the dramatic story of your past life<br>and advice for your current life",
-    "premiumButton": "Read Full Story",
-    "modernLifeTitle": "Who You Are Now",
-    "recommendTitle": "You Might Also Like",
-    "compatibilityPercent": "% compatibility"
+    "echoesTitle": "Echoes in Your Present Life",
+    "compatTitle": "Your Past Life Companions",
+    "compatPercent": "% match",
+    "recommendTitle": "You Might Also Like"
   },
-  "canvas": {
-    "strengthPrefix": "Strengths: "
+  "types": {
+    "knight": {
+      "name": "Knight Commander",
+      "era": "Medieval Europe (12th c.) \u00B7 Normandy, France",
+      "description": "Your past life was a Knight Commander of Medieval Europe! You always led from the front on the battlefield and considered protecting the weak your sacred duty. You valued loyalty and honor above all else, and your comrades trusted you with their lives.",
+      "quote": "\u201CBlades may rust, but honor is eternal\u201D",
+      "strength1": "Courage",
+      "strength2": "Loyalty",
+      "strength3": "Leadership",
+      "strength4": "Decisiveness",
+      "weakness1": "Stubbornness",
+      "weakness2": "Reckless charges",
+      "echo1": "You have a strong sense of justice and cannot ignore wrongdoing",
+      "echo2": "You naturally shine in leadership roles",
+      "echo3": "You have a strong instinct to protect the vulnerable",
+      "echo4": "Trust and loyalty are your highest values",
+      "echoIcon1": "\u2694\uFE0F",
+      "echoIcon2": "\uD83D\uDC51",
+      "echoIcon3": "\uD83D\uDEE1\uFE0F",
+      "echoIcon4": "\uD83E\uDD1D"
+    },
+    "scholar": {
+      "name": "Royal Scholar",
+      "era": "Ancient Egypt (15th c. BC) \u00B7 Thebes, Egypt",
+      "description": "Your past life was a Royal Scholar of Ancient Egypt! You recorded history beside the Pharaoh, observed the stars, and accumulated wisdom. Your writings on papyrus have been passed down through millennia to this day.",
+      "quote": "\u201CKnowledge is true power\u201D",
+      "strength1": "Wisdom",
+      "strength2": "Observation",
+      "strength3": "Patience",
+      "strength4": "Analytical mind",
+      "weakness1": "Indecisiveness",
+      "weakness2": "Over-caution",
+      "echo1": "You love learning and enjoy deep thinking",
+      "echo2": "You excel at systematic planning and execution",
+      "echo3": "You perform best in quiet environments",
+      "echo4": "You find satisfaction in recording and organizing",
+      "echoIcon1": "\uD83D\uDCDA",
+      "echoIcon2": "\uD83D\uDCCB",
+      "echoIcon3": "\uD83E\uDDD8",
+      "echoIcon4": "\u270D\uFE0F"
+    },
+    "painter": {
+      "name": "Renaissance Painter",
+      "era": "Renaissance (15th c.) \u00B7 Florence, Italy",
+      "description": "Your past life was a genius painter of the Renaissance! You captured the world's beauty on canvas, mastering light and shadow with ease. Your art moved people deeply, and your works remain masterpieces that transcend time.",
+      "quote": "\u201CThe world is reborn at the tip of my brush\u201D",
+      "strength1": "Creativity",
+      "strength2": "Aesthetic sense",
+      "strength3": "Sensitivity",
+      "strength4": "Focus",
+      "weakness1": "Lacks practicality",
+      "weakness2": "Fickleness",
+      "echo1": "You are emotionally rich and drawn to beauty",
+      "echo2": "You overflow with original ideas",
+      "echo3": "You hold high aesthetic standards in daily life",
+      "echo4": "You express emotions honestly",
+      "echoIcon1": "\uD83C\uDFA8",
+      "echoIcon2": "\uD83D\uDCA1",
+      "echoIcon3": "\u2728",
+      "echoIcon4": "\uD83D\uDC96"
+    },
+    "royal": {
+      "name": "Wise Monarch",
+      "era": "Byzantine Empire (6th c.) \u00B7 Constantinople",
+      "description": "Your past life was a Wise Monarch of the Byzantine Empire! You ruled a vast empire, excelling in both diplomacy and domestic affairs. You led people with charisma and were recorded in history as a great ruler who cultivated law and culture.",
+      "quote": "\u201COnly those who can bear the crown's weight are true rulers\u201D",
+      "strength1": "Charisma",
+      "strength2": "Diplomacy",
+      "strength3": "Command",
+      "strength4": "Judgment",
+      "weakness1": "Loneliness",
+      "weakness2": "Suspicion",
+      "echo1": "You have a natural leadership presence",
+      "echo2": "People naturally follow you",
+      "echo3": "You shine brightest when making important decisions",
+      "echo4": "You excel at strategic thinking",
+      "echoIcon1": "\uD83D\uDC51",
+      "echoIcon2": "\uD83C\uDF1F",
+      "echoIcon3": "\u2696\uFE0F",
+      "echoIcon4": "\uD83C\uDFAF"
+    },
+    "explorer": {
+      "name": "Great Explorer",
+      "era": "Age of Exploration (16th c.) \u00B7 Lisbon, Portugal",
+      "description": "Your past life was an Explorer of the Age of Discovery! You raised sails toward unknown seas and discovered lands no one had visited. Curiosity outweighed fear, and you sailed endlessly, dreaming of new worlds.",
+      "quote": "\u201CBeyond the horizon lies a new world\u201D",
+      "strength1": "Adventurous",
+      "strength2": "Adaptability",
+      "strength3": "Optimism",
+      "strength4": "Courage",
+      "weakness1": "Restlessness",
+      "weakness2": "Lack of planning",
+      "echo1": "You love new experiences and challenges",
+      "echo2": "You are drawn to travel and foreign cultures",
+      "echo3": "You have a strong urge to break free from routine",
+      "echo4": "You are a free spirit at heart",
+      "echoIcon1": "\uD83C\uDF0D",
+      "echoIcon2": "\u2708\uFE0F",
+      "echoIcon3": "\uD83D\uDE80",
+      "echoIcon4": "\uD83C\uDF2C\uFE0F"
+    },
+    "healer": {
+      "name": "Forest Healer",
+      "era": "Celtic Era (5th c.) \u00B7 Ireland / Scotland",
+      "description": "Your past life was a Celtic Healer! You gathered herbs deep in the forest and cared for the sick. You understood nature's language and performed healing rituals by the moon's cycle. To the villagers, you were both lifesaver and spiritual guide.",
+      "quote": "\u201CFor every wound, there is a matching herb\u201D",
+      "strength1": "Empathy",
+      "strength2": "Patience",
+      "strength3": "Intuition",
+      "strength4": "Healing touch",
+      "weakness1": "Self-sacrificing",
+      "weakness2": "Emotional drain",
+      "echo1": "You have exceptional empathy and read emotions well",
+      "echo2": "You are suited for counseling, medicine, or education",
+      "echo3": "You recharge your energy in nature",
+      "echo4": "You often become the go-to person for advice",
+      "echoIcon1": "\uD83D\uDC9A",
+      "echoIcon2": "\uD83C\uDF3F",
+      "echoIcon3": "\uD83C\uDF33",
+      "echoIcon4": "\uD83E\uDE79"
+    },
+    "oracle": {
+      "name": "Temple Oracle",
+      "era": "Ancient Greece (5th c. BC) \u00B7 Delphi, Greece",
+      "description": "Your past life was a Temple Oracle of Ancient Greece! You delivered prophecies at the Temple of Delphi and read fate in the movement of stars. Through deep meditation and ritual, you communed with the unseen world. Even kings sought your counsel.",
+      "quote": "\u201CClose your eyes to see what is truly there\u201D",
+      "strength1": "Intuition",
+      "strength2": "Insight",
+      "strength3": "Meditation",
+      "strength4": "Mystic charisma",
+      "weakness1": "Detachment",
+      "weakness2": "Excessive solitude",
+      "echo1": "You have strong intuition and see through to essence",
+      "echo2": "You are drawn to psychology, philosophy, and spirituality",
+      "echo3": "You absolutely need time alone",
+      "echo4": "You read people's hidden emotions well",
+      "echoIcon1": "\uD83D\uDD2E",
+      "echoIcon2": "\uD83D\uDCDA",
+      "echoIcon3": "\uD83C\uDF19",
+      "echoIcon4": "\uD83D\uDC41\uFE0F"
+    },
+    "pirate": {
+      "name": "Pirate Captain",
+      "era": "Golden Age of Piracy (17th c.) \u00B7 Caribbean Sea",
+      "description": "Your past life was a Pirate Captain of the Caribbean! With blazing passion for freedom, you roamed the seas and lived by no one's command. Bold and charismatic, your crew gave you their absolute trust.",
+      "quote": "\u201COn the sea, I am king\u201D",
+      "strength1": "Boldness",
+      "strength2": "Free spirit",
+      "strength3": "Quick wit",
+      "strength4": "Charisma",
+      "weakness1": "Impulsive",
+      "weakness2": "Hates rules",
+      "echo1": "You refuse to live a cookie-cutter life",
+      "echo2": "You walk your own path as a free spirit",
+      "echo3": "You trust instinct over rules",
+      "echo4": "A touch of rebellion is part of your charm",
+      "echoIcon1": "\uD83C\uDFF4\u200D\u2620\uFE0F",
+      "echoIcon2": "\uD83C\uDF0A",
+      "echoIcon3": "\u26A1",
+      "echoIcon4": "\uD83D\uDD25"
+    }
   },
   "share": {
-    "title": "Past Life Job Test",
+    "title": "Past Life Test",
+    "template": "{emoji} After traveling through the Time Portal, I was {type} in {era}! What's your past life?",
     "copied": "Result copied to clipboard!",
     "copyPrompt": "Copy the text below:"
   },
   "buttons": {
     "share": "Share Results",
     "save": "Save Image",
-    "retry": "Try Again"
+    "retry": "Travel Again"
   },
   "recommendations": {
     "idleClicker": "Idle Clicker Game",
@@ -62,8 +278,8 @@
     "lottery": "Lottery Number Generator",
     "whiteNoise": "White Noise Player"
   },
-  "ad": {
-    "waitText": "Detailed story will be revealed shortly"
+  "ads": {
+    "banner": "AD AREA"
   },
   "game": {
     "back": "DopaBrain Home"

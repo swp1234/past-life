@@ -1,329 +1,591 @@
-// Past Life Job Test - Main App
+// Past Life - Time Portal Journey
 (function() {
     'use strict';
 
-    const state = {
-        currentQ: 0,
-        scores: {},
-        resultType: null,
-        premiumUnlocked: false,
-        adTimer: null
+    // 8 past-life types with full data
+    var TYPES = {
+        knight: {
+            id: 'knight', emoji: '\u{1F5E1}\uFE0F',
+            color: '#C41E3A',
+            bgGradient: ['#1a0a0e', '#2d1520'],
+            compatible: ['scholar', 'healer']
+        },
+        scholar: {
+            id: 'scholar', emoji: '\u{1F4DC}',
+            color: '#DAA520',
+            bgGradient: ['#1a1508', '#2d2510'],
+            compatible: ['knight', 'oracle']
+        },
+        painter: {
+            id: 'painter', emoji: '\u{1F3A8}',
+            color: '#E07C5F',
+            bgGradient: ['#1a0f0a', '#2d1a14'],
+            compatible: ['explorer', 'oracle']
+        },
+        royal: {
+            id: 'royal', emoji: '\u{1F451}',
+            color: '#9B59B6',
+            bgGradient: ['#120a1a', '#1f142d'],
+            compatible: ['knight', 'scholar']
+        },
+        explorer: {
+            id: 'explorer', emoji: '\u{1F9ED}',
+            color: '#2E86C1',
+            bgGradient: ['#0a1420', '#14202d'],
+            compatible: ['pirate', 'painter']
+        },
+        healer: {
+            id: 'healer', emoji: '\u{1F33F}',
+            color: '#27AE60',
+            bgGradient: ['#0a1a0f', '#142d1a'],
+            compatible: ['knight', 'oracle']
+        },
+        oracle: {
+            id: 'oracle', emoji: '\u{1F52E}',
+            color: '#8E44AD',
+            bgGradient: ['#140a1a', '#22142d'],
+            compatible: ['scholar', 'healer']
+        },
+        pirate: {
+            id: 'pirate', emoji: '\u{1F3F4}\u200D\u2620\uFE0F',
+            color: '#E74C3C',
+            bgGradient: ['#1a0a0a', '#2d1414'],
+            compatible: ['explorer', 'painter']
+        }
     };
 
-    // DOM refs
-    const $ = id => document.getElementById(id);
-    const screens = {
-        intro: $('screen-intro'),
-        quiz: $('screen-quiz'),
-        loading: $('screen-loading'),
-        result: $('screen-result')
+    // Compatibility matrix
+    var COMPATIBILITY = {
+        knight:   { knight: 65, scholar: 90, painter: 45, royal: 80, explorer: 40, healer: 92, oracle: 70, pirate: 30 },
+        scholar:  { knight: 90, scholar: 60, painter: 40, royal: 85, explorer: 35, healer: 75, oracle: 95, pirate: 25 },
+        painter:  { knight: 45, scholar: 40, painter: 55, royal: 50, explorer: 88, healer: 78, oracle: 85, pirate: 90 },
+        royal:    { knight: 80, scholar: 85, painter: 50, royal: 45, explorer: 55, healer: 35, oracle: 72, pirate: 20 },
+        explorer: { knight: 40, scholar: 35, painter: 88, royal: 55, explorer: 50, healer: 65, oracle: 60, pirate: 95 },
+        healer:   { knight: 92, scholar: 75, painter: 78, royal: 35, explorer: 65, healer: 60, oracle: 90, pirate: 30 },
+        oracle:   { knight: 70, scholar: 95, painter: 85, royal: 72, explorer: 60, healer: 90, oracle: 50, pirate: 25 },
+        pirate:   { knight: 30, scholar: 25, painter: 90, royal: 20, explorer: 95, healer: 30, oracle: 25, pirate: 55 }
     };
+
+    // 6 Eras - each with binary choice mapping to type scores
+    var ERAS = [
+        {
+            id: 'egypt',
+            cssClass: 'era-egypt',
+            yearKey: 'eras.egypt.year',
+            titleKey: 'eras.egypt.title',
+            sceneKey: 'eras.egypt.scene',
+            choiceA: {
+                iconKey: 'eras.egypt.choiceAIcon',
+                textKey: 'eras.egypt.choiceA',
+                scores: { oracle: 3, royal: 2, knight: 1 }
+            },
+            choiceB: {
+                iconKey: 'eras.egypt.choiceBIcon',
+                textKey: 'eras.egypt.choiceB',
+                scores: { scholar: 3, healer: 2, painter: 1 }
+            }
+        },
+        {
+            id: 'medieval',
+            cssClass: 'era-medieval',
+            yearKey: 'eras.medieval.year',
+            titleKey: 'eras.medieval.title',
+            sceneKey: 'eras.medieval.scene',
+            choiceA: {
+                iconKey: 'eras.medieval.choiceAIcon',
+                textKey: 'eras.medieval.choiceA',
+                scores: { knight: 3, pirate: 2, royal: 1 }
+            },
+            choiceB: {
+                iconKey: 'eras.medieval.choiceBIcon',
+                textKey: 'eras.medieval.choiceB',
+                scores: { healer: 3, painter: 1, scholar: 1 }
+            }
+        },
+        {
+            id: 'renaissance',
+            cssClass: 'era-renaissance',
+            yearKey: 'eras.renaissance.year',
+            titleKey: 'eras.renaissance.title',
+            sceneKey: 'eras.renaissance.scene',
+            choiceA: {
+                iconKey: 'eras.renaissance.choiceAIcon',
+                textKey: 'eras.renaissance.choiceA',
+                scores: { painter: 3, oracle: 1, healer: 1 }
+            },
+            choiceB: {
+                iconKey: 'eras.renaissance.choiceBIcon',
+                textKey: 'eras.renaissance.choiceB',
+                scores: { explorer: 3, royal: 2, pirate: 1 }
+            }
+        },
+        {
+            id: 'exploration',
+            cssClass: 'era-exploration',
+            yearKey: 'eras.exploration.year',
+            titleKey: 'eras.exploration.title',
+            sceneKey: 'eras.exploration.scene',
+            choiceA: {
+                iconKey: 'eras.exploration.choiceAIcon',
+                textKey: 'eras.exploration.choiceA',
+                scores: { explorer: 3, pirate: 2, knight: 1 }
+            },
+            choiceB: {
+                iconKey: 'eras.exploration.choiceBIcon',
+                textKey: 'eras.exploration.choiceB',
+                scores: { scholar: 3, oracle: 2, painter: 1 }
+            }
+        },
+        {
+            id: 'industrial',
+            cssClass: 'era-industrial',
+            yearKey: 'eras.industrial.year',
+            titleKey: 'eras.industrial.title',
+            sceneKey: 'eras.industrial.scene',
+            choiceA: {
+                iconKey: 'eras.industrial.choiceAIcon',
+                textKey: 'eras.industrial.choiceA',
+                scores: { royal: 3, pirate: 1, explorer: 1 }
+            },
+            choiceB: {
+                iconKey: 'eras.industrial.choiceBIcon',
+                textKey: 'eras.industrial.choiceB',
+                scores: { healer: 3, oracle: 2, painter: 1 }
+            }
+        },
+        {
+            id: 'modern',
+            cssClass: 'era-modern',
+            yearKey: 'eras.modern.year',
+            titleKey: 'eras.modern.title',
+            sceneKey: 'eras.modern.scene',
+            choiceA: {
+                iconKey: 'eras.modern.choiceAIcon',
+                textKey: 'eras.modern.choiceA',
+                scores: { pirate: 3, painter: 2, explorer: 1 }
+            },
+            choiceB: {
+                iconKey: 'eras.modern.choiceBIcon',
+                textKey: 'eras.modern.choiceB',
+                scores: { scholar: 2, oracle: 3, healer: 1 }
+            }
+        }
+    ];
+
+    var state = {
+        currentEra: 0,
+        scores: {},
+        resultType: null
+    };
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var screens = {};
 
     function init() {
+        screens = {
+            intro: $('screen-intro'),
+            era: $('screen-era'),
+            transition: $('screen-transition'),
+            reveal: $('screen-reveal'),
+            result: $('screen-result')
+        };
+
         resetScores();
-        $('btn-start').addEventListener('click', startQuiz);
+
+        $('btn-start').addEventListener('click', startJourney);
         $('btn-retry').addEventListener('click', retry);
         $('btn-share').addEventListener('click', shareResult);
         $('btn-save').addEventListener('click', saveImage);
-        $('btn-premium').addEventListener('click', showPremium);
+        $('choice-a').addEventListener('click', function() { selectChoice('a'); });
+        $('choice-b').addEventListener('click', function() { selectChoice('b'); });
 
-        // Update participant count
+        // Participant count
         try {
-            let count = parseInt(localStorage.getItem('pastlife_count') || '0');
+            var count = parseInt(localStorage.getItem('pastlife_count') || '0');
             count++;
             localStorage.setItem('pastlife_count', String(count));
-            const display = 45820 + count;
-            const numEl = $('participant-count-num');
+            var display = 50820 + count;
+            var numEl = $('participant-count-num');
             if (numEl) numEl.textContent = display.toLocaleString();
         } catch (e) {
-            const numEl = $('participant-count-num');
-            if (numEl) numEl.textContent = '45820';
+            // private browsing
         }
+
+        // Build timeline dots
+        buildTimeline();
     }
 
     function resetScores() {
         state.scores = {};
-        TYPES.forEach(t => state.scores[t.id] = 0);
-        state.currentQ = 0;
+        Object.keys(TYPES).forEach(function(k) { state.scores[k] = 0; });
+        state.currentEra = 0;
         state.resultType = null;
-        state.premiumUnlocked = false;
     }
 
-    function showScreen(name) {
-        Object.values(screens).forEach(s => s.classList.remove('active'));
-        screens[name].classList.add('active');
-        window.scrollTo(0, 0);
-    }
-
-    function startQuiz() {
-        resetScores();
-        showScreen('quiz');
-        renderQuestion();
-        // GA4: 테스트 시작
-        if (typeof gtag === 'function') {
-            gtag('event', 'test_start', {
-                app_name: 'past-life',
-                content_type: 'test'
-            });
+    function buildTimeline() {
+        var dotsWrap = $('timeline-dots');
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = '';
+        for (var i = 0; i < ERAS.length; i++) {
+            var dot = document.createElement('div');
+            dot.className = 'timeline-dot';
+            dot.setAttribute('data-era', i);
+            dotsWrap.appendChild(dot);
         }
     }
 
-    function renderQuestion() {
-        const q = QUESTIONS[state.currentQ];
-        const total = QUESTIONS.length;
-
-        $('progress-bar').style.width = ((state.currentQ / total) * 100) + '%';
-        const qcurrent = $('question-current');
-        if (qcurrent) qcurrent.textContent = (state.currentQ + 1);
-        $('question-text').textContent = q.question;
-
-        const wrap = $('answers');
-        wrap.innerHTML = '';
-
-        q.answers.forEach((ans, i) => {
-            const btn = document.createElement('button');
-            btn.className = 'answer-btn';
-            btn.textContent = ans.text;
-            btn.addEventListener('click', () => selectAnswer(i));
-            wrap.appendChild(btn);
+    function updateTimeline() {
+        var dots = document.querySelectorAll('.timeline-dot');
+        dots.forEach(function(dot, i) {
+            dot.classList.remove('active', 'completed');
+            if (i < state.currentEra) dot.classList.add('completed');
+            if (i === state.currentEra) dot.classList.add('active');
         });
+        var fill = $('timeline-fill');
+        if (fill) {
+            var pct = (state.currentEra / ERAS.length) * 100;
+            fill.style.width = pct + '%';
+        }
     }
 
-    function selectAnswer(idx) {
-        const q = QUESTIONS[state.currentQ];
-        const ans = q.answers[idx];
+    function showScreen(name) {
+        Object.values(screens).forEach(function(s) {
+            if (s) s.classList.remove('active');
+        });
+        if (screens[name]) {
+            screens[name].classList.add('active');
+        }
+        window.scrollTo(0, 0);
+    }
+
+    function t(key) {
+        if (typeof i18n !== 'undefined' && i18n.t) return i18n.t(key);
+        return key;
+    }
+
+    function startJourney() {
+        resetScores();
+        buildTimeline();
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'test_start', { app_name: 'past-life', content_type: 'time_portal' });
+        }
+
+        showEra(0);
+    }
+
+    function showEra(index) {
+        state.currentEra = index;
+        updateTimeline();
+
+        var era = ERAS[index];
+
+        // Remove old era class and set new one
+        var eraScreen = $('screen-era');
+        ERAS.forEach(function(e) { eraScreen.classList.remove(e.cssClass); });
+        eraScreen.classList.add(era.cssClass);
+
+        // Update content
+        $('era-year').textContent = t(era.yearKey);
+        $('era-title').textContent = t(era.titleKey);
+        $('era-scene').textContent = t(era.sceneKey);
+
+        $('choice-a-icon').textContent = t(era.choiceA.iconKey);
+        $('choice-a-text').textContent = t(era.choiceA.textKey);
+        $('choice-b-icon').textContent = t(era.choiceB.iconKey);
+        $('choice-b-text').textContent = t(era.choiceB.textKey);
+
+        // Reset button states
+        $('choice-a').classList.remove('selected');
+        $('choice-b').classList.remove('selected');
+        $('choice-a').style.pointerEvents = '';
+        $('choice-b').style.pointerEvents = '';
+
+        // Animate in
+        var container = $('era-container');
+        container.style.animation = 'none';
+        container.offsetHeight; // reflow
+        container.style.animation = 'fadeInUp 0.6s ease';
+
+        showScreen('era');
+    }
+
+    function selectChoice(choice) {
+        var era = ERAS[state.currentEra];
+        var data = choice === 'a' ? era.choiceA : era.choiceB;
 
         // Apply scores
-        Object.entries(ans.scores).forEach(([type, score]) => {
-            state.scores[type] = (state.scores[type] || 0) + score;
+        Object.keys(data.scores).forEach(function(type) {
+            state.scores[type] = (state.scores[type] || 0) + data.scores[type];
         });
 
         // Visual feedback
-        const btns = document.querySelectorAll('.answer-btn');
-        btns.forEach(b => b.style.pointerEvents = 'none');
-        btns[idx].classList.add('selected');
+        var btnA = $('choice-a');
+        var btnB = $('choice-b');
+        btnA.style.pointerEvents = 'none';
+        btnB.style.pointerEvents = 'none';
 
-        setTimeout(() => {
-            state.currentQ++;
-            if (state.currentQ < QUESTIONS.length) {
-                renderQuestion();
+        if (choice === 'a') {
+            btnA.classList.add('selected');
+        } else {
+            btnB.classList.add('selected');
+        }
+
+        // Advance after brief delay
+        setTimeout(function() {
+            if (state.currentEra < ERAS.length - 1) {
+                showTransition(function() {
+                    showEra(state.currentEra + 1);
+                });
             } else {
-                showLoading();
+                // All eras done
+                showReveal();
             }
-        }, 150);
+        }, 400);
     }
 
-    function showLoading() {
-        showScreen('loading');
-        setTimeout(() => {
-            calcResult();
+    function showTransition(callback) {
+        showScreen('transition');
+        setTimeout(function() {
+            if (callback) callback();
+        }, 1200);
+    }
+
+    function showReveal() {
+        calcResult();
+        showScreen('reveal');
+        setTimeout(function() {
             showScreen('result');
             renderResult();
-        }, 3200);
+        }, 2500);
     }
 
     function calcResult() {
-        let maxScore = -1;
-        let maxType = null;
-        Object.entries(state.scores).forEach(([type, score]) => {
-            if (score > maxScore) {
-                maxScore = score;
+        var maxScore = -1;
+        var maxType = null;
+        Object.keys(state.scores).forEach(function(type) {
+            if (state.scores[type] > maxScore) {
+                maxScore = state.scores[type];
                 maxType = type;
             }
         });
-        state.resultType = TYPES.find(t => t.id === maxType);
+        state.resultType = maxType;
 
-        // GA4: 테스트 완료
-        if (typeof gtag === 'function' && state.resultType) {
+        if (typeof gtag === 'function' && maxType) {
             gtag('event', 'test_complete', {
                 app_name: 'past-life',
-                result_type: state.resultType.id,
-                result_name: state.resultType.name
+                result_type: maxType,
+                result_name: t('types.' + maxType + '.name')
             });
         }
     }
 
     function renderResult() {
-        const t = state.resultType;
-        if (!t) return;
+        var typeId = state.resultType;
+        if (!typeId) return;
+        var typeData = TYPES[typeId];
 
-        $('result-emoji').textContent = t.emoji;
-        $('result-type').textContent = t.name;
-        $('result-type').style.color = t.color;
-        $('result-era').textContent = t.era + ' · ' + t.region;
-        $('result-desc').textContent = t.description;
-        $('result-quote').textContent = t.quote;
+        $('result-emoji').textContent = typeData.emoji;
+        var nameEl = $('result-type');
+        nameEl.textContent = t('types.' + typeId + '.name');
+        nameEl.style.color = typeData.color;
+
+        $('result-era').textContent = t('types.' + typeId + '.era');
+        $('result-desc').textContent = t('types.' + typeId + '.description');
+        $('result-quote').textContent = t('types.' + typeId + '.quote');
+
+        // Echoes in present
+        var echoesList = $('echoes-list');
+        echoesList.innerHTML = '';
+        for (var i = 1; i <= 4; i++) {
+            var echoText = t('types.' + typeId + '.echo' + i);
+            if (echoText && echoText !== 'types.' + typeId + '.echo' + i) {
+                var item = document.createElement('div');
+                item.className = 'echo-item';
+                var iconSpan = document.createElement('span');
+                iconSpan.className = 'echo-icon';
+                iconSpan.textContent = t('types.' + typeId + '.echoIcon' + i);
+                var textSpan = document.createElement('span');
+                textSpan.textContent = echoText;
+                item.appendChild(iconSpan);
+                item.appendChild(textSpan);
+                echoesList.appendChild(item);
+            }
+        }
 
         // Strengths
-        $('result-strengths').innerHTML = t.strengths.map(s =>
-            '<span class="stat-tag">' + s + '</span>'
-        ).join('');
+        var strengths = [];
+        for (var s = 1; s <= 4; s++) {
+            var sv = t('types.' + typeId + '.strength' + s);
+            if (sv && sv !== 'types.' + typeId + '.strength' + s) strengths.push(sv);
+        }
+        $('result-strengths').innerHTML = strengths.map(function(s) {
+            return '<span class="stat-tag">' + s + '</span>';
+        }).join('');
 
         // Weaknesses
-        $('result-weaknesses').innerHTML = t.weaknesses.map(w =>
-            '<span class="stat-tag weak">' + w + '</span>'
-        ).join('');
+        var weaknesses = [];
+        for (var w = 1; w <= 2; w++) {
+            var wv = t('types.' + typeId + '.weakness' + w);
+            if (wv && wv !== 'types.' + typeId + '.weakness' + w) weaknesses.push(wv);
+        }
+        $('result-weaknesses').innerHTML = weaknesses.map(function(w) {
+            return '<span class="stat-tag weak">' + w + '</span>';
+        }).join('');
 
-        // Compatibility - best 2
-        const compatList = $('compat-list');
+        // Compatibility
+        var compatList = $('compat-list');
         compatList.innerHTML = '';
-        const myCompat = COMPATIBILITY[t.id];
-        const sorted = Object.entries(myCompat)
-            .filter(([id]) => id !== t.id)
-            .sort((a, b) => b[1] - a[1]);
+        var myCompat = COMPATIBILITY[typeId];
+        var sorted = Object.keys(myCompat)
+            .filter(function(id) { return id !== typeId; })
+            .map(function(id) { return { id: id, score: myCompat[id] }; })
+            .sort(function(a, b) { return b.score - a.score; });
 
-        sorted.slice(0, 3).forEach(([id, score]) => {
-            const other = TYPES.find(x => x.id === id);
+        sorted.slice(0, 3).forEach(function(entry) {
+            var other = TYPES[entry.id];
             if (!other) return;
-            const color = score >= 80 ? '#27AE60' : score >= 60 ? '#F39C12' : '#E74C3C';
-            const compatLabel = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('result.compatibilityPercent') : '% 궁합';
-            compatList.innerHTML += `
-                <div class="compat-item">
-                    <span class="compat-emoji">${other.emoji}</span>
-                    <div class="compat-info">
-                        <div class="compat-name">${other.name}</div>
-                        <div class="compat-score" style="color:${color}">${score}${compatLabel}</div>
-                    </div>
-                    <div class="compat-bar-bg">
-                        <div class="compat-bar" style="width:${score}%;background:${color}"></div>
-                    </div>
-                </div>`;
+            var color = entry.score >= 80 ? '#27AE60' : entry.score >= 60 ? '#F39C12' : '#E74C3C';
+            var pctLabel = t('result.compatPercent');
+            var div = document.createElement('div');
+            div.className = 'compat-item';
+            div.innerHTML =
+                '<span class="compat-emoji">' + other.emoji + '</span>' +
+                '<div class="compat-info">' +
+                    '<div class="compat-name">' + t('types.' + entry.id + '.name') + '</div>' +
+                    '<div class="compat-score" style="color:' + color + '">' + entry.score + pctLabel + '</div>' +
+                '</div>' +
+                '<div class="compat-bar-bg">' +
+                    '<div class="compat-bar" style="width:' + entry.score + '%;background:' + color + '"></div>' +
+                '</div>';
+            compatList.appendChild(div);
         });
 
-        // Premium content (hidden)
-        $('premium-story').textContent = t.premiumStory;
-        $('premium-modern').textContent = t.modernLife;
-        $('premium-content').classList.remove('visible');
-        $('btn-premium').style.display = '';
-        state.premiumUnlocked = false;
-
-        // Draw canvas
-        drawResultCard(t);
-
-        // Recommend other tests
+        drawResultCard(typeId);
         renderRecommend();
     }
 
-    function drawResultCard(t) {
-        const canvas = $('resultCanvas');
-        const ctx = canvas.getContext('2d');
-        const W = 600, H = 800;
+    function drawResultCard(typeId) {
+        var typeData = TYPES[typeId];
+        var canvas = $('resultCanvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var W = 600, H = 800;
         canvas.width = W;
         canvas.height = H;
 
-        // Background - parchment effect
-        const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
-        bgGrad.addColorStop(0, t.bgGradient[0]);
-        bgGrad.addColorStop(0.5, t.bgGradient[1]);
-        bgGrad.addColorStop(1, t.bgGradient[0]);
+        // Background
+        var bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+        bgGrad.addColorStop(0, typeData.bgGradient[0]);
+        bgGrad.addColorStop(0.5, typeData.bgGradient[1]);
+        bgGrad.addColorStop(1, typeData.bgGradient[0]);
         ctx.fillStyle = bgGrad;
         ctx.fillRect(0, 0, W, H);
 
-        // Ornate border
-        ctx.strokeStyle = 'rgba(201, 169, 110, 0.3)';
-        ctx.lineWidth = 2;
-        ctx.strokeRect(20, 20, W - 40, H - 40);
-        ctx.strokeRect(30, 30, W - 60, H - 60);
-
-        // Corner decorations
-        const corners = [[30, 30], [W - 30, 30], [30, H - 30], [W - 30, H - 30]];
-        corners.forEach(([cx, cy]) => {
-            ctx.beginPath();
-            ctx.arc(cx, cy, 6, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(201, 169, 110, 0.4)';
-            ctx.fill();
-        });
-
-        // Radial glow
-        const glow = ctx.createRadialGradient(W / 2, 240, 50, W / 2, 240, 250);
-        glow.addColorStop(0, t.color + '20');
+        // Portal glow
+        var glow = ctx.createRadialGradient(W/2, 200, 30, W/2, 200, 200);
+        glow.addColorStop(0, typeData.color + '30');
         glow.addColorStop(1, 'transparent');
         ctx.fillStyle = glow;
         ctx.fillRect(0, 0, W, H);
 
-        // Title label
+        // Ornate border
+        ctx.strokeStyle = 'rgba(201,169,110,0.25)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(20, 20, W-40, H-40);
+        ctx.strokeRect(30, 30, W-60, H-60);
+
+        // Corner dots
+        [[30,30],[W-30,30],[30,H-30],[W-30,H-30]].forEach(function(c) {
+            ctx.beginPath();
+            ctx.arc(c[0], c[1], 5, 0, Math.PI*2);
+            ctx.fillStyle = 'rgba(201,169,110,0.3)';
+            ctx.fill();
+        });
+
         ctx.textAlign = 'center';
-        ctx.fillStyle = 'rgba(201, 169, 110, 0.6)';
+
+        // Label
+        ctx.fillStyle = 'rgba(201,169,110,0.5)';
         ctx.font = '14px Georgia, serif';
-        const titleText = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('result.label') : '당신의 전생은...';
-        ctx.fillText(titleText, W / 2, 80);
+        ctx.fillText(t('result.label'), W/2, 80);
 
         // Emoji
-        ctx.font = '80px serif';
-        ctx.fillText(t.emoji, W / 2, 190);
+        ctx.font = '72px serif';
+        ctx.fillText(typeData.emoji, W/2, 180);
 
-        // Type name
-        ctx.fillStyle = t.color;
-        ctx.font = 'bold 36px Georgia, serif';
-        ctx.fillText(t.name, W / 2, 260);
+        // Name
+        ctx.fillStyle = typeData.color;
+        ctx.font = 'bold 34px Georgia, serif';
+        ctx.fillText(t('types.' + typeId + '.name'), W/2, 250);
 
         // Era
-        ctx.fillStyle = 'rgba(201, 169, 110, 0.7)';
-        ctx.font = '15px Georgia, serif';
-        ctx.fillText(t.era + ' · ' + t.region, W / 2, 295);
+        ctx.fillStyle = 'rgba(201,169,110,0.6)';
+        ctx.font = '14px Georgia, serif';
+        ctx.fillText(t('types.' + typeId + '.era'), W/2, 285);
 
         // Divider
         ctx.beginPath();
-        ctx.moveTo(100, 320);
-        ctx.lineTo(W - 100, 320);
-        ctx.strokeStyle = 'rgba(201, 169, 110, 0.2)';
+        ctx.moveTo(100, 310);
+        ctx.lineTo(W-100, 310);
+        ctx.strokeStyle = 'rgba(201,169,110,0.2)';
         ctx.lineWidth = 1;
         ctx.stroke();
 
-        // Description (word wrap)
+        // Description
         ctx.fillStyle = '#f0e6d3';
-        ctx.font = '15px Georgia, serif';
-        wrapText(ctx, t.description, W / 2, 355, W - 100, 24);
+        ctx.font = '14px Georgia, serif';
+        wrapText(ctx, t('types.' + typeId + '.description'), W/2, 345, W-100, 22);
 
         // Quote
         ctx.fillStyle = '#FFD700';
-        ctx.font = 'italic 16px Georgia, serif';
-        ctx.fillText(t.quote, W / 2, 560);
+        ctx.font = 'italic 15px Georgia, serif';
+        ctx.fillText(t('types.' + typeId + '.quote'), W/2, 550);
 
         // Strengths
-        ctx.fillStyle = 'rgba(201, 169, 110, 0.5)';
-        ctx.font = '13px sans-serif';
-        const strengthPrefix = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('canvas.strengthPrefix') : '강점: ';
-        ctx.fillText(strengthPrefix + t.strengths.join(' · '), W / 2, 610);
+        ctx.fillStyle = 'rgba(201,169,110,0.5)';
+        ctx.font = '12px sans-serif';
+        var strs = [];
+        for (var i = 1; i <= 4; i++) {
+            var sv = t('types.' + typeId + '.strength' + i);
+            if (sv && sv.indexOf('types.') !== 0) strs.push(sv);
+        }
+        ctx.fillText(t('result.strengthLabel') + ': ' + strs.join(' \u00B7 '), W/2, 600);
 
-        // Divider bottom
+        // Divider
         ctx.beginPath();
-        ctx.moveTo(100, 650);
-        ctx.lineTo(W - 100, 650);
-        ctx.strokeStyle = 'rgba(201, 169, 110, 0.2)';
+        ctx.moveTo(100, 640);
+        ctx.lineTo(W-100, 640);
+        ctx.strokeStyle = 'rgba(201,169,110,0.2)';
         ctx.stroke();
 
         // Watermark
-        ctx.fillStyle = 'rgba(201, 169, 110, 0.3)';
+        ctx.fillStyle = 'rgba(201,169,110,0.3)';
         ctx.font = '12px sans-serif';
-        const appTitle = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('app.title').split(' - ')[0] : '전생 직업 테스트';
-        ctx.fillText(appTitle, W / 2, 690);
-        ctx.fillText('dopabrain.com/past-life', W / 2, 710);
+        ctx.fillText(t('app.title').split(' - ')[0], W/2, 680);
+        ctx.fillText('dopabrain.com/past-life', W/2, 700);
 
-        // Best compatibility
-        const myCompat = COMPATIBILITY[t.id];
-        const best = Object.entries(myCompat)
-            .filter(([id]) => id !== t.id)
-            .sort((a, b) => b[1] - a[1])[0];
+        // Best compat
+        var myCompat = COMPATIBILITY[typeId];
+        var best = Object.keys(myCompat)
+            .filter(function(id) { return id !== typeId; })
+            .sort(function(a, b) { return myCompat[b] - myCompat[a]; })[0];
         if (best) {
-            const bestType = TYPES.find(x => x.id === best[0]);
-            if (bestType) {
-                ctx.fillStyle = 'rgba(201, 169, 110, 0.4)';
-                ctx.font = '13px sans-serif';
-                // Note: Canvas text will be in the current language from i18n
-                ctx.fillText(bestType.emoji + ' ' + bestType.name + ' (' + best[1] + '%)', W / 2, 750);
-            }
+            ctx.fillStyle = 'rgba(201,169,110,0.4)';
+            ctx.font = '13px sans-serif';
+            ctx.fillText(TYPES[best].emoji + ' ' + t('types.' + best + '.name') + ' (' + myCompat[best] + '%)', W/2, 745);
         }
     }
 
     function wrapText(ctx, text, x, y, maxW, lineH) {
-        const chars = text.split('');
-        let line = '';
-        let curY = y;
-        for (let i = 0; i < chars.length; i++) {
-            const testLine = line + chars[i];
-            const metrics = ctx.measureText(testLine);
-            if (metrics.width > maxW && line.length > 0) {
+        if (!text) return;
+        var chars = text.split('');
+        var line = '';
+        var curY = y;
+        for (var i = 0; i < chars.length; i++) {
+            var testLine = line + chars[i];
+            if (ctx.measureText(testLine).width > maxW && line.length > 0) {
                 ctx.fillText(line, x, curY);
                 line = chars[i];
                 curY += lineH;
@@ -334,133 +596,103 @@
         if (line) ctx.fillText(line, x, curY);
     }
 
-    function showPremium() {
-        // Show ad overlay
-        const overlay = $('ad-overlay');
-        overlay.classList.add('active');
-        let sec = 5;
-        $('ad-timer').textContent = sec;
-
-        if (state.adTimer) clearInterval(state.adTimer);
-        state.adTimer = setInterval(() => {
-            sec--;
-            $('ad-timer').textContent = sec;
-            if (sec <= 0) {
-                clearInterval(state.adTimer);
-                overlay.classList.remove('active');
-                state.premiumUnlocked = true;
-                $('premium-content').classList.add('visible');
-                $('btn-premium').style.display = 'none';
-
-                // Track
-                if (typeof gtag === 'function') {
-                    gtag('event', 'premium_unlock', { event_category: 'monetization', event_label: state.resultType.id });
-                }
-            }
-        }, 1000);
-    }
-
     function shareResult() {
-        const t = state.resultType;
-        if (!t) return;
+        var typeId = state.resultType;
+        if (!typeId) return;
 
-        const tmpl = SHARE_TEMPLATES[Math.floor(Math.random() * SHARE_TEMPLATES.length)];
-        const text = tmpl
-            .replace('{type}', t.name)
-            .replace('{emoji}', t.emoji)
-            .replace('{era}', t.era)
-            .replace('{quote}', t.quote);
+        var name = t('types.' + typeId + '.name');
+        var era = t('types.' + typeId + '.era');
+        var emoji = TYPES[typeId].emoji;
+        var shareText = t('share.template')
+            .replace('{type}', name)
+            .replace('{era}', era)
+            .replace('{emoji}', emoji);
 
-        const url = 'https://dopabrain.com/past-life/';
-        const shareTitle = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('share.title') : '전생 직업 테스트';
-        const copiedMsg = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('share.copied') : '결과가 클립보드에 복사되었습니다!';
-        const copyPromptMsg = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('share.copyPrompt') : '아래 텍스트를 복사하세요:';
+        var url = 'https://dopabrain.com/past-life/';
+        var shareTitle = t('share.title');
+        var copiedMsg = t('share.copied');
+        var copyPromptMsg = t('share.copyPrompt');
 
         if (navigator.share) {
-            navigator.share({ title: shareTitle, text, url }).catch(() => {});
+            navigator.share({ title: shareTitle, text: shareText, url: url }).catch(function(){});
         } else {
-            const full = text + '\n' + url;
-            navigator.clipboard.writeText(full).then(() => {
-                alert(copiedMsg);
-            }).catch(() => {
+            var full = shareText + '\n' + url;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(full).then(function() {
+                    alert(copiedMsg);
+                }).catch(function() {
+                    prompt(copyPromptMsg, full);
+                });
+            } else {
                 prompt(copyPromptMsg, full);
-            });
+            }
         }
 
         if (typeof gtag === 'function') {
-            gtag('event', 'share', { event_category: 'engagement', event_label: t.id });
+            gtag('event', 'share', { event_category: 'engagement', event_label: typeId });
         }
     }
 
     function saveImage() {
-        const canvas = $('resultCanvas');
-        const link = document.createElement('a');
+        var canvas = $('resultCanvas');
+        if (!canvas) return;
+        var link = document.createElement('a');
         link.download = 'past-life-result.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
 
         if (typeof gtag === 'function') {
-            gtag('event', 'save_image', { event_category: 'engagement', event_label: state.resultType?.id });
+            gtag('event', 'save_image', { event_category: 'engagement', event_label: state.resultType });
         }
     }
 
     function retry() {
         resetScores();
+        buildTimeline();
         showScreen('intro');
     }
 
     function renderRecommend() {
-        const wrap = $('recommend-list');
+        var wrap = $('recommend-list');
         if (!wrap) return;
 
-        // Get i18n names if available
-        const getName = (key) => {
-            return (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('recommendations.' + key) : key;
-        };
-
-        const items = [
-            { emoji: '🎮', name: getName('idleClicker'), url: 'https://dopabrain.com/idle-clicker-game/' },
-            { emoji: '😊', name: getName('emojiMerge'), url: 'https://dopabrain.com/emoji-merge/' },
-            { emoji: '🏃', name: getName('zigzagRunner'), url: 'https://dopabrain.com/zigzag-runner/' },
-            { emoji: '💕', name: getName('loveFrequency'), url: 'https://dopabrain.com/love-frequency/' },
-            { emoji: '🌡️', name: getName('emotionTemp'), url: 'https://dopabrain.com/emotion-temp/' },
-            { emoji: '💕', name: getName('mbtiLove'), url: 'https://dopabrain.com/mbti-love/' },
-            { emoji: '🧠', name: getName('brainType'), url: 'https://dopabrain.com/brain-type/' },
-            { emoji: '🎰', name: getName('lottery'), url: 'https://dopabrain.com/lottery-generator/' },
-            { emoji: '🎵', name: getName('whiteNoise'), url: 'https://dopabrain.com/white-noise/' }
+        var items = [
+            { emoji: '\u{1F3AE}', nameKey: 'recommendations.idleClicker', url: 'https://dopabrain.com/idle-clicker-game/' },
+            { emoji: '\u{1F60A}', nameKey: 'recommendations.emojiMerge', url: 'https://dopabrain.com/emoji-merge/' },
+            { emoji: '\u{1F3C3}', nameKey: 'recommendations.zigzagRunner', url: 'https://dopabrain.com/zigzag-runner/' },
+            { emoji: '\u{1F495}', nameKey: 'recommendations.loveFrequency', url: 'https://dopabrain.com/love-frequency/' },
+            { emoji: '\u{1F321}\uFE0F', nameKey: 'recommendations.emotionTemp', url: 'https://dopabrain.com/emotion-temp/' },
+            { emoji: '\u{1F495}', nameKey: 'recommendations.mbtiLove', url: 'https://dopabrain.com/mbti-love/' },
+            { emoji: '\u{1F9E0}', nameKey: 'recommendations.brainType', url: 'https://dopabrain.com/brain-type/' },
+            { emoji: '\u{1F3B0}', nameKey: 'recommendations.lottery', url: 'https://dopabrain.com/lottery-generator/' },
+            { emoji: '\u{1F3B5}', nameKey: 'recommendations.whiteNoise', url: 'https://dopabrain.com/white-noise/' }
         ];
-        wrap.innerHTML = items.map(it =>
-            `<a href="${it.url}" class="compat-item" style="text-decoration:none;color:inherit" target="_blank">
-                <span class="compat-emoji">${it.emoji}</span>
-                <div class="compat-info">
-                    <div class="compat-name">${it.name}</div>
-                </div>
-            </a>`
-        ).join('');
+
+        wrap.innerHTML = items.map(function(it) {
+            return '<a href="' + it.url + '" class="compat-item" style="text-decoration:none;color:inherit" target="_blank">' +
+                '<span class="compat-emoji">' + it.emoji + '</span>' +
+                '<div class="compat-info"><div class="compat-name">' + t(it.nameKey) + '</div></div>' +
+                '</a>';
+        }).join('');
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    // Expose for language change callback
+    window.PastLifeApp = {
+        onLanguageChange: function() {
+            // If on result screen, re-render
+            if (state.resultType && screens.result && screens.result.classList.contains('active')) {
+                renderResult();
+            }
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
         init();
 
-        // Theme toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            const savedTheme = localStorage.getItem('app-theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
-            themeToggle.addEventListener('click', () => {
-                const current = document.documentElement.getAttribute('data-theme') || 'dark';
-                const next = current === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', next);
-                localStorage.setItem('app-theme', next);
-                themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
-            });
-        }
-
-        const loader = document.getElementById('app-loader');
+        var loader = document.getElementById('app-loader');
         if (loader) {
             loader.classList.add('hidden');
-            setTimeout(() => loader.remove(), 300);
+            setTimeout(function() { loader.remove(); }, 300);
         }
     });
 })();

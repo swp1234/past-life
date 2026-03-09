@@ -1,71 +1,30 @@
 {
-  "app": {
-    "title": "Teste de Profissão de Vidas Passadas - Quem Você Era?",
-    "description": "Descubra sua ocupação em vidas passadas em apenas 10 questões! Cavaleiro, Capitão Pirata, Pintor da Renascença... 8 tipos e compatibilidade. Faça o teste agora!"
+  "app": { "title": "Teste de Vida Passada - Viagem pelo Portal do Tempo", "description": "Abra o Portal do Tempo e viaje por 6 eras. Do Egito Antigo a era moderna, suas escolhas revelam sua profissao de vida passada!", "skipLink": "Pular para o conteudo", "loading": "Carregando..." },
+  "intro": { "title": "Viagem pelo Portal do Tempo", "subtitle": "Atravesse o Portal do Tempo.<br>Suas escolhas atraves das eras revelarao quem voce foi.", "quickTest": "6 eras para viajar", "participantCount": " viajaram", "startButton": "Entrar no Portal", "ctaSub": "Compartilhe sua vida passada com amigos", "era1": "Egito Antigo", "era2": "Europa Medieval", "era3": "Renascimento", "era4": "Era das Exploracoes", "era5": "Revolucao Industrial", "era6": "Era Moderna", "discover1": "\uD83C\uDF0A Viaje por 6 eras historicas", "discover2": "\u2694\uFE0F Faca escolhas cruciais em cada era", "discover3": "\uD83D\uDC51 Descubra sua profissao de vida passada" },
+  "eras": {
+    "egypt": { "year": "3000 a.C.", "title": "Egito Antigo", "scene": "A luz da lua se derrama entre as colunas de pedra de um grande templo. A cerimonia de coroacao do Farao esta prestes a comecar. Milhares de olhares estao fixos em voce.", "choiceAIcon": "\uD83D\uDD25", "choiceA": "Liderar o ritual", "choiceBIcon": "\uD83D\uDCDC", "choiceB": "Registrar o conhecimento" },
+    "medieval": { "year": "1200 d.C.", "title": "Europa Medieval", "scene": "A neblina se agarra as muralhas do castelo. Ao longe, trombetas de guerra soam, enquanto rosas florescem no patio. O momento de escolher chegou.", "choiceAIcon": "\u2694\uFE0F", "choiceA": "Empunhar a espada", "choiceBIcon": "\uD83C\uDF3F", "choiceB": "Cuidar do jardim" },
+    "renaissance": { "year": "1500 d.C.", "title": "Renascimento", "scene": "Um atelie florentino se enche com o aroma de tinta. Pela janela, navios de expedicao se preparam para zarpar rumo a novos continentes.", "choiceAIcon": "\uD83C\uDFA8", "choiceA": "Criar arte", "choiceBIcon": "\uD83D\uDCB0", "choiceB": "Financiar a expedicao" },
+    "exploration": { "year": "1700 d.C.", "title": "Era das Exploracoes", "scene": "Velas tremulam em um navio ancorado no porto. Um mundo desconhecido espera alem do mar, enquanto no observatorio uma nova constelacao foi descoberta.", "choiceAIcon": "\u2693", "choiceA": "Zarpar", "choiceBIcon": "\u2B50", "choiceB": "Mapear as estrelas" },
+    "industrial": { "year": "1850 d.C.", "title": "Revolucao Industrial", "scene": "Motores a vapor rugem e fumaca sobe das chamines das fabricas. Enquanto isso, no campo, as pessoas ainda acreditam no poder de cura da natureza.", "choiceAIcon": "\u2699\uFE0F", "choiceA": "Construir a maquina", "choiceBIcon": "\uD83D\uDC9A", "choiceB": "Curar as pessoas" },
+    "modern": { "year": "1920 d.C.", "title": "Era Moderna", "scene": "O jazz preenche uma noite urbana deslumbrante. Luzes do teatro brilham, enquanto em um cafe tranquilo alguem escreve palavras que mudarao o mundo.", "choiceAIcon": "\uD83C\uDFAD", "choiceA": "Brilhar no palco", "choiceBIcon": "\u270D\uFE0F", "choiceB": "Escrever na solidao" }
   },
-  "intro": {
-    "title": "Teste de Profissão de Vidas Passadas",
-    "subtitle": "Que tipo de vida você viveu no passado?<br>Descubra sua vida passada em 10 questões!",
-    "quickTest": "Completa em 30 segundos!",
-    "participantCount": "participantes",
-    "startButton": "Começar Agora",
-    "ctaSub": "Compartilhe seus resultados nas redes sociais",
-    "tags": {
-      "knight": "🗡️ Cavaleiro",
-      "scholar": "📜 Estudioso",
-      "painter": "🎨 Pintor",
-      "pirate": "🏴‍☠️ Pirata",
-      "priest": "🔮 Sacerdote",
-      "explorer": "🧭 Explorador"
-    }
+  "transition": { "traveling": "Viajando no tempo..." },
+  "reveal": { "closing": "O portal se fecha...", "past": "Sua vida passada e revelada" },
+  "result": { "label": "Em uma vida passada, voce foi...", "strengthLabel": "Pontos fortes", "weaknessLabel": "Pontos fracos", "echoesTitle": "Ecos na sua vida atual", "compatTitle": "Companheiros de vida passada", "compatPercent": "% compatibilidade", "recommendTitle": "Voce tambem pode gostar" },
+  "types": {
+    "knight": { "name": "Comandante Cavaleiro", "era": "Europa Medieval (sec. XII) \u00B7 Normandia, Franca", "description": "Sua vida passada foi um Comandante Cavaleiro da Europa Medieval! Sempre liderava da frente e considerava proteger os fracos seu dever sagrado.", "quote": "\u201CEspadas enferrujam, mas a honra e eterna\u201D", "strength1": "Coragem", "strength2": "Lealdade", "strength3": "Lideranca", "strength4": "Decisao", "weakness1": "Teimosia", "weakness2": "Cargas temerarias", "echo1": "Forte senso de justica", "echo2": "Brilha em papeis de lideranca", "echo3": "Instinto protetor forte", "echo4": "Confianca e lealdade sao valores supremos", "echoIcon1": "\u2694\uFE0F", "echoIcon2": "\uD83D\uDC51", "echoIcon3": "\uD83D\uDEE1\uFE0F", "echoIcon4": "\uD83E\uDD1D" },
+    "scholar": { "name": "Erudito Real", "era": "Egito Antigo (sec. XV a.C.) \u00B7 Tebas", "description": "Sua vida passada foi um Erudito Real do Egito Antigo! Registrava historia ao lado do Farao e acumulava sabedoria observando as estrelas.", "quote": "\u201CO conhecimento e o verdadeiro poder\u201D", "strength1": "Sabedoria", "strength2": "Observacao", "strength3": "Paciencia", "strength4": "Analise", "weakness1": "Indecisao", "weakness2": "Cautela excessiva", "echo1": "Ama aprender e pensar profundamente", "echo2": "Excelente em planejamento sistematico", "echo3": "Melhor desempenho em ambientes tranquilos", "echo4": "Encontra satisfacao em registrar e organizar", "echoIcon1": "\uD83D\uDCDA", "echoIcon2": "\uD83D\uDCCB", "echoIcon3": "\uD83E\uDDD8", "echoIcon4": "\u270D\uFE0F" },
+    "painter": { "name": "Pintor Renascentista", "era": "Renascimento (sec. XV) \u00B7 Florenca, Italia", "description": "Sua vida passada foi um genio pintor do Renascimento! Capturava a beleza do mundo em tela, dominando luz e sombra com maestria.", "quote": "\u201CO mundo renasce na ponta do meu pincel\u201D", "strength1": "Criatividade", "strength2": "Senso estetico", "strength3": "Sensibilidade", "strength4": "Foco", "weakness1": "Pouco pratico", "weakness2": "Inconstante", "echo1": "Emocionalmente rico e atraido pela beleza", "echo2": "Transborda ideias originais", "echo3": "Altos padroes esteticos no dia a dia", "echo4": "Expressa emocoes honestamente", "echoIcon1": "\uD83C\uDFA8", "echoIcon2": "\uD83D\uDCA1", "echoIcon3": "\u2728", "echoIcon4": "\uD83D\uDC96" },
+    "royal": { "name": "Monarca Sabio", "era": "Imperio Bizantino (sec. VI) \u00B7 Constantinopla", "description": "Sua vida passada foi um Monarca Sabio do Imperio Bizantino! Governava um vasto imperio com excelencia em diplomacia e assuntos internos.", "quote": "\u201CSo quem suporta o peso da coroa e verdadeiro rei\u201D", "strength1": "Carisma", "strength2": "Diplomacia", "strength3": "Comando", "strength4": "Julgamento", "weakness1": "Solidao", "weakness2": "Desconfianca", "echo1": "Presenca de lideranca natural", "echo2": "As pessoas te seguem naturalmente", "echo3": "Brilha ao tomar decisoes importantes", "echo4": "Pensamento estrategico excelente", "echoIcon1": "\uD83D\uDC51", "echoIcon2": "\uD83C\uDF1F", "echoIcon3": "\u2696\uFE0F", "echoIcon4": "\uD83C\uDFAF" },
+    "explorer": { "name": "Grande Explorador", "era": "Era das Exploracoes (sec. XVI) \u00B7 Lisboa, Portugal", "description": "Sua vida passada foi um Explorador da Era dos Descobrimentos! Icou velas rumo a mares desconhecidos e descobriu terras nunca antes visitadas.", "quote": "\u201CAlem do horizonte ha um mundo novo\u201D", "strength1": "Aventureiro", "strength2": "Adaptabilidade", "strength3": "Otimismo", "strength4": "Coragem", "weakness1": "Inquietacao", "weakness2": "Falta de planejamento", "echo1": "Ama novas experiencias e desafios", "echo2": "Atraido por viagens e culturas estrangeiras", "echo3": "Forte desejo de quebrar a rotina", "echo4": "Espirito livre de coracao", "echoIcon1": "\uD83C\uDF0D", "echoIcon2": "\u2708\uFE0F", "echoIcon3": "\uD83D\uDE80", "echoIcon4": "\uD83C\uDF2C\uFE0F" },
+    "healer": { "name": "Curandeiro da Floresta", "era": "Era Celta (sec. V) \u00B7 Irlanda/Escocia", "description": "Sua vida passada foi um Curandeiro Celta! Coletava ervas na floresta profunda e cuidava dos doentes com rituais de cura lunares.", "quote": "\u201CPara cada ferida, ha uma erva adequada\u201D", "strength1": "Empatia", "strength2": "Paciencia", "strength3": "Intuicao", "strength4": "Dom de cura", "weakness1": "Auto-sacrificio", "weakness2": "Desgaste emocional", "echo1": "Empatia excepcional e le emocoes bem", "echo2": "Aptidao para aconselhamento, medicina ou educacao", "echo3": "Recarrega energia na natureza", "echo4": "E o conselheiro que todos procuram", "echoIcon1": "\uD83D\uDC9A", "echoIcon2": "\uD83C\uDF3F", "echoIcon3": "\uD83C\uDF33", "echoIcon4": "\uD83E\uDE79" },
+    "oracle": { "name": "Oraculo do Templo", "era": "Grecia Antiga (sec. V a.C.) \u00B7 Delfos", "description": "Sua vida passada foi um Oraculo do Templo da Grecia Antiga! Entregava profecias no Templo de Delfos e lia o destino nas estrelas.", "quote": "\u201CFeche os olhos para ver o que realmente existe\u201D", "strength1": "Intuicao", "strength2": "Perspicacia", "strength3": "Meditacao", "strength4": "Carisma mistico", "weakness1": "Distanciamento", "weakness2": "Solidao excessiva", "echo1": "Intuicao forte e ve a essencia das coisas", "echo2": "Interesse em psicologia, filosofia e espiritualidade", "echo3": "Precisa absolutamente de tempo sozinho", "echo4": "Le emocoes ocultas das pessoas", "echoIcon1": "\uD83D\uDD2E", "echoIcon2": "\uD83D\uDCDA", "echoIcon3": "\uD83C\uDF19", "echoIcon4": "\uD83D\uDC41\uFE0F" },
+    "pirate": { "name": "Capitao Pirata", "era": "Era de Ouro da Pirataria (sec. XVII) \u00B7 Caribe", "description": "Sua vida passada foi um Capitao Pirata do Caribe! Com paixao ardente pela liberdade, navegava os mares sem obedecer a ninguem.", "quote": "\u201CNo mar, eu sou o rei\u201D", "strength1": "Ousadia", "strength2": "Espirito livre", "strength3": "Esperteza", "strength4": "Carisma", "weakness1": "Impulsivo", "weakness2": "Odeia regras", "echo1": "Recusa uma vida convencional", "echo2": "Caminha seu proprio caminho", "echo3": "Confia no instinto mais que nas regras", "echo4": "Um toque de rebeldia e seu charme", "echoIcon1": "\uD83C\uDFF4\u200D\u2620\uFE0F", "echoIcon2": "\uD83C\uDF0A", "echoIcon3": "\u26A1", "echoIcon4": "\uD83D\uDD25" }
   },
-  "quiz": {
-    "questionCounter": "/ 10"
-  },
-  "loading": {
-    "mainText": "Explorando memórias de vidas passadas...",
-    "subText": "Viajando através do fluxo do tempo"
-  },
-  "result": {
-    "label": "Sua vida passada era...",
-    "strengthLabel": "Pontos Fortes",
-    "weaknessLabel": "Pontos Fracos",
-    "compatibilityTitle": "Top 3 Compatibilidade de Vidas Passadas",
-    "premiumTitle": "Sua História de Vidas Passadas",
-    "premiumDesc": "Descubra a história dramática de sua vida passada<br>e conselhos para sua vida atual",
-    "premiumButton": "Ler História Completa",
-    "modernLifeTitle": "Quem Você É Agora",
-    "recommendTitle": "Você Também Pode Gostar",
-    "compatibilityPercent": "% compatibilidade"
-  },
-  "canvas": {
-    "strengthPrefix": "Pontos Fortes: "
-  },
-  "share": {
-    "title": "Teste de Profissão de Vidas Passadas",
-    "copied": "Resultado copiado para a área de transferência!",
-    "copyPrompt": "Copie o texto abaixo:"
-  },
-  "buttons": {
-    "share": "Compartilhar Resultados",
-    "save": "Salvar Imagem",
-    "retry": "Tentar Novamente"
-  },
-  "recommendations": {
-    "idleClicker": "Jogo Idle Clicker",
-    "emojiMerge": "Jogo Emoji Merge",
-    "zigzagRunner": "Jogo Zigzag Runner",
-    "loveFrequency": "Teste Love Frequency",
-    "emotionTemp": "Teste Emotion Temperature",
-    "mbtiLove": "Compatibilidade MBTI Love",
-    "brainType": "Teste Brain Type",
-    "lottery": "Gerador de Números de Loteria",
-    "whiteNoise": "Reprodutor de Ruído Branco"
-  },
-  "ad": {
-    "waitText": "A história detalhada será revelada em breve"
-  },
-  "game": {
-    "back": "DopaBrain Início"
-  }
+  "share": { "title": "Teste de Vida Passada", "template": "{emoji} Apos viajar pelo Portal do Tempo, minha vida passada foi {type} em {era}! Qual e a sua?", "copied": "Resultado copiado!", "copyPrompt": "Copie o texto:" },
+  "buttons": { "share": "Compartilhar", "save": "Salvar imagem", "retry": "Viajar de novo" },
+  "recommendations": { "idleClicker": "Jogo Idle Clicker", "emojiMerge": "Emoji Merge", "zigzagRunner": "Zigzag Runner", "loveFrequency": "Teste Frequencia do Amor", "emotionTemp": "Termometro Emocional", "mbtiLove": "Compatibilidade MBTI", "brainType": "Teste Tipo de Cerebro", "lottery": "Gerador de Loteria", "whiteNoise": "Ruido Branco" },
+  "ads": { "banner": "AREA DE ANUNCIOS" },
+  "game": { "back": "Inicio DopaBrain" }
 }

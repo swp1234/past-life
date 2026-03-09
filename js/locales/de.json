@@ -1,71 +1,30 @@
 {
-  "app": {
-    "title": "Früheres Leben Beruf Test - Wer warst du?",
-    "description": "Entdecke deinen früheren Beruf in nur 10 Fragen! Ritter, Piratenkaptän, Renaissance-Maler... 8 Typen und Kompatibilität. Mach den Test jetzt!"
+  "app": { "title": "Frueheres Leben Test - Zeitportal-Reise", "description": "Oeffne das Zeitportal und reise durch 6 Epochen. Vom Alten Aegypten bis zur Moderne - deine Entscheidungen enthullen deinen Beruf im frueheren Leben!", "skipLink": "Zum Inhalt springen", "loading": "Wird geladen..." },
+  "intro": { "title": "Zeitportal-Reise", "subtitle": "Tritt durch das Zeitportal.<br>Deine Entscheidungen durch die Epochen enthullen, wer du warst.", "quickTest": "6 Epochen bereisen", "participantCount": " sind gereist", "startButton": "Portal betreten", "ctaSub": "Teile dein frueheres Leben mit Freunden", "era1": "Altes Aegypten", "era2": "Mittelalterliches Europa", "era3": "Renaissance", "era4": "Zeitalter der Entdeckungen", "era5": "Industrielle Revolution", "era6": "Fruehe Moderne", "discover1": "\uD83C\uDF0A Reise durch 6 historische Epochen", "discover2": "\u2694\uFE0F Treffe entscheidende Wahlen", "discover3": "\uD83D\uDC51 Entdecke deinen Beruf im frueheren Leben" },
+  "eras": {
+    "egypt": { "year": "3000 v. Chr.", "title": "Altes Aegypten", "scene": "Mondlicht ergiesst sich zwischen den Steinsaeulen eines grossen Tempels. Die Kroenungszeremonie des Pharaos steht bevor. Tausende Augen sind auf dich gerichtet.", "choiceAIcon": "\uD83D\uDD25", "choiceA": "Das Ritual leiten", "choiceBIcon": "\uD83D\uDCDC", "choiceB": "Wissen aufzeichnen" },
+    "medieval": { "year": "1200 n. Chr.", "title": "Mittelalterliches Europa", "scene": "Nebel umhuellt die Burgmauern. In der Ferne erklingen Kriegstrompeten, waehrend Rosen im Innenhof bluehen. Der Moment der Entscheidung ist gekommen.", "choiceAIcon": "\u2694\uFE0F", "choiceA": "Das Schwert ergreifen", "choiceBIcon": "\uD83C\uDF3F", "choiceB": "Den Garten pflegen" },
+    "renaissance": { "year": "1500 n. Chr.", "title": "Renaissance", "scene": "Eine florentinische Werkstatt ist erfuellt vom Duft der Farben. Durch das Fenster bereiten Expeditionsschiffe die Abfahrt zu neuen Kontinenten vor.", "choiceAIcon": "\uD83C\uDFA8", "choiceA": "Kunst erschaffen", "choiceBIcon": "\uD83D\uDCB0", "choiceB": "Die Expedition finanzieren" },
+    "exploration": { "year": "1700 n. Chr.", "title": "Zeitalter der Entdeckungen", "scene": "Segel flattern an einem Schiff im Hafen. Jenseits des Meeres wartet eine unbekannte Welt, waehrend im Observatorium eine neue Sternenkonstellation entdeckt wurde.", "choiceAIcon": "\u2693", "choiceA": "In See stechen", "choiceBIcon": "\u2B50", "choiceB": "Die Sterne kartieren" },
+    "industrial": { "year": "1850 n. Chr.", "title": "Industrielle Revolution", "scene": "Dampfmaschinen droehnen und Rauch steigt aus Fabrikschornsteinen. Auf dem Land glauben die Menschen noch an die Heilkraft der Natur.", "choiceAIcon": "\u2699\uFE0F", "choiceA": "Die Maschine bauen", "choiceBIcon": "\uD83D\uDC9A", "choiceB": "Menschen heilen" },
+    "modern": { "year": "1920 n. Chr.", "title": "Fruehe Moderne", "scene": "Jazz erfuellt eine schillernde Stadtnacht. Theaterlichter leuchten, waehrend in einem stillen Cafe jemand Worte schreibt, die die Welt veraendern werden.", "choiceAIcon": "\uD83C\uDFAD", "choiceA": "Auf der Buehne glaenzen", "choiceBIcon": "\u270D\uFE0F", "choiceB": "In Einsamkeit schreiben" }
   },
-  "intro": {
-    "title": "Früheres Leben Beruf Test",
-    "subtitle": "Welche Art von Leben hast du in deiner Vergangenheit gelebt?<br>Entdecke dein früheres Leben in 10 Fragen!",
-    "quickTest": "In 30 Sekunden abgeschlossen!",
-    "participantCount": "Teilnehmer",
-    "startButton": "Jetzt Testen",
-    "ctaSub": "Teilen Sie Ihre Ergebnisse auf Social Media",
-    "tags": {
-      "knight": "🗡️ Ritter",
-      "scholar": "📜 Gelehrter",
-      "painter": "🎨 Maler",
-      "pirate": "🏴‍☠️ Pirat",
-      "priest": "🔮 Priester",
-      "explorer": "🧭 Erforscher"
-    }
+  "transition": { "traveling": "Zeitreise laeuft..." },
+  "reveal": { "closing": "Das Portal schliesst sich...", "past": "Dein frueheres Leben wird enthuellt" },
+  "result": { "label": "In einem frueheren Leben warst du...", "strengthLabel": "Staerken", "weaknessLabel": "Schwaechen", "echoesTitle": "Echos in deinem heutigen Leben", "compatTitle": "Gefaehrten im frueheren Leben", "compatPercent": "% Kompatibilitaet", "recommendTitle": "Das koennte dir auch gefallen" },
+  "types": {
+    "knight": { "name": "Ritterkommandant", "era": "Mittelalterliches Europa (12. Jh.) \u00B7 Normandie, Frankreich", "description": "Dein frueheres Leben war ein Ritterkommandant des mittelalterlichen Europas! Du fuehrtest immer von vorne und sahst den Schutz der Schwachen als heilige Pflicht.", "quote": "\u201CSchwerter rosten, aber Ehre ist ewig\u201D", "strength1": "Mut", "strength2": "Treue", "strength3": "Fuehrung", "strength4": "Entschlossenheit", "weakness1": "Sturheit", "weakness2": "Ruecksichtslose Angriffe", "echo1": "Starkes Gerechtigkeitsgefuehl", "echo2": "Natuerlich glaenzend in Fuehrungsrollen", "echo3": "Starker Schutzinstinkt fuer Schwache", "echo4": "Vertrauen und Treue sind hoechste Werte", "echoIcon1": "\u2694\uFE0F", "echoIcon2": "\uD83D\uDC51", "echoIcon3": "\uD83D\uDEE1\uFE0F", "echoIcon4": "\uD83E\uDD1D" },
+    "scholar": { "name": "Koeniglicher Gelehrter", "era": "Altes Aegypten (15. Jh. v. Chr.) \u00B7 Theben", "description": "Dein frueheres Leben war ein koeniglicher Gelehrter des Alten Aegyptens! Du zeichnetest Geschichte neben dem Pharao auf und sammeltest Weisheit.", "quote": "\u201CWissen ist wahre Macht\u201D", "strength1": "Weisheit", "strength2": "Beobachtung", "strength3": "Geduld", "strength4": "Analytik", "weakness1": "Unentschlossenheit", "weakness2": "Uebervorsicht", "echo1": "Lernbegeistert und geniesst tiefes Denken", "echo2": "Hervorragend in systematischer Planung", "echo3": "Beste Leistung in ruhiger Umgebung", "echo4": "Zufriedenheit beim Aufzeichnen und Ordnen", "echoIcon1": "\uD83D\uDCDA", "echoIcon2": "\uD83D\uDCCB", "echoIcon3": "\uD83E\uDDD8", "echoIcon4": "\u270D\uFE0F" },
+    "painter": { "name": "Renaissance-Maler", "era": "Renaissance (15. Jh.) \u00B7 Florenz, Italien", "description": "Dein frueheres Leben war ein genialer Maler der Renaissance! Du hast die Schoenheit der Welt auf Leinwand eingefangen und Licht und Schatten meisterhaft beherrscht.", "quote": "\u201CDie Welt wird an der Spitze meines Pinsels wiedergeboren\u201D", "strength1": "Kreativitaet", "strength2": "Aesthetik", "strength3": "Sensibilitaet", "strength4": "Fokus", "weakness1": "Unpraktisch", "weakness2": "Wankelmuetig", "echo1": "Emotional reich und von Schoenheit angezogen", "echo2": "Voller origineller Ideen", "echo3": "Hohe aesthetische Standards im Alltag", "echo4": "Ehrlicher Ausdruck von Emotionen", "echoIcon1": "\uD83C\uDFA8", "echoIcon2": "\uD83D\uDCA1", "echoIcon3": "\u2728", "echoIcon4": "\uD83D\uDC96" },
+    "royal": { "name": "Weiser Monarch", "era": "Byzantinisches Reich (6. Jh.) \u00B7 Konstantinopel", "description": "Dein frueheres Leben war ein weiser Monarch des Byzantinischen Reiches! Du regiertest ein riesiges Reich mit Exzellenz in Diplomatie und inneren Angelegenheiten.", "quote": "\u201CNur wer das Gewicht der Krone traegt, ist wahrer Herrscher\u201D", "strength1": "Charisma", "strength2": "Diplomatie", "strength3": "Fuehrung", "strength4": "Urteilsvermoegen", "weakness1": "Einsamkeit", "weakness2": "Misstrauen", "echo1": "Natuerliche Fuehrungspraesenz", "echo2": "Menschen folgen dir natuerlich", "echo3": "Glaenzt bei wichtigen Entscheidungen", "echo4": "Hervorragendes strategisches Denken", "echoIcon1": "\uD83D\uDC51", "echoIcon2": "\uD83C\uDF1F", "echoIcon3": "\u2696\uFE0F", "echoIcon4": "\uD83C\uDFAF" },
+    "explorer": { "name": "Grosser Entdecker", "era": "Zeitalter der Entdeckungen (16. Jh.) \u00B7 Lissabon, Portugal", "description": "Dein frueheres Leben war ein Entdecker des Zeitalters der Entdeckungen! Du setztest Segel zu unbekannten Meeren und entdecktest Laender, die nie zuvor besucht wurden.", "quote": "\u201CJenseits des Horizonts liegt eine neue Welt\u201D", "strength1": "Abenteuerlust", "strength2": "Anpassung", "strength3": "Optimismus", "strength4": "Mut", "weakness1": "Rastlosigkeit", "weakness2": "Planlosigkeit", "echo1": "Liebt neue Erfahrungen und Herausforderungen", "echo2": "Von Reisen und fremden Kulturen angezogen", "echo3": "Starker Drang, aus der Routine auszubrechen", "echo4": "Freier Geist im Herzen", "echoIcon1": "\uD83C\uDF0D", "echoIcon2": "\u2708\uFE0F", "echoIcon3": "\uD83D\uDE80", "echoIcon4": "\uD83C\uDF2C\uFE0F" },
+    "healer": { "name": "Waldheiler", "era": "Keltische Aera (5. Jh.) \u00B7 Irland/Schottland", "description": "Dein frueheres Leben war ein keltischer Heiler! Du sammeltest Kraeuter im tiefen Wald und pflegtest die Kranken mit Mondzyklus-Heilritualen.", "quote": "\u201CFuer jede Wunde gibt es ein passendes Kraut\u201D", "strength1": "Empathie", "strength2": "Geduld", "strength3": "Intuition", "strength4": "Heilende Beruehrung", "weakness1": "Selbstaufopferung", "weakness2": "Emotionale Erschoepfung", "echo1": "Aussergewoehnliche Empathie", "echo2": "Eignung fuer Beratung, Medizin oder Bildung", "echo3": "Aufladung in der Natur", "echo4": "Anlaufstelle fuer Ratschlaege", "echoIcon1": "\uD83D\uDC9A", "echoIcon2": "\uD83C\uDF3F", "echoIcon3": "\uD83C\uDF33", "echoIcon4": "\uD83E\uDE79" },
+    "oracle": { "name": "Tempelorakel", "era": "Antikes Griechenland (5. Jh. v. Chr.) \u00B7 Delphi", "description": "Dein frueheres Leben war ein Tempelorakel des Antiken Griechenlands! Du ueberbrachtest Prophezeiungen im Tempel von Delphi.", "quote": "\u201CSchliesse die Augen, um die Wahrheit zu sehen\u201D", "strength1": "Intuition", "strength2": "Einsicht", "strength3": "Meditation", "strength4": "Mystisches Charisma", "weakness1": "Distanziertheit", "weakness2": "Uebertriebene Einsamkeit", "echo1": "Starke Intuition und sieht das Wesen der Dinge", "echo2": "Interesse an Psychologie, Philosophie und Spiritualitaet", "echo3": "Braucht unbedingt Zeit allein", "echo4": "Liest verborgene Emotionen der Menschen", "echoIcon1": "\uD83D\uDD2E", "echoIcon2": "\uD83D\uDCDA", "echoIcon3": "\uD83C\uDF19", "echoIcon4": "\uD83D\uDC41\uFE0F" },
+    "pirate": { "name": "Piratenkapitaen", "era": "Goldenes Zeitalter der Piraterie (17. Jh.) \u00B7 Karibik", "description": "Dein frueheres Leben war ein Piratenkapitaen der Karibik! Mit brennender Leidenschaft fuer Freiheit segeltest du die Meere ohne jemandem zu gehorchen.", "quote": "\u201CAuf See bin ich der Koenig\u201D", "strength1": "Kuehnheit", "strength2": "Freier Geist", "strength3": "Schlagfertigkeit", "strength4": "Charisma", "weakness1": "Impulsiv", "weakness2": "Hasst Regeln", "echo1": "Verweigert ein konventionelles Leben", "echo2": "Geht den eigenen Weg", "echo3": "Vertraut Instinkt mehr als Regeln", "echo4": "Ein Hauch Rebellion ist dein Charme", "echoIcon1": "\uD83C\uDFF4\u200D\u2620\uFE0F", "echoIcon2": "\uD83C\uDF0A", "echoIcon3": "\u26A1", "echoIcon4": "\uD83D\uDD25" }
   },
-  "quiz": {
-    "questionCounter": "/ 10"
-  },
-  "loading": {
-    "mainText": "Erkunde Erinnerungen an früheres Leben...",
-    "subText": "Reise durch den Fluss der Zeit"
-  },
-  "result": {
-    "label": "Dein früheres Leben war...",
-    "strengthLabel": "Stärken",
-    "weaknessLabel": "Schwächen",
-    "compatibilityTitle": "Top 3 Kompatibilität früheres Leben",
-    "premiumTitle": "Deine Geschichte des früheren Lebens",
-    "premiumDesc": "Entdecke die dramatische Geschichte deines früheren Lebens<br>und Rat für dein heutiges Leben",
-    "premiumButton": "Vollständige Geschichte lesen",
-    "modernLifeTitle": "Wer du jetzt bist",
-    "recommendTitle": "Dir könnten auch diese gefallen",
-    "compatibilityPercent": "% Kompatibilität"
-  },
-  "canvas": {
-    "strengthPrefix": "Stärken: "
-  },
-  "share": {
-    "title": "Früheres Leben Beruf Test",
-    "copied": "Ergebnis in die Zwischenablage kopiert!",
-    "copyPrompt": "Kopieren Sie den folgenden Text:"
-  },
-  "buttons": {
-    "share": "Ergebnisse teilen",
-    "save": "Bild speichern",
-    "retry": "Nochmal versuchen"
-  },
-  "recommendations": {
-    "idleClicker": "Idle Clicker Spiel",
-    "emojiMerge": "Emoji Merge Spiel",
-    "zigzagRunner": "Zigzag Runner Spiel",
-    "loveFrequency": "Love Frequency Test",
-    "emotionTemp": "Emotion Temperature Test",
-    "mbtiLove": "MBTI Love Kompatibilität",
-    "brainType": "Brain Type Test",
-    "lottery": "Lotterienummern-Generator",
-    "whiteNoise": "Weißrausch-Player"
-  },
-  "ad": {
-    "waitText": "Detaillierte Geschichte wird in Kürze enthüllt"
-  },
-  "game": {
-    "back": "DopaBrain Startseite"
-  }
+  "share": { "title": "Frueheres Leben Test", "template": "{emoji} Nach der Zeitportal-Reise war mein frueheres Leben {type} in {era}! Was war deins?", "copied": "Ergebnis kopiert!", "copyPrompt": "Text kopieren:" },
+  "buttons": { "share": "Teilen", "save": "Bild speichern", "retry": "Nochmal reisen" },
+  "recommendations": { "idleClicker": "Idle Clicker Spiel", "emojiMerge": "Emoji Merge", "zigzagRunner": "Zigzag Runner", "loveFrequency": "Liebesfrequenz Test", "emotionTemp": "Emotionsthermometer", "mbtiLove": "MBTI Liebeskompatibilitaet", "brainType": "Gehirntyp Test", "lottery": "Lotteriegenerator", "whiteNoise": "Weisses Rauschen" },
+  "ads": { "banner": "WERBUNG" },
+  "game": { "back": "DopaBrain Startseite" }
 }

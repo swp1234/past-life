@@ -1,71 +1,30 @@
 {
-  "app": {
-    "title": "Tes Pekerjaan Kehidupan Lampau - Siapa Anda?",
-    "description": "Temukan pekerjaan kehidupan lampau Anda hanya dalam 10 pertanyaan! Ksatria, Kapten Bajak Laut, Seniman Renaisans... 8 jenis dan kompatibilitas. Ambil tesnya sekarang!"
+  "app": { "title": "Tes Kehidupan Lampau - Perjalanan Portal Waktu", "description": "Buka Portal Waktu dan jelajahi 6 era. Dari Mesir Kuno hingga era modern, pilihanmu mengungkap pekerjaan kehidupan lampau!", "skipLink": "Langsung ke konten", "loading": "Memuat..." },
+  "intro": { "title": "Perjalanan Portal Waktu", "subtitle": "Langkahi Portal Waktu.<br>Pilihanmu di setiap era akan mengungkap siapa dirimu dulu.", "quickTest": "6 era untuk dijelajahi", "participantCount": " telah bepergian", "startButton": "Masuk Portal", "ctaSub": "Bagikan kehidupan lampau dengan teman", "era1": "Mesir Kuno", "era2": "Eropa Abad Pertengahan", "era3": "Renaisans", "era4": "Era Penjelajahan", "era5": "Revolusi Industri", "era6": "Era Modern", "discover1": "\uD83C\uDF0A Jelajahi 6 era bersejarah", "discover2": "\u2694\uFE0F Buat pilihan penting di setiap era", "discover3": "\uD83D\uDC51 Temukan pekerjaan kehidupan lampau" },
+  "eras": {
+    "egypt": { "year": "3000 SM", "title": "Mesir Kuno", "scene": "Cahaya bulan menerobos pilar-pilar batu kuil agung. Upacara penobatan Firaun akan segera dimulai. Ribuan mata tertuju padamu.", "choiceAIcon": "\uD83D\uDD25", "choiceA": "Memimpin ritual", "choiceBIcon": "\uD83D\uDCDC", "choiceB": "Mencatat pengetahuan" },
+    "medieval": { "year": "1200 M", "title": "Eropa Abad Pertengahan", "scene": "Kabut menyelimuti dinding kastil. Di kejauhan, terompet perang berbunyi, sementara mawar bermekaran di halaman. Saatnya memilih.", "choiceAIcon": "\u2694\uFE0F", "choiceA": "Mengangkat pedang", "choiceBIcon": "\uD83C\uDF3F", "choiceB": "Merawat taman" },
+    "renaissance": { "year": "1500 M", "title": "Renaisans", "scene": "Bengkel Florentine dipenuhi aroma cat. Dari jendela, kapal ekspedisi bersiap berlayar menuju benua baru.", "choiceAIcon": "\uD83C\uDFA8", "choiceA": "Menciptakan seni", "choiceBIcon": "\uD83D\uDCB0", "choiceB": "Mendanai ekspedisi" },
+    "exploration": { "year": "1700 M", "title": "Era Penjelajahan", "scene": "Layar berkibar di kapal yang berlabuh di pelabuhan. Dunia tak dikenal menanti di seberang laut, sementara di observatorium, rasi bintang baru ditemukan.", "choiceAIcon": "\u2693", "choiceA": "Berlayar", "choiceBIcon": "\u2B50", "choiceB": "Memetakan bintang" },
+    "industrial": { "year": "1850 M", "title": "Revolusi Industri", "scene": "Mesin uap menggelegar dan asap mengepul dari cerobong pabrik. Sementara di pedesaan, orang masih percaya pada kekuatan penyembuhan alam.", "choiceAIcon": "\u2699\uFE0F", "choiceA": "Membangun mesin", "choiceBIcon": "\uD83D\uDC9A", "choiceB": "Menyembuhkan orang" },
+    "modern": { "year": "1920 M", "title": "Era Modern", "scene": "Musik jazz memenuhi malam kota yang gemerlap. Lampu teater bersinar, sementara di kafe yang tenang seseorang menulis kata-kata yang akan mengubah dunia.", "choiceAIcon": "\uD83C\uDFAD", "choiceA": "Bersinar di panggung", "choiceBIcon": "\u270D\uFE0F", "choiceB": "Menulis dalam kesendirian" }
   },
-  "intro": {
-    "title": "Tes Pekerjaan Kehidupan Lampau",
-    "subtitle": "Kehidupan apa yang Anda jalani di masa lalu?<br>Temukan kehidupan lampau Anda dalam 10 pertanyaan!",
-    "quickTest": "Selesai dalam 30 detik!",
-    "participantCount": "peserta",
-    "startButton": "Mulai Sekarang",
-    "ctaSub": "Bagikan hasil Anda di media sosial",
-    "tags": {
-      "knight": "🗡️ Ksatria",
-      "scholar": "📜 Cendekiawan",
-      "painter": "🎨 Pelukis",
-      "pirate": "🏴‍☠️ Bajak Laut",
-      "priest": "🔮 Pendeta",
-      "explorer": "🧭 Penjelajah"
-    }
+  "transition": { "traveling": "Melintasi waktu..." },
+  "reveal": { "closing": "Portal menutup...", "past": "Kehidupan lampau terungkap" },
+  "result": { "label": "Di kehidupan lampau, kamu adalah...", "strengthLabel": "Kekuatan", "weaknessLabel": "Kelemahan", "echoesTitle": "Gema di kehidupan sekarang", "compatTitle": "Teman kehidupan lampau", "compatPercent": "% kecocokan", "recommendTitle": "Kamu mungkin juga suka" },
+  "types": {
+    "knight": { "name": "Komandan Ksatria", "era": "Eropa Abad Pertengahan (abad XII) \u00B7 Normandia, Prancis", "description": "Kehidupan lampau kamu adalah Komandan Ksatria Eropa Abad Pertengahan! Selalu memimpin dari depan dalam pertempuran dan menganggap melindungi yang lemah sebagai tugas suci.", "quote": "\u201CPedang bisa berkarat, tapi kehormatan abadi\u201D", "strength1": "Keberanian", "strength2": "Kesetiaan", "strength3": "Kepemimpinan", "strength4": "Ketegasan", "weakness1": "Keras kepala", "weakness2": "Serangan gegabah", "echo1": "Rasa keadilan yang kuat", "echo2": "Bersinar dalam peran kepemimpinan", "echo3": "Naluri melindungi yang rentan", "echo4": "Kepercayaan dan kesetiaan adalah nilai tertinggi", "echoIcon1": "\u2694\uFE0F", "echoIcon2": "\uD83D\uDC51", "echoIcon3": "\uD83D\uDEE1\uFE0F", "echoIcon4": "\uD83E\uDD1D" },
+    "scholar": { "name": "Cendekiawan Kerajaan", "era": "Mesir Kuno (abad XV SM) \u00B7 Thebes", "description": "Kehidupan lampau kamu adalah Cendekiawan Kerajaan Mesir Kuno! Mencatat sejarah di sisi Firaun, mengamati bintang, dan mengumpulkan kebijaksanaan.", "quote": "\u201CPengetahuan adalah kekuatan sejati\u201D", "strength1": "Kebijaksanaan", "strength2": "Pengamatan", "strength3": "Kesabaran", "strength4": "Analitis", "weakness1": "Ragu-ragu", "weakness2": "Terlalu hati-hati", "echo1": "Suka belajar dan menikmati pemikiran mendalam", "echo2": "Unggul dalam perencanaan sistematis", "echo3": "Performa terbaik di lingkungan tenang", "echo4": "Menemukan kepuasan dalam mencatat dan mengorganisir", "echoIcon1": "\uD83D\uDCDA", "echoIcon2": "\uD83D\uDCCB", "echoIcon3": "\uD83E\uDDD8", "echoIcon4": "\u270D\uFE0F" },
+    "painter": { "name": "Pelukis Renaisans", "era": "Renaisans (abad XV) \u00B7 Florence, Italia", "description": "Kehidupan lampau kamu adalah pelukis jenius Renaisans! Menangkap keindahan dunia di kanvas, menguasai cahaya dan bayangan dengan sempurna.", "quote": "\u201CDunia terlahir kembali di ujung kuasku\u201D", "strength1": "Kreativitas", "strength2": "Rasa estetika", "strength3": "Kepekaan", "strength4": "Fokus", "weakness1": "Kurang praktis", "weakness2": "Berubah-ubah", "echo1": "Kaya emosi dan tertarik pada keindahan", "echo2": "Penuh ide-ide orisinal", "echo3": "Standar estetika tinggi dalam keseharian", "echo4": "Mengekspresikan emosi dengan jujur", "echoIcon1": "\uD83C\uDFA8", "echoIcon2": "\uD83D\uDCA1", "echoIcon3": "\u2728", "echoIcon4": "\uD83D\uDC96" },
+    "royal": { "name": "Penguasa Bijaksana", "era": "Kekaisaran Bizantium (abad VI) \u00B7 Konstantinopel", "description": "Kehidupan lampau kamu adalah Penguasa Bijaksana Kekaisaran Bizantium! Memerintah kerajaan luas dengan keunggulan dalam diplomasi dan urusan dalam negeri.", "quote": "\u201CHanya yang mampu menanggung beban mahkota yang menjadi raja sejati\u201D", "strength1": "Karisma", "strength2": "Diplomasi", "strength3": "Komando", "strength4": "Penilaian", "weakness1": "Kesepian", "weakness2": "Kecurigaan", "echo1": "Kehadiran kepemimpinan alami", "echo2": "Orang-orang mengikutimu secara alami", "echo3": "Bersinar saat membuat keputusan penting", "echo4": "Pemikiran strategis yang unggul", "echoIcon1": "\uD83D\uDC51", "echoIcon2": "\uD83C\uDF1F", "echoIcon3": "\u2696\uFE0F", "echoIcon4": "\uD83C\uDFAF" },
+    "explorer": { "name": "Penjelajah Agung", "era": "Era Penjelajahan (abad XVI) \u00B7 Lisbon, Portugal", "description": "Kehidupan lampau kamu adalah Penjelajah Era Penemuan! Mengibarkan layar ke laut tak dikenal dan menemukan tanah yang belum pernah dikunjungi.", "quote": "\u201CDi balik cakrawala ada dunia baru\u201D", "strength1": "Petualang", "strength2": "Adaptabilitas", "strength3": "Optimisme", "strength4": "Keberanian", "weakness1": "Gelisah", "weakness2": "Kurang perencanaan", "echo1": "Suka pengalaman dan tantangan baru", "echo2": "Tertarik pada perjalanan dan budaya asing", "echo3": "Keinginan kuat untuk keluar dari rutinitas", "echo4": "Jiwa bebas di dalam hati", "echoIcon1": "\uD83C\uDF0D", "echoIcon2": "\u2708\uFE0F", "echoIcon3": "\uD83D\uDE80", "echoIcon4": "\uD83C\uDF2C\uFE0F" },
+    "healer": { "name": "Penyembuh Hutan", "era": "Era Celtic (abad V) \u00B7 Irlandia/Skotlandia", "description": "Kehidupan lampau kamu adalah Penyembuh Celtic! Mengumpulkan herbal di hutan dalam dan merawat orang sakit dengan ritual penyembuhan berdasarkan siklus bulan.", "quote": "\u201CUntuk setiap luka, ada herbal yang cocok\u201D", "strength1": "Empati", "strength2": "Kesabaran", "strength3": "Intuisi", "strength4": "Sentuhan penyembuh", "weakness1": "Pengorbanan diri", "weakness2": "Kelelahan emosional", "echo1": "Empati luar biasa dan membaca emosi dengan baik", "echo2": "Cocok untuk konseling, medis, atau pendidikan", "echo3": "Mengisi ulang energi di alam", "echo4": "Menjadi tempat curhat bagi semua orang", "echoIcon1": "\uD83D\uDC9A", "echoIcon2": "\uD83C\uDF3F", "echoIcon3": "\uD83C\uDF33", "echoIcon4": "\uD83E\uDE79" },
+    "oracle": { "name": "Oracle Kuil", "era": "Yunani Kuno (abad V SM) \u00B7 Delphi", "description": "Kehidupan lampau kamu adalah Oracle Kuil Yunani Kuno! Menyampaikan ramalan di Kuil Delphi dan membaca takdir dari pergerakan bintang.", "quote": "\u201CTutup matamu untuk melihat apa yang sesungguhnya ada\u201D", "strength1": "Intuisi", "strength2": "Wawasan", "strength3": "Meditasi", "strength4": "Karisma mistis", "weakness1": "Keterpisahan", "weakness2": "Kesendirian berlebih", "echo1": "Intuisi kuat dan melihat esensi hal", "echo2": "Tertarik pada psikologi, filsafat, dan spiritualitas", "echo3": "Mutlak membutuhkan waktu sendiri", "echo4": "Membaca emosi tersembunyi orang", "echoIcon1": "\uD83D\uDD2E", "echoIcon2": "\uD83D\uDCDA", "echoIcon3": "\uD83C\uDF19", "echoIcon4": "\uD83D\uDC41\uFE0F" },
+    "pirate": { "name": "Kapten Bajak Laut", "era": "Zaman Keemasan Bajak Laut (abad XVII) \u00B7 Karibia", "description": "Kehidupan lampau kamu adalah Kapten Bajak Laut Karibia! Dengan gairah membara untuk kebebasan, mengarungi lautan tanpa menaati siapapun.", "quote": "\u201CDi laut, akulah rajanya\u201D", "strength1": "Keberanian", "strength2": "Jiwa bebas", "strength3": "Kecerdikan", "strength4": "Karisma", "weakness1": "Impulsif", "weakness2": "Benci aturan", "echo1": "Menolak hidup yang biasa-biasa saja", "echo2": "Berjalan di jalanmu sendiri", "echo3": "Percaya insting lebih dari aturan", "echo4": "Sedikit pemberontakan adalah pesonamu", "echoIcon1": "\uD83C\uDFF4\u200D\u2620\uFE0F", "echoIcon2": "\uD83C\uDF0A", "echoIcon3": "\u26A1", "echoIcon4": "\uD83D\uDD25" }
   },
-  "quiz": {
-    "questionCounter": "/ 10"
-  },
-  "loading": {
-    "mainText": "Menjelajahi kenangan kehidupan lampau...",
-    "subText": "Melintasi aliran waktu"
-  },
-  "result": {
-    "label": "Kehidupan lampau Anda adalah...",
-    "strengthLabel": "Kekuatan",
-    "weaknessLabel": "Kelemahan",
-    "compatibilityTitle": "3 Kompatibilitas Kehidupan Lampau Teratas",
-    "premiumTitle": "Cerita Kehidupan Lampau Anda",
-    "premiumDesc": "Temukan cerita dramatis kehidupan lampau Anda<br>dan saran untuk kehidupan saat ini",
-    "premiumButton": "Baca Cerita Lengkap",
-    "modernLifeTitle": "Siapa Anda Sekarang",
-    "recommendTitle": "Anda Mungkin Juga Menyukai",
-    "compatibilityPercent": "% kompatibilitas"
-  },
-  "canvas": {
-    "strengthPrefix": "Kekuatan: "
-  },
-  "share": {
-    "title": "Tes Pekerjaan Kehidupan Lampau",
-    "copied": "Hasil disalin ke papan klip!",
-    "copyPrompt": "Salin teks di bawah ini:"
-  },
-  "buttons": {
-    "share": "Bagikan Hasil",
-    "save": "Simpan Gambar",
-    "retry": "Coba Lagi"
-  },
-  "recommendations": {
-    "idleClicker": "Game Idle Clicker",
-    "emojiMerge": "Game Emoji Merge",
-    "zigzagRunner": "Game Zigzag Runner",
-    "loveFrequency": "Tes Love Frequency",
-    "emotionTemp": "Tes Emotion Temperature",
-    "mbtiLove": "Kompatibilitas MBTI Love",
-    "brainType": "Tes Brain Type",
-    "lottery": "Generator Angka Lotere",
-    "whiteNoise": "Pemain Kebisingan Putih"
-  },
-  "ad": {
-    "waitText": "Cerita terperinci akan diungkapkan segera"
-  },
-  "game": {
-    "back": "Beranda DopaBrain"
-  }
+  "share": { "title": "Tes Kehidupan Lampau", "template": "{emoji} Setelah melewati Portal Waktu, kehidupan lampau saya adalah {type} di {era}! Apa kehidupan lampau kamu?", "copied": "Hasil disalin!", "copyPrompt": "Salin teks di bawah:" },
+  "buttons": { "share": "Bagikan", "save": "Simpan gambar", "retry": "Perjalanan lagi" },
+  "recommendations": { "idleClicker": "Idle Clicker Game", "emojiMerge": "Emoji Merge Game", "zigzagRunner": "Zigzag Runner", "loveFrequency": "Tes Frekuensi Cinta", "emotionTemp": "Termometer Emosi", "mbtiLove": "Kecocokan MBTI", "brainType": "Tes Tipe Otak", "lottery": "Generator Lotere", "whiteNoise": "White Noise Player" },
+  "ads": { "banner": "AREA IKLAN" },
+  "game": { "back": "Beranda DopaBrain" }
 }

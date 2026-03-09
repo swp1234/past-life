@@ -1,55 +1,271 @@
 {
   "app": {
-    "title": "전생 직업 테스트 - 나의 전생은?",
-    "description": "10문항으로 알아보는 나의 전생 직업! 기사단장, 해적 선장, 르네상스 화가... 8가지 전생 유형과 궁합까지. 지금 테스트해보세요!"
+    "title": "전생 직업 테스트 - 시간의 포탈 여행",
+    "description": "시간의 포탈을 열고 6개의 시대를 여행하세요. 고대 이집트부터 근대까지, 당신의 선택이 전생의 직업을 밝혀냅니다!",
+    "skipLink": "본문으로 건너뛰기",
+    "loading": "로딩 중..."
   },
   "intro": {
-    "title": "전생 직업 테스트",
-    "subtitle": "당신은 전생에 어떤 삶을 살았을까요?<br>10가지 질문으로 알아보는 나의 전생!",
-    "quickTest": "30초에 완료!",
-    "participantCount": "명 참여",
-    "startButton": "지금 테스트하기",
-    "ctaSub": "결과는 SNS에서 공유 가능합니다",
-    "tags": {
-      "knight": "🗡️ 기사",
-      "scholar": "📜 학자",
-      "painter": "🎨 화가",
-      "pirate": "🏴‍☠️ 해적",
-      "priest": "🔮 사제",
-      "explorer": "🧭 탐험가"
+    "title": "시간의 포탈 여행",
+    "subtitle": "시간의 포탈을 통과하세요.<br>6개 시대를 여행하며 당신의 전생이 밝혀집니다.",
+    "quickTest": "6개 시대 여행",
+    "participantCount": "명 여행 완료",
+    "startButton": "포탈에 들어가기",
+    "ctaSub": "결과를 친구들과 공유하세요",
+    "era1": "고대 이집트",
+    "era2": "중세 유럽",
+    "era3": "르네상스",
+    "era4": "대항해 시대",
+    "era5": "산업혁명",
+    "era6": "근대",
+    "discover1": "\uD83C\uDF0A 6개의 역사적 시대를 여행합니다",
+    "discover2": "\u2694\uFE0F 각 시대에서 운명적 선택을 합니다",
+    "discover3": "\uD83D\uDC51 당신의 전생 직업이 밝혀집니다"
+  },
+  "eras": {
+    "egypt": {
+      "year": "기원전 3000년",
+      "title": "고대 이집트",
+      "scene": "거대한 신전의 돌기둥 사이로 달빛이 쏟아집니다. 파라오의 즉위 의식이 시작되려 합니다. 수천 명의 시선이 당신에게 쏠려 있습니다.",
+      "choiceAIcon": "\uD83D\uDD25",
+      "choiceA": "의식을 이끌다",
+      "choiceBIcon": "\uD83D\uDCDC",
+      "choiceB": "지식을 기록하다"
+    },
+    "medieval": {
+      "year": "서기 1200년",
+      "title": "중세 유럽",
+      "scene": "성벽 아래 안개가 자욱합니다. 멀리서 전투의 나팔 소리가 울리고, 성 안뜰에서는 장미가 피어 있습니다. 선택의 순간입니다.",
+      "choiceAIcon": "\u2694\uFE0F",
+      "choiceA": "검을 들다",
+      "choiceBIcon": "\uD83C\uDF3F",
+      "choiceB": "정원을 돌보다"
+    },
+    "renaissance": {
+      "year": "서기 1500년",
+      "title": "르네상스",
+      "scene": "피렌체의 공방에 물감 냄새가 가득합니다. 창밖으로는 새로운 대륙을 향한 탐험선이 출항을 준비하고 있습니다.",
+      "choiceAIcon": "\uD83C\uDFA8",
+      "choiceA": "예술을 창조하다",
+      "choiceBIcon": "\uD83D\uDCB0",
+      "choiceB": "탐험을 후원하다"
+    },
+    "exploration": {
+      "year": "서기 1700년",
+      "title": "대항해 시대",
+      "scene": "항구에 정박한 범선의 돛이 바람에 펄럭입니다. 바다 너머 미지의 세계가 기다리고, 천문대에서는 새로운 별자리가 발견되었습니다.",
+      "choiceAIcon": "\u2693",
+      "choiceA": "항해를 떠나다",
+      "choiceBIcon": "\u2B50",
+      "choiceB": "별을 관측하다"
+    },
+    "industrial": {
+      "year": "서기 1850년",
+      "title": "산업혁명",
+      "scene": "증기기관의 굉음이 울리고, 공장의 굴뚝에서 연기가 피어오릅니다. 한편 시골에서는 아직 자연의 치유력을 믿는 사람들이 있습니다.",
+      "choiceAIcon": "\u2699\uFE0F",
+      "choiceA": "기계를 만들다",
+      "choiceBIcon": "\uD83D\uDC9A",
+      "choiceB": "사람을 치유하다"
+    },
+    "modern": {
+      "year": "서기 1920년",
+      "title": "근대",
+      "scene": "재즈 음악이 흐르는 화려한 도시의 밤. 극장의 조명이 빛나고, 조용한 카페에서는 누군가 세상을 바꿀 글을 쓰고 있습니다.",
+      "choiceAIcon": "\uD83C\uDFAD",
+      "choiceA": "무대에서 빛나다",
+      "choiceBIcon": "\u270D\uFE0F",
+      "choiceB": "고독 속에 글을 쓰다"
     }
   },
-  "quiz": {
-    "questionCounter": "/ 10"
+  "transition": {
+    "traveling": "시간을 이동 중..."
   },
-  "loading": {
-    "mainText": "전생의 기억을 탐색 중...",
-    "subText": "시간의 흐름을 거슬러 올라가고 있습니다"
+  "reveal": {
+    "closing": "포탈이 닫힙니다...",
+    "past": "당신의 전생이 밝혀집니다"
   },
   "result": {
     "label": "당신의 전생은...",
     "strengthLabel": "강점",
     "weaknessLabel": "약점",
-    "compatibilityTitle": "전생 궁합 TOP 3",
-    "premiumTitle": "전생의 상세 이야기",
-    "premiumDesc": "당신의 전생에서 일어난 드라마틱한 이야기와<br>현생에 대한 조언을 확인하세요",
-    "premiumButton": "상세 이야기 보기",
-    "modernLifeTitle": "현생에서의 당신",
-    "recommendTitle": "이것도 해보세요",
-    "compatibilityPercent": "% 궁합"
+    "echoesTitle": "현생에 남은 전생의 흔적",
+    "compatTitle": "전생의 동반자",
+    "compatPercent": "% 궁합",
+    "recommendTitle": "이것도 해보세요"
   },
-  "canvas": {
-    "strengthPrefix": "강점: "
+  "types": {
+    "knight": {
+      "name": "기사단장",
+      "era": "중세 유럽 (12세기) \u00B7 프랑스 노르망디",
+      "description": "당신의 전생은 중세 유럽의 기사단장! 전장에서 누구보다 앞장서며, 약한 자를 지키는 것을 사명으로 여겼습니다. 충성심과 명예를 무엇보다 소중히 했고, 동료들에게는 목숨을 맡길 수 있는 든든한 존재였습니다.",
+      "quote": "\u201C칼은 녹슬어도, 명예는 영원하다\u201D",
+      "strength1": "용기",
+      "strength2": "충성심",
+      "strength3": "리더십",
+      "strength4": "결단력",
+      "weakness1": "완고함",
+      "weakness2": "때로 무모한 돌격",
+      "echo1": "불의를 보면 참지 못하는 정의감이 있습니다",
+      "echo2": "리더 역할을 맡으면 자연스럽게 빛납니다",
+      "echo3": "약자를 보호하려는 본능이 강합니다",
+      "echo4": "신뢰와 충성을 가장 중요하게 여깁니다",
+      "echoIcon1": "\u2694\uFE0F",
+      "echoIcon2": "\uD83D\uDC51",
+      "echoIcon3": "\uD83D\uDEE1\uFE0F",
+      "echoIcon4": "\uD83E\uDD1D"
+    },
+    "scholar": {
+      "name": "왕궁 학자",
+      "era": "고대 이집트 (기원전 15세기) \u00B7 이집트 테베",
+      "description": "당신의 전생은 고대 이집트의 왕궁 학자! 파라오의 곁에서 역사를 기록하고, 별을 관측하며 지혜를 축적했습니다. 파피루스에 담긴 당신의 기록은 수천 년이 지난 지금도 전해지고 있습니다.",
+      "quote": "\u201C아는 것이 진정한 힘이다\u201D",
+      "strength1": "지혜",
+      "strength2": "관찰력",
+      "strength3": "인내심",
+      "strength4": "분석력",
+      "weakness1": "우유부단함",
+      "weakness2": "지나친 신중함",
+      "echo1": "배우는 것을 좋아하고 깊이 있는 사고를 즐깁니다",
+      "echo2": "체계적으로 계획하고 실행하는 능력이 뛰어납니다",
+      "echo3": "조용한 환경에서 최고의 성과를 냅니다",
+      "echo4": "기록하고 정리하는 것에 만족감을 느낍니다",
+      "echoIcon1": "\uD83D\uDCDA",
+      "echoIcon2": "\uD83D\uDCCB",
+      "echoIcon3": "\uD83E\uDDD8",
+      "echoIcon4": "\u270D\uFE0F"
+    },
+    "painter": {
+      "name": "르네상스 화가",
+      "era": "르네상스 (15세기) \u00B7 이탈리아 피렌체",
+      "description": "당신의 전생은 르네상스 시대의 천재 화가! 캔버스 위에 세상의 아름다움을 담아냈고, 빛과 그림자를 자유자재로 다루었습니다. 예술을 통해 사람들에게 감동을 주었고, 당신의 작품은 시대를 초월한 걸작으로 남았습니다.",
+      "quote": "\u201C세상은 내 붓끝에서 다시 태어난다\u201D",
+      "strength1": "창의력",
+      "strength2": "미적 감각",
+      "strength3": "감수성",
+      "strength4": "집중력",
+      "weakness1": "현실감각 부족",
+      "weakness2": "변덕스러움",
+      "echo1": "감성이 풍부하고 아름다운 것에 끌립니다",
+      "echo2": "독창적인 아이디어가 넘칩니다",
+      "echo3": "일상에서도 미적 기준이 높습니다",
+      "echo4": "감정 표현이 솔직합니다",
+      "echoIcon1": "\uD83C\uDFA8",
+      "echoIcon2": "\uD83D\uDCA1",
+      "echoIcon3": "\u2728",
+      "echoIcon4": "\uD83D\uDC96"
+    },
+    "royal": {
+      "name": "현명한 군주",
+      "era": "비잔틴 제국 (6세기) \u00B7 콘스탄티노플",
+      "description": "당신의 전생은 비잔틴 제국의 현명한 군주! 거대한 제국을 다스리며, 외교와 내정 모두에서 탁월한 능력을 발휘했습니다. 카리스마로 사람들을 이끌었고, 법과 문화를 꽃피운 명군으로 기록되었습니다.",
+      "quote": "\u201C왕관의 무게를 감당할 자만이 진정한 왕이다\u201D",
+      "strength1": "카리스마",
+      "strength2": "외교력",
+      "strength3": "통솔력",
+      "strength4": "판단력",
+      "weakness1": "고독감",
+      "weakness2": "의심이 많음",
+      "echo1": "자연스러운 리더십과 존재감을 가지고 있습니다",
+      "echo2": "사람들이 자연스럽게 당신을 따릅니다",
+      "echo3": "중요한 결정을 내릴 때 가장 빛납니다",
+      "echo4": "전략적 사고에 능합니다",
+      "echoIcon1": "\uD83D\uDC51",
+      "echoIcon2": "\uD83C\uDF1F",
+      "echoIcon3": "\u2696\uFE0F",
+      "echoIcon4": "\uD83C\uDFAF"
+    },
+    "explorer": {
+      "name": "대항해 탐험가",
+      "era": "대항해 시대 (16세기) \u00B7 포르투갈 리스본",
+      "description": "당신의 전생은 대항해 시대의 탐험가! 미지의 바다를 향해 돛을 올리고, 누구도 가보지 못한 땅을 발견했습니다. 두려움보다 호기심이 컸고, 새로운 세계를 꿈꾸며 끊임없이 항해했습니다.",
+      "quote": "\u201C수평선 너머에 새로운 세계가 있다\u201D",
+      "strength1": "모험심",
+      "strength2": "적응력",
+      "strength3": "낙천성",
+      "strength4": "용기",
+      "weakness1": "안주하지 못함",
+      "weakness2": "무계획적",
+      "echo1": "새로운 경험과 도전을 좋아합니다",
+      "echo2": "여행과 낯선 문화에 끌립니다",
+      "echo3": "일상의 틀을 벗어나려는 욕구가 강합니다",
+      "echo4": "자유로운 영혼의 소유자입니다",
+      "echoIcon1": "\uD83C\uDF0D",
+      "echoIcon2": "\u2708\uFE0F",
+      "echoIcon3": "\uD83D\uDE80",
+      "echoIcon4": "\uD83C\uDF2C\uFE0F"
+    },
+    "healer": {
+      "name": "숲의 치유사",
+      "era": "켈트 시대 (5세기) \u00B7 아일랜드 / 스코틀랜드",
+      "description": "당신의 전생은 켈트의 치유사! 깊은 숲에서 약초를 채집하고, 아픈 이들을 돌보았습니다. 자연의 언어를 이해하고, 달의 주기에 맞춰 치유 의식을 행했습니다. 마을 사람들에게는 생명의 은인이자 영혼의 안내자였습니다.",
+      "quote": "\u201C모든 상처에는 그에 맞는 약초가 있다\u201D",
+      "strength1": "공감력",
+      "strength2": "인내심",
+      "strength3": "직관력",
+      "strength4": "치유 능력",
+      "weakness1": "자기 희생적",
+      "weakness2": "감정 소모가 큼",
+      "echo1": "공감 능력이 뛰어나고 감정을 잘 읽습니다",
+      "echo2": "상담, 의료, 교육 분야에 적성이 있습니다",
+      "echo3": "자연과 가까이할 때 에너지가 충전됩니다",
+      "echo4": "주변 사람들의 고민 상담 역할을 합니다",
+      "echoIcon1": "\uD83D\uDC9A",
+      "echoIcon2": "\uD83C\uDF3F",
+      "echoIcon3": "\uD83C\uDF33",
+      "echoIcon4": "\uD83E\uDE79"
+    },
+    "oracle": {
+      "name": "신전 사제",
+      "era": "고대 그리스 (기원전 5세기) \u00B7 그리스 델포이",
+      "description": "당신의 전생은 고대 그리스의 신전 사제! 델포이 신전에서 신탁을 전하고, 별의 움직임으로 운명을 읽었습니다. 깊은 명상과 의식을 통해 보이지 않는 세계와 소통하며, 왕들조차 당신의 조언을 구했습니다.",
+      "quote": "\u201C눈을 감아야 진정한 것이 보인다\u201D",
+      "strength1": "직관력",
+      "strength2": "통찰력",
+      "strength3": "명상",
+      "strength4": "신비로운 카리스마",
+      "weakness1": "세속과의 거리감",
+      "weakness2": "지나친 고독",
+      "echo1": "직관이 강하고 본질을 잘 꿰뚫어봅니다",
+      "echo2": "심리학, 철학, 영성에 관심이 많습니다",
+      "echo3": "혼자만의 시간이 반드시 필요합니다",
+      "echo4": "사람의 숨겨진 감정을 잘 읽습니다",
+      "echoIcon1": "\uD83D\uDD2E",
+      "echoIcon2": "\uD83D\uDCDA",
+      "echoIcon3": "\uD83C\uDF19",
+      "echoIcon4": "\uD83D\uDC41\uFE0F"
+    },
+    "pirate": {
+      "name": "해적 선장",
+      "era": "대해적 시대 (17세기) \u00B7 카리브해",
+      "description": "당신의 전생은 카리브해의 해적 선장! 자유를 향한 불꽃 같은 열정으로 바다를 누비며, 누구의 명령도 받지 않는 삶을 살았습니다. 대담하고 카리스마 넘치는 리더로, 선원들의 절대적인 신뢰를 받았습니다.",
+      "quote": "\u201C바다 위에서 나는 왕이다\u201D",
+      "strength1": "대담함",
+      "strength2": "자유로운 영혼",
+      "strength3": "순발력",
+      "strength4": "카리스마",
+      "weakness1": "충동적",
+      "weakness2": "규칙을 싫어함",
+      "echo1": "틀에 박힌 삶을 거부합니다",
+      "echo2": "자신만의 길을 걷는 자유로운 영혼입니다",
+      "echo3": "규칙보다 직감을 믿습니다",
+      "echo4": "약간의 반항심이 당신의 매력입니다",
+      "echoIcon1": "\uD83C\uDFF4\u200D\u2620\uFE0F",
+      "echoIcon2": "\uD83C\uDF0A",
+      "echoIcon3": "\u26A1",
+      "echoIcon4": "\uD83D\uDD25"
+    }
   },
   "share": {
     "title": "전생 직업 테스트",
+    "template": "{emoji} 시간의 포탈을 통과한 결과, 나의 전생은 {era}의 {type}이었다! 당신의 전생은?",
     "copied": "결과가 클립보드에 복사되었습니다!",
     "copyPrompt": "아래 텍스트를 복사하세요:"
   },
   "buttons": {
     "share": "결과 공유하기",
     "save": "이미지 저장",
-    "retry": "다시 테스트하기"
+    "retry": "다시 여행하기"
   },
   "recommendations": {
     "idleClicker": "아이들 클리커 게임",
@@ -62,8 +278,8 @@
     "lottery": "로또 번호 생성기",
     "whiteNoise": "화이트 노이즈 플레이어"
   },
-  "ad": {
-    "waitText": "잠시 후 상세 이야기가 공개됩니다"
+  "ads": {
+    "banner": "광고 영역"
   },
   "game": {
     "back": "DopaBrain 홈"

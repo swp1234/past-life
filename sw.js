@@ -1,11 +1,11 @@
-const CACHE_NAME = 'past-life-v2';
+const CACHE_NAME = 'past-life-v3';
 const ASSETS = [
     './',
     'index.html',
     'css/style.css',
     'js/app.js',
-    'js/data.js',
     'js/i18n.js',
+    'js/error-handler.js',
     'manifest.json',
     'icon-192.svg',
     'icon-512.svg',
