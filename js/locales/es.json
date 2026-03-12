@@ -26,5 +26,13 @@
   "buttons": { "share": "Compartir", "save": "Guardar imagen", "retry": "Viajar de nuevo" },
   "recommendations": { "idleClicker": "Juego Idle Clicker", "emojiMerge": "Emoji Merge", "zigzagRunner": "Zigzag Runner", "loveFrequency": "Test Frecuencia de Amor", "emotionTemp": "Termometro Emocional", "mbtiLove": "Compatibilidad MBTI", "brainType": "Test Tipo de Cerebro", "lottery": "Generador de Loteria", "whiteNoise": "Ruido Blanco" },
   "ads": { "banner": "AREA DE ANUNCIOS" },
-  "game": { "back": "Inicio DopaBrain" }
+  "game": { "back": "Inicio DopaBrain" },
+  "error": {
+    "storage": "Algunas funciones pueden estar limitadas en modo privado.",
+    "data": "Error al cargar datos. Actualice la página.",
+    "canvas": "Problema de renderizado. Inténtelo de nuevo.",
+    "audio": "Audio no disponible. Puede continuar.",
+    "network": "Verifique su conexión e inténtelo de nuevo.",
+    "general": "Algo salió mal. Actualice o inténtelo de nuevo."
+  }
 }

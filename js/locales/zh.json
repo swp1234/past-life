@@ -185,5 +185,13 @@
     "brainType": "大脑类型测试", "lottery": "彩票号码生成器", "whiteNoise": "白噪音播放器"
   },
   "ads": { "banner": "广告区域" },
-  "game": { "back": "DopaBrain首页" }
+  "game": { "back": "DopaBrain首页" },
+  "error": {
+    "storage": "隐私模式下部分功能可能受限。",
+    "data": "数据加载错误，请刷新页面。",
+    "canvas": "图形渲染问题，请重试。",
+    "audio": "音频不可用，可继续使用。",
+    "network": "请检查网络连接后重试。",
+    "general": "出现问题，请刷新或重试。"
+  }
 }

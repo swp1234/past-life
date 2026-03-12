@@ -26,5 +26,13 @@
   "buttons": { "share": "Bagikan", "save": "Simpan gambar", "retry": "Perjalanan lagi" },
   "recommendations": { "idleClicker": "Idle Clicker Game", "emojiMerge": "Emoji Merge Game", "zigzagRunner": "Zigzag Runner", "loveFrequency": "Tes Frekuensi Cinta", "emotionTemp": "Termometer Emosi", "mbtiLove": "Kecocokan MBTI", "brainType": "Tes Tipe Otak", "lottery": "Generator Lotere", "whiteNoise": "White Noise Player" },
   "ads": { "banner": "AREA IKLAN" },
-  "game": { "back": "Beranda DopaBrain" }
+  "game": { "back": "Beranda DopaBrain" },
+  "error": {
+    "storage": "Beberapa fitur mungkin terbatas dalam mode privat.",
+    "data": "Kesalahan memuat data. Silakan muat ulang.",
+    "canvas": "Masalah rendering grafis. Silakan coba lagi.",
+    "audio": "Audio tidak tersedia. Anda dapat melanjutkan.",
+    "network": "Periksa koneksi Anda dan coba lagi.",
+    "general": "Terjadi kesalahan. Muat ulang atau coba lagi."
+  }
 }

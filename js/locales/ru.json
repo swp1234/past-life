@@ -26,5 +26,13 @@
   "buttons": { "share": "Поделиться", "save": "Сохранить", "retry": "Путешествовать снова" },
   "recommendations": { "idleClicker": "Idle Clicker", "emojiMerge": "Emoji Merge", "zigzagRunner": "Zigzag Runner", "loveFrequency": "Тест частоты любви", "emotionTemp": "Эмоциональный термометр", "mbtiLove": "MBTI совместимость", "brainType": "Тип мозга", "lottery": "Генератор лотереи", "whiteNoise": "Белый шум" },
   "ads": { "banner": "РЕКЛАМА" },
-  "game": { "back": "Главная DopaBrain" }
+  "game": { "back": "Главная DopaBrain" },
+  "error": {
+    "storage": "В приватном режиме некоторые функции ограничены.",
+    "data": "Ошибка загрузки данных. Обновите страницу.",
+    "canvas": "Проблема с графикой. Попробуйте снова.",
+    "audio": "Звук недоступен. Можно продолжить.",
+    "network": "Проверьте подключение и попробуйте снова.",
+    "general": "Что-то пошло не так. Обновите или попробуйте снова."
+  }
 }
