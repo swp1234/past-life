@@ -1,4 +1,15 @@
 {
+  "meta": {
+    "title": "Free Past Life Test Online - Discover Your Past Life | DopaBrain",
+    "description": "What was your past life? Travel 6 historical eras and discover your past life job among 8 archetypes. Free online test with shareable results!"
+  },
+  "about": {
+    "toggle": "About This Test",
+    "heading1": "How the Past Life Test Works",
+    "text1": "The Past Life Test takes you on a journey through 6 pivotal historical eras: Ancient Egypt, Medieval Europe, Renaissance, Age of Exploration, Industrial Revolution, and the Early Modern Age. At each stop, you face a defining choice that shapes your past life identity. Your pattern of choices across all eras reveals which of 8 unique archetypes you were in a past life.",
+    "heading2": "Echoes of the Past in Your Present",
+    "text2": "Your past life result includes personality echoes that may resonate with your current life. These connections between past and present can offer fun insights into your natural strengths, preferences, and tendencies. Whether you discover you were a Knight, Scholar, or Pirate Captain, each result reveals something meaningful about who you are today."
+  },
   "app": {
     "title": "Past Life Test - Time Portal Journey",
     "description": "Open the Time Portal and travel through 6 historical eras. From Ancient Egypt to the Modern Age, your choices reveal your past life occupation!",
@@ -6,7 +17,7 @@
     "loading": "Loading..."
   },
   "intro": {
-    "title": "Time Portal Journey",
+    "title": "Past Life Test - Discover Who You Were",
     "subtitle": "Step through the Time Portal.<br>Your choices across the ages will reveal who you were.",
     "quickTest": "6 eras to travel",
     "participantCount": " traveled",

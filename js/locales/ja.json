@@ -6,7 +6,7 @@
     "loading": "読み込み中..."
   },
   "intro": {
-    "title": "タイムポータルの旅",
+    "title": "前世テスト - あなたは誰だった？",
     "subtitle": "タイムポータルをくぐり抜けてください。<br>6つの時代での選択があなたの前世を明らかにします。",
     "quickTest": "6つの時代を旅する",
     "participantCount": "人が旅した",
@@ -18,68 +18,73 @@
     "era4": "大航海時代",
     "era5": "産業革命",
     "era6": "近代",
-    "discover1": "\uD83C\uDF0A 6つの歴史的時代を旅します",
-    "discover2": "\u2694\uFE0F 各時代で運命的な選択をします",
-    "discover3": "\uD83D\uDC51 あなたの前世の職業が明らかに"
+    "discover1": "🌊 6つの歴史的時代を旅します",
+    "discover2": "⚔️ 各時代で運命的な選択をします",
+    "discover3": "👑 あなたの前世の職業が明らかに"
   },
   "eras": {
     "egypt": {
       "year": "紀元前3000年",
       "title": "古代エジプト",
       "scene": "巨大な神殿の石柱の間から月光が降り注ぎます。ファラオの即位式が始まろうとしています。何千もの視線があなたに注がれています。",
-      "choiceAIcon": "\uD83D\uDD25",
+      "choiceAIcon": "🔥",
       "choiceA": "儀式を導く",
-      "choiceBIcon": "\uD83D\uDCDC",
+      "choiceBIcon": "📜",
       "choiceB": "知識を記録する"
     },
     "medieval": {
       "year": "西暦1200年",
       "title": "中世ヨーロッパ",
       "scene": "城壁の下に霧が立ち込めています。遠くで戦いのラッパが鳴り、城の中庭ではバラが咲いています。選択の瞬間です。",
-      "choiceAIcon": "\u2694\uFE0F",
+      "choiceAIcon": "⚔️",
       "choiceA": "剣を取る",
-      "choiceBIcon": "\uD83C\uDF3F",
+      "choiceBIcon": "🌿",
       "choiceB": "庭を手入れする"
     },
     "renaissance": {
       "year": "西暦1500年",
       "title": "ルネサンス",
       "scene": "フィレンツェの工房に絵の具の香りが満ちています。窓の外では新大陸への探検船が出航の準備をしています。",
-      "choiceAIcon": "\uD83C\uDFA8",
+      "choiceAIcon": "🎨",
       "choiceA": "芸術を創造する",
-      "choiceBIcon": "\uD83D\uDCB0",
+      "choiceBIcon": "💰",
       "choiceB": "探検を支援する"
     },
     "exploration": {
       "year": "西暦1700年",
       "title": "大航海時代",
       "scene": "港に停泊した帆船の帆が風にはためいています。海の向こうに未知の世界が待ち、天文台では新しい星座が発見されました。",
-      "choiceAIcon": "\u2693",
+      "choiceAIcon": "⚓",
       "choiceA": "航海に出る",
-      "choiceBIcon": "\u2B50",
+      "choiceBIcon": "⭐",
       "choiceB": "星を観測する"
     },
     "industrial": {
       "year": "西暦1850年",
       "title": "産業革命",
       "scene": "蒸気機関の轟音が響き、工場の煙突から煙が立ち上ります。一方、田舎では自然の治癒力を信じる人々がまだいます。",
-      "choiceAIcon": "\u2699\uFE0F",
+      "choiceAIcon": "⚙️",
       "choiceA": "機械を造る",
-      "choiceBIcon": "\uD83D\uDC9A",
+      "choiceBIcon": "💚",
       "choiceB": "人を癒す"
     },
     "modern": {
       "year": "西暦1920年",
       "title": "近代",
       "scene": "ジャズが流れる華やかな都市の夜。劇場の照明が輝き、静かなカフェでは誰かが世界を変える文章を書いています。",
-      "choiceAIcon": "\uD83C\uDFAD",
+      "choiceAIcon": "🎭",
       "choiceA": "舞台で輝く",
-      "choiceBIcon": "\u270D\uFE0F",
+      "choiceBIcon": "✍️",
       "choiceB": "孤独の中で書く"
     }
   },
-  "transition": { "traveling": "時間を移動中..." },
-  "reveal": { "closing": "ポータルが閉じます...", "past": "あなたの前世が明らかに" },
+  "transition": {
+    "traveling": "時間を移動中..."
+  },
+  "reveal": {
+    "closing": "ポータルが閉じます...",
+    "past": "あなたの前世が明らかに"
+  },
   "result": {
     "label": "あなたの前世は...",
     "strengthLabel": "強み",
@@ -93,84 +98,164 @@
   },
   "types": {
     "knight": {
-      "name": "騎士団長", "era": "中世ヨーロッパ（12世紀）\u00B7 ノルマンディー",
+      "name": "騎士団長",
+      "era": "中世ヨーロッパ（12世紀）· ノルマンディー",
       "description": "あなたの前世は中世ヨーロッパの騎士団長！戦場では誰よりも先頭に立ち、弱者を守ることを使命としていました。忠誠心と名誉を何よりも大切にし、仲間たちにとって命を預けられる頼もしい存在でした。",
-      "quote": "\u201C剣は錆びても、名誉は永遠なり\u201D",
-      "strength1": "勇気", "strength2": "忠誠心", "strength3": "リーダーシップ", "strength4": "決断力",
-      "weakness1": "頑固さ", "weakness2": "時に無謀な突撃",
-      "echo1": "不正を見ると黙っていられない正義感", "echo2": "リーダー役で自然に輝く",
-      "echo3": "弱者を守ろうとする本能が強い", "echo4": "信頼と忠誠を最も重要視する",
-      "echoIcon1": "\u2694\uFE0F", "echoIcon2": "\uD83D\uDC51", "echoIcon3": "\uD83D\uDEE1\uFE0F", "echoIcon4": "\uD83E\uDD1D"
+      "quote": "“剣は錆びても、名誉は永遠なり”",
+      "strength1": "勇気",
+      "strength2": "忠誠心",
+      "strength3": "リーダーシップ",
+      "strength4": "決断力",
+      "weakness1": "頑固さ",
+      "weakness2": "時に無謀な突撃",
+      "echo1": "不正を見ると黙っていられない正義感",
+      "echo2": "リーダー役で自然に輝く",
+      "echo3": "弱者を守ろうとする本能が強い",
+      "echo4": "信頼と忠誠を最も重要視する",
+      "echoIcon1": "⚔️",
+      "echoIcon2": "👑",
+      "echoIcon3": "🛡️",
+      "echoIcon4": "🤝"
     },
     "scholar": {
-      "name": "王宮学者", "era": "古代エジプト（紀元前15世紀）\u00B7 テーベ",
+      "name": "王宮学者",
+      "era": "古代エジプト（紀元前15世紀）· テーベ",
       "description": "あなたの前世は古代エジプトの王宮学者！ファラオのそばで歴史を記録し、星を観測して知恵を蓄えました。",
-      "quote": "\u201C知ることこそ真の力なり\u201D",
-      "strength1": "知恵", "strength2": "観察力", "strength3": "忍耐力", "strength4": "分析力",
-      "weakness1": "優柔不断", "weakness2": "慎重すぎる",
-      "echo1": "学ぶことが好きで深い思考を楽しむ", "echo2": "体系的に計画し実行する能力に優れている",
-      "echo3": "静かな環境で最高の成果を出す", "echo4": "記録し整理することに満足感を覚える",
-      "echoIcon1": "\uD83D\uDCDA", "echoIcon2": "\uD83D\uDCCB", "echoIcon3": "\uD83E\uDDD8", "echoIcon4": "\u270D\uFE0F"
+      "quote": "“知ることこそ真の力なり”",
+      "strength1": "知恵",
+      "strength2": "観察力",
+      "strength3": "忍耐力",
+      "strength4": "分析力",
+      "weakness1": "優柔不断",
+      "weakness2": "慎重すぎる",
+      "echo1": "学ぶことが好きで深い思考を楽しむ",
+      "echo2": "体系的に計画し実行する能力に優れている",
+      "echo3": "静かな環境で最高の成果を出す",
+      "echo4": "記録し整理することに満足感を覚える",
+      "echoIcon1": "📚",
+      "echoIcon2": "📋",
+      "echoIcon3": "🧘",
+      "echoIcon4": "✍️"
     },
     "painter": {
-      "name": "ルネサンス画家", "era": "ルネサンス（15世紀）\u00B7 フィレンツェ",
+      "name": "ルネサンス画家",
+      "era": "ルネサンス（15世紀）· フィレンツェ",
       "description": "あなたの前世はルネサンス時代の天才画家！キャンバスに世界の美しさを描き出し、光と影を自在に操りました。",
-      "quote": "\u201C世界は私の筆先から生まれ変わる\u201D",
-      "strength1": "創造力", "strength2": "美的感覚", "strength3": "感受性", "strength4": "集中力",
-      "weakness1": "現実感覚の不足", "weakness2": "気まぐれ",
-      "echo1": "感性が豊かで美しいものに惹かれる", "echo2": "独創的なアイデアに溢れている",
-      "echo3": "日常でも美的基準が高い", "echo4": "感情表現が素直",
-      "echoIcon1": "\uD83C\uDFA8", "echoIcon2": "\uD83D\uDCA1", "echoIcon3": "\u2728", "echoIcon4": "\uD83D\uDC96"
+      "quote": "“世界は私の筆先から生まれ変わる”",
+      "strength1": "創造力",
+      "strength2": "美的感覚",
+      "strength3": "感受性",
+      "strength4": "集中力",
+      "weakness1": "現実感覚の不足",
+      "weakness2": "気まぐれ",
+      "echo1": "感性が豊かで美しいものに惹かれる",
+      "echo2": "独創的なアイデアに溢れている",
+      "echo3": "日常でも美的基準が高い",
+      "echo4": "感情表現が素直",
+      "echoIcon1": "🎨",
+      "echoIcon2": "💡",
+      "echoIcon3": "✨",
+      "echoIcon4": "💖"
     },
     "royal": {
-      "name": "賢明な君主", "era": "ビザンツ帝国（6世紀）\u00B7 コンスタンティノープル",
+      "name": "賢明な君主",
+      "era": "ビザンツ帝国（6世紀）· コンスタンティノープル",
       "description": "あなたの前世はビザンツ帝国の賢明な君主！巨大な帝国を治め、外交と内政の両方で卓越した能力を発揮しました。",
-      "quote": "\u201C王冠の重さに耐えうる者だけが真の王\u201D",
-      "strength1": "カリスマ", "strength2": "外交力", "strength3": "統率力", "strength4": "判断力",
-      "weakness1": "孤独感", "weakness2": "疑い深い",
-      "echo1": "自然なリーダーシップと存在感を持つ", "echo2": "人々が自然とついてくる",
-      "echo3": "重要な決定を下す時に最も輝く", "echo4": "戦略的思考に長けている",
-      "echoIcon1": "\uD83D\uDC51", "echoIcon2": "\uD83C\uDF1F", "echoIcon3": "\u2696\uFE0F", "echoIcon4": "\uD83C\uDFAF"
+      "quote": "“王冠の重さに耐えうる者だけが真の王”",
+      "strength1": "カリスマ",
+      "strength2": "外交力",
+      "strength3": "統率力",
+      "strength4": "判断力",
+      "weakness1": "孤独感",
+      "weakness2": "疑い深い",
+      "echo1": "自然なリーダーシップと存在感を持つ",
+      "echo2": "人々が自然とついてくる",
+      "echo3": "重要な決定を下す時に最も輝く",
+      "echo4": "戦略的思考に長けている",
+      "echoIcon1": "👑",
+      "echoIcon2": "🌟",
+      "echoIcon3": "⚖️",
+      "echoIcon4": "🎯"
     },
     "explorer": {
-      "name": "大航海探検家", "era": "大航海時代（16世紀）\u00B7 リスボン",
+      "name": "大航海探検家",
+      "era": "大航海時代（16世紀）· リスボン",
       "description": "あなたの前世は大航海時代の探検家！未知の海に向かって帆を上げ、誰も行ったことのない土地を発見しました。",
-      "quote": "\u201C水平線の向こうに新しい世界がある\u201D",
-      "strength1": "冒険心", "strength2": "適応力", "strength3": "楽観性", "strength4": "勇気",
-      "weakness1": "落ち着きがない", "weakness2": "無計画",
-      "echo1": "新しい体験や挑戦が好き", "echo2": "旅行や異文化に惹かれる",
-      "echo3": "日常の枠から抜け出したい", "echo4": "自由な魂の持ち主",
-      "echoIcon1": "\uD83C\uDF0D", "echoIcon2": "\u2708\uFE0F", "echoIcon3": "\uD83D\uDE80", "echoIcon4": "\uD83C\uDF2C\uFE0F"
+      "quote": "“水平線の向こうに新しい世界がある”",
+      "strength1": "冒険心",
+      "strength2": "適応力",
+      "strength3": "楽観性",
+      "strength4": "勇気",
+      "weakness1": "落ち着きがない",
+      "weakness2": "無計画",
+      "echo1": "新しい体験や挑戦が好き",
+      "echo2": "旅行や異文化に惹かれる",
+      "echo3": "日常の枠から抜け出したい",
+      "echo4": "自由な魂の持ち主",
+      "echoIcon1": "🌍",
+      "echoIcon2": "✈️",
+      "echoIcon3": "🚀",
+      "echoIcon4": "🌬️"
     },
     "healer": {
-      "name": "森の治療師", "era": "ケルト時代（5世紀）\u00B7 アイルランド",
+      "name": "森の治療師",
+      "era": "ケルト時代（5世紀）· アイルランド",
       "description": "あなたの前世はケルトの治療師！深い森で薬草を採集し、病める人々を看ました。自然の言葉を理解し、月の周期に合わせて治癒の儀式を行いました。",
-      "quote": "\u201Cすべての傷にはそれに合う薬草がある\u201D",
-      "strength1": "共感力", "strength2": "忍耐力", "strength3": "直感力", "strength4": "治癒能力",
-      "weakness1": "自己犠牲的", "weakness2": "感情消耗が大きい",
-      "echo1": "共感能力に優れ感情をよく読み取る", "echo2": "カウンセリング・医療の適性がある",
-      "echo3": "自然の中でエネルギーが充電される", "echo4": "周りの人の相談役になりがち",
-      "echoIcon1": "\uD83D\uDC9A", "echoIcon2": "\uD83C\uDF3F", "echoIcon3": "\uD83C\uDF33", "echoIcon4": "\uD83E\uDE79"
+      "quote": "“すべての傷にはそれに合う薬草がある”",
+      "strength1": "共感力",
+      "strength2": "忍耐力",
+      "strength3": "直感力",
+      "strength4": "治癒能力",
+      "weakness1": "自己犠牲的",
+      "weakness2": "感情消耗が大きい",
+      "echo1": "共感能力に優れ感情をよく読み取る",
+      "echo2": "カウンセリング・医療の適性がある",
+      "echo3": "自然の中でエネルギーが充電される",
+      "echo4": "周りの人の相談役になりがち",
+      "echoIcon1": "💚",
+      "echoIcon2": "🌿",
+      "echoIcon3": "🌳",
+      "echoIcon4": "🩹"
     },
     "oracle": {
-      "name": "神殿の神官", "era": "古代ギリシャ（紀元前5世紀）\u00B7 デルフォイ",
+      "name": "神殿の神官",
+      "era": "古代ギリシャ（紀元前5世紀）· デルフォイ",
       "description": "あなたの前世は古代ギリシャの神殿の神官！デルフォイ神殿で神託を伝え、星の動きで運命を読みました。",
-      "quote": "\u201C目を閉じてこそ真実が見える\u201D",
-      "strength1": "直感力", "strength2": "洞察力", "strength3": "瞑想", "strength4": "神秘的カリスマ",
-      "weakness1": "俗世との距離感", "weakness2": "過度の孤独",
-      "echo1": "直感が強く物事の本質を見抜く", "echo2": "心理学・哲学・スピリチュアルに関心がある",
-      "echo3": "一人の時間が絶対に必要", "echo4": "人の隠れた感情をよく読む",
-      "echoIcon1": "\uD83D\uDD2E", "echoIcon2": "\uD83D\uDCDA", "echoIcon3": "\uD83C\uDF19", "echoIcon4": "\uD83D\uDC41\uFE0F"
+      "quote": "“目を閉じてこそ真実が見える”",
+      "strength1": "直感力",
+      "strength2": "洞察力",
+      "strength3": "瞑想",
+      "strength4": "神秘的カリスマ",
+      "weakness1": "俗世との距離感",
+      "weakness2": "過度の孤独",
+      "echo1": "直感が強く物事の本質を見抜く",
+      "echo2": "心理学・哲学・スピリチュアルに関心がある",
+      "echo3": "一人の時間が絶対に必要",
+      "echo4": "人の隠れた感情をよく読む",
+      "echoIcon1": "🔮",
+      "echoIcon2": "📚",
+      "echoIcon3": "🌙",
+      "echoIcon4": "👁️"
     },
     "pirate": {
-      "name": "海賊船長", "era": "大海賊時代（17世紀）\u00B7 カリブ海",
+      "name": "海賊船長",
+      "era": "大海賊時代（17世紀）· カリブ海",
       "description": "あなたの前世はカリブ海の海賊船長！自由への燃えるような情熱で海を駆け回り、誰の命令にも従わない人生を送りました。",
-      "quote": "\u201C海の上では、俺が王だ\u201D",
-      "strength1": "大胆さ", "strength2": "自由な魂", "strength3": "瞬発力", "strength4": "カリスマ",
-      "weakness1": "衝動的", "weakness2": "規則嫌い",
-      "echo1": "型にはまった生き方を拒否する", "echo2": "自分だけの道を行く自由な魂",
-      "echo3": "ルールより直感を信じる", "echo4": "少しの反骨心が魅力",
-      "echoIcon1": "\uD83C\uDFF4\u200D\u2620\uFE0F", "echoIcon2": "\uD83C\uDF0A", "echoIcon3": "\u26A1", "echoIcon4": "\uD83D\uDD25"
+      "quote": "“海の上では、俺が王だ”",
+      "strength1": "大胆さ",
+      "strength2": "自由な魂",
+      "strength3": "瞬発力",
+      "strength4": "カリスマ",
+      "weakness1": "衝動的",
+      "weakness2": "規則嫌い",
+      "echo1": "型にはまった生き方を拒否する",
+      "echo2": "自分だけの道を行く自由な魂",
+      "echo3": "ルールより直感を信じる",
+      "echo4": "少しの反骨心が魅力",
+      "echoIcon1": "🏴‍☠️",
+      "echoIcon2": "🌊",
+      "echoIcon3": "⚡",
+      "echoIcon4": "🔥"
     }
   },
   "share": {
@@ -179,12 +264,21 @@
     "copied": "結果がクリップボードにコピーされました！",
     "copyPrompt": "以下のテキストをコピーしてください："
   },
-  "buttons": { "share": "結果をシェア", "save": "画像を保存", "retry": "もう一度旅する" },
+  "buttons": {
+    "share": "結果をシェア",
+    "save": "画像を保存",
+    "retry": "もう一度旅する"
+  },
   "recommendations": {
-    "idleClicker": "放置クリッカーゲーム", "emojiMerge": "絵文字マージゲーム",
-    "zigzagRunner": "ジグザグランナー", "loveFrequency": "恋愛周波数テスト",
-    "emotionTemp": "感情温度計テスト", "mbtiLove": "MBTI恋愛相性",
-    "brainType": "脳タイプテスト", "lottery": "宝くじ番号生成", "whiteNoise": "ホワイトノイズ"
+    "idleClicker": "放置クリッカーゲーム",
+    "emojiMerge": "絵文字マージゲーム",
+    "zigzagRunner": "ジグザグランナー",
+    "loveFrequency": "恋愛周波数テスト",
+    "emotionTemp": "感情温度計テスト",
+    "mbtiLove": "MBTI恋愛相性",
+    "brainType": "脳タイプテスト",
+    "lottery": "宝くじ番号生成",
+    "whiteNoise": "ホワイトノイズ"
   },
   "related": {
     "soulAge": "魂の年齢",
@@ -192,8 +286,12 @@
     "numerology": "数秘術",
     "dailyTarot": "デイリータロット"
   },
-  "ads": { "banner": "広告エリア" },
-  "game": { "back": "DopaBrainホーム" },
+  "ads": {
+    "banner": "広告エリア"
+  },
+  "game": {
+    "back": "DopaBrainホーム"
+  },
   "error": {
     "storage": "プライベートモードでは一部機能が制限されます。",
     "data": "データ読み込みエラー。ページを更新してください。",
@@ -201,5 +299,16 @@
     "audio": "音声が利用できません。続行できます。",
     "network": "接続を確認して再試行してください。",
     "general": "問題が発生しました。更新するか再試行してください。"
+  },
+  "meta": {
+    "title": "無料前世テスト - 前世を発見 | DopaBrain",
+    "description": "あなたの前世は？6つの歴史時代を旅して前世の職業を発見！無料テスト！"
+  },
+  "about": {
+    "toggle": "テストについて",
+    "heading1": "前世テストの仕組み",
+    "text1": "前世テストは6つの重要な歴史時代を旅します。各時代で前世のアイデンティティを形作る決定的な選択に直面します。全時代の選択パターンが8つのユニークな原型の中から前世を明らかにします。",
+    "heading2": "現在に残る前世のエコー",
+    "text2": "前世の結果には、現在の生活と共鳴するかもしれない性格のエコーが含まれます。"
   }
 }
