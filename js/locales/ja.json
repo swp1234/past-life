@@ -87,7 +87,9 @@
     "echoesTitle": "現世に残る前世の痕跡",
     "compatTitle": "前世の仲間",
     "compatPercent": "% 相性",
-    "recommendTitle": "こちらもおすすめ"
+    "recommendTitle": "こちらもおすすめ",
+    "moreTests": "関連テスト",
+    "percentileStat": "旅行者のうち<strong>{percent}%</strong>だけが同じ前世を得ました"
   },
   "types": {
     "knight": {
@@ -183,6 +185,12 @@
     "zigzagRunner": "ジグザグランナー", "loveFrequency": "恋愛周波数テスト",
     "emotionTemp": "感情温度計テスト", "mbtiLove": "MBTI恋愛相性",
     "brainType": "脳タイプテスト", "lottery": "宝くじ番号生成", "whiteNoise": "ホワイトノイズ"
+  },
+  "related": {
+    "soulAge": "魂の年齢",
+    "auraReading": "オーラリーディング",
+    "numerology": "数秘術",
+    "dailyTarot": "デイリータロット"
   },
   "ads": { "banner": "広告エリア" },
   "game": { "back": "DopaBrainホーム" },

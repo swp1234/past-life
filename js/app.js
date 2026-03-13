@@ -462,8 +462,19 @@
             compatList.appendChild(div);
         });
 
+        // Percentile stat
+        var percentile = Math.floor(Math.random() * 15) + 3;
+        var percentileEl = $('percentile-stat');
+        if (percentileEl) {
+            var pText = t('result.percentileStat');
+            if (pText && pText !== 'result.percentileStat') {
+                percentileEl.innerHTML = pText.replace('{percent}', percentile);
+            } else {
+                percentileEl.innerHTML = 'Only <strong>' + percentile + '%</strong> of travelers got the same past life';
+            }
+        }
+
         drawResultCard(typeId);
-        renderRecommend();
     }
 
     function drawResultCard(typeId) {
@@ -650,30 +661,6 @@
         resetScores();
         buildTimeline();
         showScreen('intro');
-    }
-
-    function renderRecommend() {
-        var wrap = $('recommend-list');
-        if (!wrap) return;
-
-        var items = [
-            { emoji: '\u{1F3AE}', nameKey: 'recommendations.idleClicker', url: 'https://dopabrain.com/idle-clicker-game/' },
-            { emoji: '\u{1F60A}', nameKey: 'recommendations.emojiMerge', url: 'https://dopabrain.com/emoji-merge/' },
-            { emoji: '\u{1F3C3}', nameKey: 'recommendations.zigzagRunner', url: 'https://dopabrain.com/zigzag-runner/' },
-            { emoji: '\u{1F495}', nameKey: 'recommendations.loveFrequency', url: 'https://dopabrain.com/love-frequency/' },
-            { emoji: '\u{1F321}\uFE0F', nameKey: 'recommendations.emotionTemp', url: 'https://dopabrain.com/emotion-temp/' },
-            { emoji: '\u{1F495}', nameKey: 'recommendations.mbtiLove', url: 'https://dopabrain.com/mbti-love/' },
-            { emoji: '\u{1F9E0}', nameKey: 'recommendations.brainType', url: 'https://dopabrain.com/brain-type/' },
-            { emoji: '\u{1F3B0}', nameKey: 'recommendations.lottery', url: 'https://dopabrain.com/lottery-generator/' },
-            { emoji: '\u{1F3B5}', nameKey: 'recommendations.whiteNoise', url: 'https://dopabrain.com/white-noise/' }
-        ];
-
-        wrap.innerHTML = items.map(function(it) {
-            return '<a href="' + it.url + '" class="compat-item" style="text-decoration:none;color:inherit" target="_blank">' +
-                '<span class="compat-emoji">' + it.emoji + '</span>' +
-                '<div class="compat-info"><div class="compat-name">' + t(it.nameKey) + '</div></div>' +
-                '</a>';
-        }).join('');
     }
 
     // Expose for language change callback

@@ -87,7 +87,9 @@
     "echoesTitle": "前世在今生的回响",
     "compatTitle": "前世的伙伴",
     "compatPercent": "% 契合",
-    "recommendTitle": "你可能还喜欢"
+    "recommendTitle": "你可能还喜欢",
+    "moreTests": "更多测试",
+    "percentileStat": "只有<strong>{percent}%</strong>的旅行者获得了相同的前世"
   },
   "types": {
     "knight": {
@@ -183,6 +185,12 @@
     "zigzagRunner": "之字形跑酷", "loveFrequency": "爱情频率测试",
     "emotionTemp": "情绪温度计", "mbtiLove": "MBTI恋爱匹配",
     "brainType": "大脑类型测试", "lottery": "彩票号码生成器", "whiteNoise": "白噪音播放器"
+  },
+  "related": {
+    "soulAge": "灵魂年龄",
+    "auraReading": "光环解读",
+    "numerology": "数字命理",
+    "dailyTarot": "每日塔罗"
   },
   "ads": { "banner": "广告区域" },
   "game": { "back": "DopaBrain首页" },

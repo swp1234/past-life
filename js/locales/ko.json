@@ -92,7 +92,9 @@
     "echoesTitle": "현생에 남은 전생의 흔적",
     "compatTitle": "전생의 동반자",
     "compatPercent": "% 궁합",
-    "recommendTitle": "이것도 해보세요"
+    "recommendTitle": "이것도 해보세요",
+    "moreTests": "관련 테스트",
+    "percentileStat": "여행자 중 <strong>{percent}%</strong>만이 같은 전생을 받았습니다"
   },
   "types": {
     "knight": {
@@ -277,6 +279,12 @@
     "brainType": "두뇌 유형 테스트",
     "lottery": "로또 번호 생성기",
     "whiteNoise": "화이트 노이즈 플레이어"
+  },
+  "related": {
+    "soulAge": "영혼 나이 테스트",
+    "auraReading": "오라 리딩",
+    "numerology": "수비학 테스트",
+    "dailyTarot": "오늘의 타로"
   },
   "ads": {
     "banner": "광고 영역"

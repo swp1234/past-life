@@ -262,10 +262,29 @@
                 <button class="btn btn-secondary" id="btn-save" data-i18n="buttons.save">Save Image</button>
             </div>
 
-            <!-- Recommend -->
-            <div class="recommend-section">
-                <div class="recommend-title" data-i18n="result.recommendTitle">You Might Also Like</div>
-                <div class="recommend-grid" id="recommend-list"></div>
+            <p class="percentile-stat" id="percentile-stat"></p>
+
+            <!-- Related Tests -->
+            <div class="related-tests">
+                <h3 data-i18n="result.moreTests">More Tests</h3>
+                <div class="related-grid">
+                    <a href="/soul-age/" class="related-card" style="--card-color: #9b59b6">
+                        <span class="related-emoji">&#x1F31F;</span>
+                        <span class="related-name" data-i18n="related.soulAge">Soul Age</span>
+                    </a>
+                    <a href="/aura-reading/" class="related-card" style="--card-color: #8e44ad">
+                        <span class="related-emoji">&#x1F52E;</span>
+                        <span class="related-name" data-i18n="related.auraReading">Aura Reading</span>
+                    </a>
+                    <a href="/numerology/" class="related-card" style="--card-color: #3498db">
+                        <span class="related-emoji">&#x1F522;</span>
+                        <span class="related-name" data-i18n="related.numerology">Numerology</span>
+                    </a>
+                    <a href="/daily-tarot/" class="related-card" style="--card-color: #f39c12">
+                        <span class="related-emoji">&#x1F0CF;</span>
+                        <span class="related-name" data-i18n="related.dailyTarot">Daily Tarot</span>
+                    </a>
+                </div>
             </div>
 
             <!-- Retry -->
@@ -290,16 +309,6 @@
     <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
 
-    <section class="related-games" style="margin:20px auto;padding:16px;max-width:480px;background:rgba(255,255,255,0.05);border-radius:12px;">
-      <p style="font-size:13px;color:#aaa;margin:0 0 8px 0;font-weight:600;">More Free Tests</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="/future-self/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🔮 Future Self</a>
-        <a href="/soul-age/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">✨ Soul Age</a>
-        <a href="/mental-age/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🧒 Mental Age</a>
-        <a href="/emotional-age/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💭 Emotional Age</a>
-        <a href="/numerology/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🔢 Numerology</a>
-      </div>
-    </section>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js').catch(function(){});
