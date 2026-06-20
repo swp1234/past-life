@@ -20,6 +20,16 @@
     --era-modern: #C5A028;
 }
 
+[data-theme="light"] {
+    --bg: #fbf6ea;
+    --bg-light: #fffaf0;
+    --surface: rgba(168, 136, 77, 0.12);
+    --surface-hover: rgba(168, 136, 77, 0.2);
+    --text: #2f261a;
+    --text-dim: rgba(47, 38, 26, 0.62);
+    --border: rgba(168, 136, 77, 0.28);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -733,6 +743,11 @@ body {
     width: 100%;
     border-radius: var(--radius);
     border: 1px solid var(--border);
+}
+
+#screen-result .ad-container {
+    width: 100%;
+    max-width: 380px;
 }
 
 /* Recommend */

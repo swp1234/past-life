@@ -175,7 +175,8 @@
     var state = {
         currentEra: 0,
         scores: {},
-        resultType: null
+        resultType: null,
+        resultTracked: false
     };
 
     var $ = function(id) { return document.getElementById(id); };
@@ -221,6 +222,7 @@
         Object.keys(TYPES).forEach(function(k) { state.scores[k] = 0; });
         state.currentEra = 0;
         state.resultType = null;
+        state.resultTracked = false;
     }
 
     function buildTimeline() {
@@ -262,6 +264,33 @@
     function t(key) {
         if (typeof i18n !== 'undefined' && i18n.t) return i18n.t(key);
         return key;
+    }
+
+    function trackEvent(name, params) {
+        if (typeof gtag === 'function') {
+            gtag('event', name, Object.assign({ app_name: 'past_life' }, params || {}));
+        }
+    }
+
+    function loadResultAd(retryCount) {
+        var slot = document.querySelector('[data-ad-surface="past_life_result_ad"] ins.adsbygoogle');
+        if (!slot || slot.dataset.adLoaded === 'true') return;
+
+        var width = slot.offsetWidth || (slot.parentElement ? slot.parentElement.offsetWidth : 0);
+        if (width < 32) {
+            if ((retryCount || 0) < 5) {
+                setTimeout(function() { loadResultAd((retryCount || 0) + 1); }, 150);
+            }
+            return;
+        }
+
+        try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+            slot.dataset.adLoaded = 'true';
+            trackEvent('past_life_result_ad_impression', { ad_surface: 'past_life_result_ad' });
+        } catch (e) {
+            slot.dataset.adLoaded = 'error';
+        }
     }
 
     function startJourney() {
@@ -475,6 +504,23 @@
         }
 
         drawResultCard(typeId);
+
+        if (!state.resultTracked) {
+            state.resultTracked = true;
+            trackEvent('past_life_result_view', {
+                event_category: 'past_life',
+                event_label: typeId,
+                result_type: typeId,
+                value: 1
+            });
+            trackEvent('result_view', {
+                event_category: 'past_life',
+                event_label: typeId,
+                result_type: typeId,
+                value: 1
+            });
+        }
+        loadResultAd(0);
     }
 
     function drawResultCard(typeId) {
@@ -640,6 +686,11 @@
         }
 
         if (typeof gtag === 'function') {
+            trackEvent('past_life_share_click', {
+                event_category: 'engagement',
+                event_label: typeId,
+                result_type: typeId
+            });
             gtag('event', 'share', { event_category: 'engagement', event_label: typeId });
         }
     }
@@ -653,6 +704,11 @@
         link.click();
 
         if (typeof gtag === 'function') {
+            trackEvent('past_life_save_click', {
+                event_category: 'engagement',
+                event_label: state.resultType,
+                result_type: state.resultType
+            });
             gtag('event', 'save_image', { event_category: 'engagement', event_label: state.resultType });
         }
     }
