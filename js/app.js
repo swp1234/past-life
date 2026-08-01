@@ -179,6 +179,10 @@
         resultTracked: false
     };
 
+    var STORY_STUDIO_LABELS = {
+        en: 'Past Life Story Studio', ko: '전생 이야기 스튜디오', zh: '前世故事工作室', hi: 'पिछले जीवन की कहानी स्टूडियो', ru: 'Студия историй о прошлой жизни', ja: '前世ストーリー・スタジオ', es: 'Estudio de historias de vidas pasadas', pt: 'Estúdio de histórias de vidas passadas', id: 'Studio Cerita Kehidupan Lampau', tr: 'Geçmiş Yaşam Hikâye Stüdyosu', de: 'Früheres-Leben-Geschichtenstudio', fr: 'Studio d’histoires de vies antérieures'
+    };
+
     var $ = function(id) { return document.getElementById(id); };
 
     var screens = {};
@@ -198,6 +202,7 @@
         $('btn-retry').addEventListener('click', retry);
         $('btn-share').addEventListener('click', shareResult);
         $('btn-save').addEventListener('click', saveImage);
+        $('story-studio-link').addEventListener('click', function() { trackEvent('past_life_story_cta_click', { event_category: 'engagement', source_app: 'past-life', surface_name: 'past_life_result', destination_path: this.getAttribute('href'), revenue_goal: 'daily_0_10' }); });
         $('choice-a').addEventListener('click', function() { selectChoice('a'); });
         $('choice-b').addEventListener('click', function() { selectChoice('b'); });
 
@@ -414,6 +419,10 @@
         var typeId = state.resultType;
         if (!typeId) return;
         var typeData = TYPES[typeId];
+        var contentLanguage = typeof i18n !== 'undefined' && i18n.getCurrentLanguage ? i18n.getCurrentLanguage() : 'en';
+        var storyLink = $('story-studio-link');
+        $('story-studio-label').textContent = STORY_STUDIO_LABELS[contentLanguage] || STORY_STUDIO_LABELS.en;
+        storyLink.href = '/portal/tools/past-life-story-studio.html?lang=' + encodeURIComponent(contentLanguage) + '&source=past_life_result';
 
         $('result-emoji').textContent = typeData.emoji;
         var nameEl = $('result-type');
@@ -519,6 +528,7 @@
                 result_type: typeId,
                 value: 1
             });
+            trackEvent('past_life_story_cta_view', { event_category: 'engagement', source_app: 'past-life', surface_name: 'past_life_result', content_locale: contentLanguage, revenue_goal: 'daily_0_10' });
         }
         loadResultAd(0);
     }

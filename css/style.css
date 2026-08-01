@@ -865,6 +865,13 @@ body {
     text-align: center;
     font-family: sans-serif;
 }
+.story-studio-card {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 54px;
+    background: linear-gradient(110deg, rgba(201,169,110,0.16), rgba(142,68,173,0.12));
+}
 
 /* === LANGUAGE SELECTOR === */
 .language-selector {

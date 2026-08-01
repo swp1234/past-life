@@ -7,6 +7,8 @@ class I18n {
     }
 
     detectLanguage() {
+        const requestedLang = new URLSearchParams(window.location.search).get('lang');
+        if (requestedLang && this.supportedLanguages.includes(requestedLang)) return requestedLang;
         const savedLang = localStorage.getItem('app_language');
         if (savedLang && this.supportedLanguages.includes(savedLang)) return savedLang;
         const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
