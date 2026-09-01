@@ -1,26 +1,47 @@
 {
   "app": {
-    "title": "Gecmis Yasam Testi - Zaman Portali Yolculugu",
-    "description": "Zaman Portalini acin ve 6 cagda yolculuk yapin. Antik Misir'dan modern caga, secimleriniz gecmis yasam mesleginizi ortaya cikarir!",
-    "skipLink": "Icerige atla",
-    "loading": "Yukleniyor..."
+    "title": "Geçmiş Yaşam Hikâyesi Yolculuğu - 6 Kurgusal Sahne | DopaBrain",
+    "shortTitle": "Geçmiş Yaşam Hikâyesi",
+    "description": "Seçimleri gizli tutan altı sahneli kurgusal tarih etkinliği."
+  },
+  "common": {
+    "skip": "Hikâyeye geç",
+    "language": "Dil",
+    "back": "DopaBrain etkinlikleri"
   },
   "intro": {
-    "title": "Geçmiş Yaşam Testi - Kimdiniz Keşfedin",
-    "subtitle": "Zaman Portalindan gecin.<br>Caglar boyunca secimleriniz kim oldugunuzu ortaya cikaracak.",
-    "quickTest": "6 cag yolculugu",
-    "participantCount": " yolculuk yapti",
-    "startButton": "Portala Gir",
-    "ctaSub": "Gecmis yasaminizi arkadaslarinizla paylasin",
-    "era1": "Antik Misir",
-    "era2": "Ortacag Avrupa",
-    "era3": "Ronesans",
-    "era4": "Kesifler Cagi",
-    "era5": "Sanayi Devrimi",
-    "era6": "Modern Cag",
-    "discover1": "🌊 6 tarihi cagda yolculuk yapin",
-    "discover2": "⚔️ Her durakta kritik secimler yapin",
-    "discover3": "👑 Gecmis yasam mesleginizi kesfed"
+    "eyebrow": "KURGUSAL HİKÂYE · 6 SAHNE",
+    "title": "Geçmiş Yaşam Hikâyesi Yolculuğu",
+    "subtitle": "Altı kurgusal tarih sahnesinde yol seçin ve bir hikâye rolü alın.",
+    "boundaryTitle": "Eğlence sınırı",
+    "boundary": "Bu etkinlik gerçek bir geçmiş yaşamı belirleyemez veya anıları geri getiremez. Kurgusal bir düşünme aracıdır.",
+    "formula": "Açık kural: her seçim üç role 3, 2 ve 1 puan ekler. En yüksek toplam kazanır; eşitlikte sabit rol sırası kullanılır.",
+    "start": "Altı sahneye gir"
+  },
+  "journey": {
+    "progress": "{total} sahneden {current}.",
+    "next": "Sonraki sahne",
+    "finish": "Hikâye rolünü gör"
+  },
+  "result": {
+    "eyebrow": "HİKÂYE TAMAMLANDI",
+    "title": "Kurgusal hikâye rolünüz",
+    "summary": "{name}, bu turdaki altı seçimin ürettiği roldür.",
+    "boundaryTitle": "Sonucu bağlamında tutun",
+    "boundary": "Rol yalnızca bu etkinlikteki seçimlerinizi açıklar. Kimlik, anı veya tarih kanıtı değildir.",
+    "retry": "Yeniden yolculuk et",
+    "share": "Etkinliği paylaş",
+    "copied": "Bağlantı kopyalandı"
+  },
+  "related": {
+    "title": "Başka bir eğlence etkinliği",
+    "soulAge": "Ruh Yaşı",
+    "numerology": "Numeroloji",
+    "tarot": "Günlük Tarot",
+    "animal": "Hayvan Hikâyesi"
+  },
+  "share": {
+    "text": "Seçimleri gizli tutan altı sahneli kurgusal hikâye etkinliğini deneyin."
   },
   "eras": {
     "egypt": {
@@ -78,237 +99,38 @@
       "choiceB": "Yalnizlikta yaz"
     }
   },
-  "transition": {
-    "traveling": "Zamanda yolculuk ediliyor..."
-  },
-  "reveal": {
-    "closing": "Portal kapaniyor...",
-    "past": "Gecmis yasaminiz ortaya cikiyor"
-  },
-  "result": {
-    "label": "Gecmis yasaminizda siz...",
-    "strengthLabel": "Guclu yanlar",
-    "weaknessLabel": "Zayif yanlar",
-    "echoesTitle": "Simdiki yasaminizda yankilar",
-    "compatTitle": "Gecmis yasam yol arkadaslari",
-    "compatPercent": "% uyum",
-    "recommendTitle": "Bunlar da ilginizi cekebilir",
-    "moreTests": "Daha fazla test",
-    "percentileStat": "Yolcularin yalnizca <strong>{percent}%</strong>'i ayni gecmis yasami aldi"
-  },
   "types": {
     "knight": {
       "name": "Sovalye Komutan",
-      "era": "Ortacag Avrupa (XII. yy) · Normandiya, Fransa",
-      "description": "Gecmis yasaminiz Ortacag Avrupa'nin bir Sovalye Komutaniydi! Savas alaninda her zaman on safta yer aldiniz ve zayiflari korumay kutsal bir gorev saydınız.",
-      "quote": "“Kiliclar paslanir ama onur sonsuzdur”",
-      "strength1": "Cesaret",
-      "strength2": "Sadakat",
-      "strength3": "Liderlik",
-      "strength4": "Kararlilik",
-      "weakness1": "Inatcilik",
-      "weakness2": "Pervasiz saldirilir",
-      "echo1": "Guclu adalet duygusu",
-      "echo2": "Liderlik rollerinde dogal olarak parlıyorsunuz",
-      "echo3": "Savunmasizlari koruma icgudusu guclu",
-      "echo4": "Guven ve sadakat en yuksek degerler",
-      "echoIcon1": "⚔️",
-      "echoIcon2": "👑",
-      "echoIcon3": "🛡️",
-      "echoIcon4": "🤝"
+      "era": "Ortacag Avrupa (XII. yy) · Normandiya, Fransa"
     },
     "scholar": {
       "name": "Kraliyet Bilgini",
-      "era": "Antik Misir (MO XV. yy) · Teb",
-      "description": "Gecmis yasaminiz Antik Misir'in Kraliyet Bilginiydi! Firavun'un yaninda tarihi kayit altina aldiniz ve yildizlari gozlemleyerek bilgelik biriktirdiniz.",
-      "quote": "“Bilgi gercek guctur”",
-      "strength1": "Bilgelik",
-      "strength2": "Gozlem",
-      "strength3": "Sabir",
-      "strength4": "Analiz",
-      "weakness1": "Kararsizlik",
-      "weakness2": "Asiri tedbirlilik",
-      "echo1": "Ogrenmeyi seviyor ve derin dusunmenin tadini cikariyor",
-      "echo2": "Sistematik planlama ve uygulamada mukemmel",
-      "echo3": "Sessiz ortamlarda en iyi performans",
-      "echo4": "Kayit ve duzenleme memnuniyeti",
-      "echoIcon1": "📚",
-      "echoIcon2": "📋",
-      "echoIcon3": "🧘",
-      "echoIcon4": "✍️"
+      "era": "Antik Misir (MO XV. yy) · Teb"
     },
     "painter": {
       "name": "Ronesans Ressami",
-      "era": "Ronesans (XV. yy) · Floransa, Italya",
-      "description": "Gecmis yasaminiz Ronesans'in dahi ressamiydi! Tuval uzerinde dunyanin guzelligini yakaladınız, isik ve golgeye hakim olarak.",
-      "quote": "“Dunya fircamin ucunda yeniden doguyor”",
-      "strength1": "Yaraticilik",
-      "strength2": "Estetik",
-      "strength3": "Duyarlilik",
-      "strength4": "Odaklanma",
-      "weakness1": "Pratikten uzak",
-      "weakness2": "Karasiz",
-      "echo1": "Duygusal zenginlik ve guzellige cekim",
-      "echo2": "Orijinal fikirlerle dolu",
-      "echo3": "Gunluk yasamda yuksek estetik standartlar",
-      "echo4": "Duyguları durust ifade edersiniz",
-      "echoIcon1": "🎨",
-      "echoIcon2": "💡",
-      "echoIcon3": "✨",
-      "echoIcon4": "💖"
+      "era": "Ronesans (XV. yy) · Floransa, Italya"
     },
     "royal": {
       "name": "Bilge Hukumdar",
-      "era": "Bizans Imparatorlugu (VI. yy) · Konstantinopolis",
-      "description": "Gecmis yasaminiz Bizans Imparatorlugu'nun Bilge Hukumdariydi! Genis bir imparatorlugu yoneterek diplomasi ve ic islerde ustuun yetenekler gosterdiniz.",
-      "quote": "“Tacin agirligini tasiyabilenler gercek hukumdardir”",
-      "strength1": "Karizma",
-      "strength2": "Diplomasi",
-      "strength3": "Komuta",
-      "strength4": "Muhakeme",
-      "weakness1": "Yalnizlik",
-      "weakness2": "Suphecilik",
-      "echo1": "Dogal liderlik varligi",
-      "echo2": "Insanlar sizi dogal olarak takip eder",
-      "echo3": "Onemli kararlar alirken en cok parlarsınız",
-      "echo4": "Stratejik dusunmede ustun",
-      "echoIcon1": "👑",
-      "echoIcon2": "🌟",
-      "echoIcon3": "⚖️",
-      "echoIcon4": "🎯"
+      "era": "Bizans Imparatorlugu (VI. yy) · Konstantinopolis"
     },
     "explorer": {
       "name": "Buyuk Kasif",
-      "era": "Kesifler Cagi (XVI. yy) · Lizbon, Portekiz",
-      "description": "Gecmis yasaminiz Kesifler Cagi'nin kasiifiydi! Bilinmeyen denizlere yelken actınız ve hic kimsenin ziyaret etmedigi toprakları kesfettiniz.",
-      "quote": "“Ufkun otesinde yeni bir dunya var”",
-      "strength1": "Maceracilik",
-      "strength2": "Uyum",
-      "strength3": "Iyimserlik",
-      "strength4": "Cesaret",
-      "weakness1": "Huzursuzluk",
-      "weakness2": "Plan eksikligi",
-      "echo1": "Yeni deneyimler ve meydan okumalar",
-      "echo2": "Seyahat ve yabanci kulturlere ilgi",
-      "echo3": "Rutinden kurtulma arzusu",
-      "echo4": "Kalbinde ozgur bir ruh",
-      "echoIcon1": "🌍",
-      "echoIcon2": "✈️",
-      "echoIcon3": "🚀",
-      "echoIcon4": "🌬️"
+      "era": "Kesifler Cagi (XVI. yy) · Lizbon, Portekiz"
     },
     "healer": {
       "name": "Orman Sifacisi",
-      "era": "Kelt Donemi (V. yy) · Irlanda/Iskocya",
-      "description": "Gecmis yasaminiz bir Kelt Sifacisiydi! Derin ormanda bitki topladin ve hastalara baktiniz. Ay dongusune gore sifa rituelleri yaptiniz.",
-      "quote": "“Her yara icin uygun bir bitki vardir”",
-      "strength1": "Empati",
-      "strength2": "Sabir",
-      "strength3": "Sezgi",
-      "strength4": "Sifa dokunusu",
-      "weakness1": "Ozveri",
-      "weakness2": "Duygusal tukenme",
-      "echo1": "Olaganustu empati ve duygu okuma",
-      "echo2": "Danismanlik, tip veya egitim icin uygun",
-      "echo3": "Dogada enerji sarzı",
-      "echo4": "Herkesin tavsiye aldigi kisi",
-      "echoIcon1": "💚",
-      "echoIcon2": "🌿",
-      "echoIcon3": "🌳",
-      "echoIcon4": "🩹"
+      "era": "Kelt Donemi (V. yy) · Irlanda/Iskocya"
     },
     "oracle": {
       "name": "Tapinak Kahini",
-      "era": "Antik Yunanistan (MO V. yy) · Delphi",
-      "description": "Gecmis yasaminiz Antik Yunanistan'in Tapinak Kahiniydi! Delphi Tapinagi'nda kehanetler aktardiniz ve yildizlarin hareketinden kader okudunuz.",
-      "quote": "“Gozlerini kapat ki gercegi gorebilesin”",
-      "strength1": "Sezgi",
-      "strength2": "Kavrayis",
-      "strength3": "Meditasyon",
-      "strength4": "Mistik karizma",
-      "weakness1": "Kopukluk",
-      "weakness2": "Asiri yalnizlik",
-      "echo1": "Guclu sezgi ve ozun gorebilme",
-      "echo2": "Psikoloji, felsefe ve maneviyat ilgisi",
-      "echo3": "Yalniz zaman kesinlikle gerekli",
-      "echo4": "Insanlarin gizli duygularini okursunuz",
-      "echoIcon1": "🔮",
-      "echoIcon2": "📚",
-      "echoIcon3": "🌙",
-      "echoIcon4": "👁️"
+      "era": "Antik Yunanistan (MO V. yy) · Delphi"
     },
     "pirate": {
       "name": "Korsan Kaptan",
-      "era": "Korsanligin Altin Cagi (XVII. yy) · Karayipler",
-      "description": "Gecmis yasaminiz Karayipler'in Korsan Kaptaniydi! Ozgurluge olan atesli tutkuyla denizleri arsinladiniz ve kimsenin emrine girmediniz.",
-      "quote": "“Denizde ben kralim”",
-      "strength1": "Cesaretlilik",
-      "strength2": "Ozgur ruh",
-      "strength3": "Hazircevap",
-      "strength4": "Karizma",
-      "weakness1": "Durtiisel",
-      "weakness2": "Kural dussmani",
-      "echo1": "Kaliplassmis yasami reddedersiniz",
-      "echo2": "Kendi yolunuzda yurursunuz",
-      "echo3": "Kurallardan cok sezgiye guvenirsiniz",
-      "echo4": "Bir parcacik isyankarlik cazibeniz",
-      "echoIcon1": "🏴‍☠️",
-      "echoIcon2": "🌊",
-      "echoIcon3": "⚡",
-      "echoIcon4": "🔥"
+      "era": "Korsanligin Altin Cagi (XVII. yy) · Karayipler"
     }
-  },
-  "share": {
-    "title": "Gecmis Yasam Testi",
-    "template": "{emoji} Zaman Portalindan gecince, gecmis yasamimda {era} doneminde {type} oldugumu ogrendim! Senin gecmis yasamin ne?",
-    "copied": "Sonuc kopyalandi!",
-    "copyPrompt": "Metni kopyalayin:"
-  },
-  "buttons": {
-    "share": "Paylas",
-    "save": "Resim kaydet",
-    "retry": "Tekrar yolculuk"
-  },
-  "recommendations": {
-    "idleClicker": "Idle Clicker Oyunu",
-    "emojiMerge": "Emoji Merge",
-    "zigzagRunner": "Zigzag Runner",
-    "loveFrequency": "Ask Frekans Testi",
-    "emotionTemp": "Duygu Termometresi",
-    "mbtiLove": "MBTI Ask Uyumu",
-    "brainType": "Beyin Tipi Testi",
-    "lottery": "Piyango Uretici",
-    "whiteNoise": "Beyaz Gurultu"
-  },
-  "related": {
-    "soulAge": "Ruh Yasi",
-    "auraReading": "Aura Okuma",
-    "numerology": "Numeroloji",
-    "dailyTarot": "Gunluk Tarot"
-  },
-  "ads": {
-    "banner": "REKLAM ALANI"
-  },
-  "game": {
-    "back": "DopaBrain Ana Sayfa"
-  },
-  "error": {
-    "storage": "Gizli modda bazı özellikler sınırlı olabilir.",
-    "data": "Veri yükleme hatası. Lütfen sayfayı yenileyin.",
-    "canvas": "Grafik oluşturma sorunu. Lütfen tekrar deneyin.",
-    "audio": "Ses kullanılamıyor. Devam edebilirsiniz.",
-    "network": "Bağlantınızı kontrol edip tekrar deneyin.",
-    "general": "Bir şeyler ters gitti. Yenileyip tekrar deneyin."
-  },
-  "meta": {
-    "title": "Ücretsiz Geçmiş Yaşam Testi | DopaBrain",
-    "description": "Geçmiş yaşamınızda kimdiniz? 6 tarihsel dönem! Ücretsiz test!"
-  },
-  "about": {
-    "toggle": "Test hakkında",
-    "heading1": "Test nasıl çalışır",
-    "text1": "Test sizi 6 önemli tarihsel dönemden geçirir. Her durakta, geçmiş yaşam kimliğinizi şekillendiren belirleyici bir seçimle karşılaşırsınız.",
-    "heading2": "Geçmişin bugündeki yankıları",
-    "text2": "Sonucunuz mevcut yaşamınızla rezonans yapabilecek kişilik yankıları içerir."
   }
 }

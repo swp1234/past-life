@@ -1,26 +1,47 @@
 {
   "app": {
-    "title": "前世职业测试 - 时间之门旅行",
-    "description": "打开时间之门，穿越6个时代。从古埃及到近代，你的选择将揭示你的前世职业！",
-    "skipLink": "跳到正文",
-    "loading": "加载中..."
+    "title": "前世故事旅程 - 6个虚构场景 | DopaBrain",
+    "shortTitle": "前世故事旅程",
+    "description": "一个保留本地选择的六场景虚构历史故事活动。"
+  },
+  "common": {
+    "skip": "跳到故事",
+    "language": "语言",
+    "back": "DopaBrain 活动"
   },
   "intro": {
-    "title": "前世测试 - 发现你是谁",
-    "subtitle": "穿越时间之门。<br>在六个时代中做出选择，揭示你的前世。",
-    "quickTest": "穿越6个时代",
-    "participantCount": "人已旅行",
-    "startButton": "进入时间之门",
-    "ctaSub": "与朋友分享你的前世",
-    "era1": "古埃及",
-    "era2": "中世纪欧洲",
-    "era3": "文艺复兴",
-    "era4": "大航海时代",
-    "era5": "工业革命",
-    "era6": "近代",
-    "discover1": "🌊 穿越6个历史时代",
-    "discover2": "⚔️ 在每个时代做出关键选择",
-    "discover3": "👑 揭示你的前世职业"
+    "eyebrow": "虚构故事 · 6个场景",
+    "title": "前世故事旅程",
+    "subtitle": "在六个虚构历史场景中选择路径，获得一个故事角色。",
+    "boundaryTitle": "娱乐范围",
+    "boundary": "本活动不能识别真实前世，也不能恢复记忆。它只是虚构的反思提示。",
+    "formula": "公开规则：每次选择为三个故事角色分别增加3、2、1分。最高分为结果；同分按固定角色顺序决定。",
+    "start": "进入六个场景"
+  },
+  "journey": {
+    "progress": "第 {current} 个场景，共 {total} 个",
+    "next": "下一个场景",
+    "finish": "查看故事角色"
+  },
+  "result": {
+    "eyebrow": "故事完成",
+    "title": "你的虚构故事角色",
+    "summary": "{name} 是本轮六次选择产生的故事角色。",
+    "boundaryTitle": "正确理解结果",
+    "boundary": "该角色只描述你在本活动中的选择，不是身份、记忆或历史证据。",
+    "retry": "再次旅行",
+    "share": "分享活动",
+    "copied": "链接已复制"
+  },
+  "related": {
+    "title": "继续其他娱乐活动",
+    "soulAge": "灵魂年龄",
+    "numerology": "数字命理",
+    "tarot": "每日塔罗",
+    "animal": "动物故事"
+  },
+  "share": {
+    "text": "试试这个将选择保留在本地的六场景虚构故事活动。"
   },
   "eras": {
     "egypt": {
@@ -78,237 +99,38 @@
       "choiceB": "在孤独中写作"
     }
   },
-  "transition": {
-    "traveling": "穿越时间中..."
-  },
-  "reveal": {
-    "closing": "时间之门关闭了...",
-    "past": "你的前世被揭示了"
-  },
-  "result": {
-    "label": "你的前世是...",
-    "strengthLabel": "优点",
-    "weaknessLabel": "弱点",
-    "echoesTitle": "前世在今生的回响",
-    "compatTitle": "前世的伙伴",
-    "compatPercent": "% 契合",
-    "recommendTitle": "你可能还喜欢",
-    "moreTests": "更多测试",
-    "percentileStat": "只有<strong>{percent}%</strong>的旅行者获得了相同的前世"
-  },
   "types": {
     "knight": {
       "name": "骑士团长",
-      "era": "中世纪欧洲（12世纪）· 法国诺曼底",
-      "description": "你的前世是中世纪欧洲的骑士团长！在战场上总是冲在最前面，把保护弱者视为使命。你最看重忠诚和荣誉，是同伴们可以托付生命的可靠存在。",
-      "quote": "“剑会生锈，但荣誉永恒”",
-      "strength1": "勇气",
-      "strength2": "忠诚",
-      "strength3": "领导力",
-      "strength4": "决断力",
-      "weakness1": "固执",
-      "weakness2": "有时鲁莽冲锋",
-      "echo1": "看到不公正时无法沉默",
-      "echo2": "担任领导角色时自然发光",
-      "echo3": "保护弱者的本能很强",
-      "echo4": "最重视信任和忠诚",
-      "echoIcon1": "⚔️",
-      "echoIcon2": "👑",
-      "echoIcon3": "🛡️",
-      "echoIcon4": "🤝"
+      "era": "中世纪欧洲（12世纪）· 法国诺曼底"
     },
     "scholar": {
       "name": "王宫学者",
-      "era": "古埃及（公元前15世纪）· 底比斯",
-      "description": "你的前世是古埃及的王宫学者！在法老身边记录历史、观测星辰、积累智慧。你写在莎草纸上的记录历经千年仍被传颂。",
-      "quote": "“知识才是真正的力量”",
-      "strength1": "智慧",
-      "strength2": "观察力",
-      "strength3": "耐心",
-      "strength4": "分析力",
-      "weakness1": "优柔寡断",
-      "weakness2": "过于谨慎",
-      "echo1": "热爱学习，享受深度思考",
-      "echo2": "擅长系统规划和执行",
-      "echo3": "在安静环境中表现最佳",
-      "echo4": "从记录整理中获得满足感",
-      "echoIcon1": "📚",
-      "echoIcon2": "📋",
-      "echoIcon3": "🧘",
-      "echoIcon4": "✍️"
+      "era": "古埃及（公元前15世纪）· 底比斯"
     },
     "painter": {
       "name": "文艺复兴画家",
-      "era": "文艺复兴（15世纪）· 意大利佛罗伦萨",
-      "description": "你的前世是文艺复兴时期的天才画家！在画布上捕捉世界之美，自如地驾驭光影。你的艺术感动了无数人，作品成为跨越时代的杰作。",
-      "quote": "“世界在我笔尖重生”",
-      "strength1": "创造力",
-      "strength2": "审美感",
-      "strength3": "敏感性",
-      "strength4": "专注力",
-      "weakness1": "缺乏现实感",
-      "weakness2": "善变",
-      "echo1": "情感丰富，被美的事物吸引",
-      "echo2": "充满独创性的想法",
-      "echo3": "日常生活中审美标准很高",
-      "echo4": "坦率表达情感",
-      "echoIcon1": "🎨",
-      "echoIcon2": "💡",
-      "echoIcon3": "✨",
-      "echoIcon4": "💖"
+      "era": "文艺复兴（15世纪）· 意大利佛罗伦萨"
     },
     "royal": {
       "name": "贤明君主",
-      "era": "拜占庭帝国（6世纪）· 君士坦丁堡",
-      "description": "你的前世是拜占庭帝国的贤明君主！治理庞大帝国，在外交和内政方面都展现卓越能力。以魅力领导众人，被记载为振兴法律和文化的明君。",
-      "quote": "“能承受王冠之重者方为真王”",
-      "strength1": "魅力",
-      "strength2": "外交力",
-      "strength3": "统率力",
-      "strength4": "判断力",
-      "weakness1": "孤独感",
-      "weakness2": "多疑",
-      "echo1": "拥有天生的领导力和存在感",
-      "echo2": "人们自然而然地追随你",
-      "echo3": "在做重要决定时最为闪耀",
-      "echo4": "擅长战略思维",
-      "echoIcon1": "👑",
-      "echoIcon2": "🌟",
-      "echoIcon3": "⚖️",
-      "echoIcon4": "🎯"
+      "era": "拜占庭帝国（6世纪）· 君士坦丁堡"
     },
     "explorer": {
       "name": "大航海探险家",
-      "era": "大航海时代（16世纪）· 葡萄牙里斯本",
-      "description": "你的前世是大航海时代的探险家！向未知的大海扬帆，发现了无人踏足的土地。好奇心胜过恐惧，不断航行追寻新世界。",
-      "quote": "“地平线那边有一个新世界”",
-      "strength1": "冒险精神",
-      "strength2": "适应力",
-      "strength3": "乐观",
-      "strength4": "勇气",
-      "weakness1": "坐不住",
-      "weakness2": "缺乏计划",
-      "echo1": "喜欢新体验和挑战",
-      "echo2": "被旅行和异国文化吸引",
-      "echo3": "有强烈冲破日常框架的欲望",
-      "echo4": "天生的自由灵魂",
-      "echoIcon1": "🌍",
-      "echoIcon2": "✈️",
-      "echoIcon3": "🚀",
-      "echoIcon4": "🌬️"
+      "era": "大航海时代（16世纪）· 葡萄牙里斯本"
     },
     "healer": {
       "name": "森林治愈师",
-      "era": "凯尔特时代（5世纪）· 爱尔兰/苏格兰",
-      "description": "你的前世是凯尔特治愈师！在深林中采集草药，照料病人。你懂得自然的语言，按月亮周期举行治愈仪式。你是村民们的救命恩人和灵魂引路人。",
-      "quote": "“每一道伤口都有对应的草药”",
-      "strength1": "共情力",
-      "strength2": "耐心",
-      "strength3": "直觉力",
-      "strength4": "治愈能力",
-      "weakness1": "自我牺牲",
-      "weakness2": "情感消耗大",
-      "echo1": "共情能力出众，善于读懂情绪",
-      "echo2": "适合咨询、医疗、教育领域",
-      "echo3": "在自然中充电",
-      "echo4": "常常成为别人的倾诉对象",
-      "echoIcon1": "💚",
-      "echoIcon2": "🌿",
-      "echoIcon3": "🌳",
-      "echoIcon4": "🩹"
+      "era": "凯尔特时代（5世纪）· 爱尔兰/苏格兰"
     },
     "oracle": {
       "name": "神殿祭司",
-      "era": "古希腊（公元前5世纪）· 德尔斐",
-      "description": "你的前世是古希腊的神殿祭司！在德尔斐神殿传达神谕，从星辰运动中解读命运。通过深度冥想与仪式与无形世界沟通，连国王都来寻求你的建议。",
-      "quote": "“闭上眼睛才能看到真相”",
-      "strength1": "直觉力",
-      "strength2": "洞察力",
-      "strength3": "冥想",
-      "strength4": "神秘魅力",
-      "weakness1": "与世俗疏离",
-      "weakness2": "过度孤独",
-      "echo1": "直觉强大，能看透本质",
-      "echo2": "对心理学、哲学、灵性感兴趣",
-      "echo3": "绝对需要独处时间",
-      "echo4": "善于读懂人们隐藏的情绪",
-      "echoIcon1": "🔮",
-      "echoIcon2": "📚",
-      "echoIcon3": "🌙",
-      "echoIcon4": "👁️"
+      "era": "古希腊（公元前5世纪）· 德尔斐"
     },
     "pirate": {
       "name": "海盗船长",
-      "era": "大海盗时代（17世纪）· 加勒比海",
-      "description": "你的前世是加勒比海的海盗船长！怀着对自由的炽热激情纵横大海，过着不受任何人命令的生活。大胆而充满魅力的领袖，赢得了船员们的绝对信任。",
-      "quote": "“在大海上，我就是王”",
-      "strength1": "大胆",
-      "strength2": "自由灵魂",
-      "strength3": "反应力",
-      "strength4": "魅力",
-      "weakness1": "冲动",
-      "weakness2": "讨厌规则",
-      "echo1": "拒绝千篇一律的生活",
-      "echo2": "走自己的路的自由灵魂",
-      "echo3": "相信直觉胜过规则",
-      "echo4": "一点叛逆是你的魅力",
-      "echoIcon1": "🏴‍☠️",
-      "echoIcon2": "🌊",
-      "echoIcon3": "⚡",
-      "echoIcon4": "🔥"
+      "era": "大海盗时代（17世纪）· 加勒比海"
     }
-  },
-  "share": {
-    "title": "前世职业测试",
-    "template": "{emoji} 穿越时间之门后，我的前世是{era}的{type}！你的前世是什么？",
-    "copied": "结果已复制到剪贴板！",
-    "copyPrompt": "请复制以下文本："
-  },
-  "buttons": {
-    "share": "分享结果",
-    "save": "保存图片",
-    "retry": "再次旅行"
-  },
-  "recommendations": {
-    "idleClicker": "放置点击游戏",
-    "emojiMerge": "表情合成游戏",
-    "zigzagRunner": "之字形跑酷",
-    "loveFrequency": "爱情频率测试",
-    "emotionTemp": "情绪温度计",
-    "mbtiLove": "MBTI恋爱匹配",
-    "brainType": "大脑类型测试",
-    "lottery": "彩票号码生成器",
-    "whiteNoise": "白噪音播放器"
-  },
-  "related": {
-    "soulAge": "灵魂年龄",
-    "auraReading": "光环解读",
-    "numerology": "数字命理",
-    "dailyTarot": "每日塔罗"
-  },
-  "ads": {
-    "banner": "广告区域"
-  },
-  "game": {
-    "back": "DopaBrain首页"
-  },
-  "error": {
-    "storage": "隐私模式下部分功能可能受限。",
-    "data": "数据加载错误，请刷新页面。",
-    "canvas": "图形渲染问题，请重试。",
-    "audio": "音频不可用，可继续使用。",
-    "network": "请检查网络连接后重试。",
-    "general": "出现问题，请刷新或重试。"
-  },
-  "meta": {
-    "title": "免费前世测试 - 发现你的前世 | DopaBrain",
-    "description": "你的前世是什么？旅行6个历史时代，发现你的前世职业！免费测试！"
-  },
-  "about": {
-    "toggle": "关于本测试",
-    "heading1": "前世测试如何运作",
-    "text1": "前世测试带你旅行6个关键历史时代。在每个时代，你面临塑造前世身份的决定性选择。所有时代的选择模式揭示你是8种独特原型中的哪一种。",
-    "heading2": "前世在今生的回响",
-    "text2": "前世结果包含可能与你当前生活产生共鸣的性格回响。过去与现在的联系可以提供有趣的洞察。"
   }
 }

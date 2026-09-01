@@ -1,26 +1,47 @@
 {
   "app": {
-    "title": "Teste de Vida Passada - Viagem pelo Portal do Tempo",
-    "description": "Abra o Portal do Tempo e viaje por 6 eras. Do Egito Antigo a era moderna, suas escolhas revelam sua profissao de vida passada!",
-    "skipLink": "Pular para o conteudo",
-    "loading": "Carregando..."
+    "title": "Jornada de história de vida passada - 6 cenas fictícias | DopaBrain",
+    "shortTitle": "Jornada de vida passada",
+    "description": "Uma atividade histórica fictícia de seis cenas com escolhas privadas."
+  },
+  "common": {
+    "skip": "Ir para a história",
+    "language": "Idioma",
+    "back": "Atividades DopaBrain"
   },
   "intro": {
-    "title": "Teste de Vida Passada - Descubra quem você foi",
-    "subtitle": "Atravesse o Portal do Tempo.<br>Suas escolhas atraves das eras revelarao quem voce foi.",
-    "quickTest": "6 eras para viajar",
-    "participantCount": " viajaram",
-    "startButton": "Entrar no Portal",
-    "ctaSub": "Compartilhe sua vida passada com amigos",
-    "era1": "Egito Antigo",
-    "era2": "Europa Medieval",
-    "era3": "Renascimento",
-    "era4": "Era das Exploracoes",
-    "era5": "Revolucao Industrial",
-    "era6": "Era Moderna",
-    "discover1": "🌊 Viaje por 6 eras historicas",
-    "discover2": "⚔️ Faca escolhas cruciais em cada era",
-    "discover3": "👑 Descubra sua profissao de vida passada"
+    "eyebrow": "HISTÓRIA FICTÍCIA · 6 CENAS",
+    "title": "Jornada de história de vida passada",
+    "subtitle": "Escolha caminhos em seis cenas históricas fictícias e receba um papel narrativo.",
+    "boundaryTitle": "Limite de entretenimento",
+    "boundary": "Esta atividade não identifica uma vida passada real nem recupera memórias. É um estímulo fictício de reflexão.",
+    "formula": "Regra publicada: cada escolha soma 3, 2 e 1 pontos a três papéis. O maior total vence; uma ordem fixa resolve empates.",
+    "start": "Entrar nas seis cenas"
+  },
+  "journey": {
+    "progress": "Cena {current} de {total}",
+    "next": "Próxima cena",
+    "finish": "Ver o papel narrativo"
+  },
+  "result": {
+    "eyebrow": "HISTÓRIA CONCLUÍDA",
+    "title": "Seu papel narrativo fictício",
+    "summary": "{name} é o papel produzido pelas seis escolhas desta rodada.",
+    "boundaryTitle": "Mantenha o contexto",
+    "boundary": "O papel descreve apenas suas escolhas nesta atividade. Não é evidência de identidade, memória ou história.",
+    "retry": "Viajar novamente",
+    "share": "Compartilhar atividade",
+    "copied": "Link copiado"
+  },
+  "related": {
+    "title": "Continue com outra atividade de entretenimento",
+    "soulAge": "Idade da alma",
+    "numerology": "Numerologia",
+    "tarot": "Tarô diário",
+    "animal": "História animal"
+  },
+  "share": {
+    "text": "Experimente esta atividade fictícia e privada de seis cenas."
   },
   "eras": {
     "egypt": {
@@ -78,237 +99,38 @@
       "choiceB": "Escrever na solidao"
     }
   },
-  "transition": {
-    "traveling": "Viajando no tempo..."
-  },
-  "reveal": {
-    "closing": "O portal se fecha...",
-    "past": "Sua vida passada e revelada"
-  },
-  "result": {
-    "label": "Em uma vida passada, voce foi...",
-    "strengthLabel": "Pontos fortes",
-    "weaknessLabel": "Pontos fracos",
-    "echoesTitle": "Ecos na sua vida atual",
-    "compatTitle": "Companheiros de vida passada",
-    "compatPercent": "% compatibilidade",
-    "recommendTitle": "Voce tambem pode gostar",
-    "moreTests": "Mais testes",
-    "percentileStat": "Apenas <strong>{percent}%</strong> dos viajantes obtiveram a mesma vida passada"
-  },
   "types": {
     "knight": {
       "name": "Comandante Cavaleiro",
-      "era": "Europa Medieval (sec. XII) · Normandia, Franca",
-      "description": "Sua vida passada foi um Comandante Cavaleiro da Europa Medieval! Sempre liderava da frente e considerava proteger os fracos seu dever sagrado.",
-      "quote": "“Espadas enferrujam, mas a honra e eterna”",
-      "strength1": "Coragem",
-      "strength2": "Lealdade",
-      "strength3": "Lideranca",
-      "strength4": "Decisao",
-      "weakness1": "Teimosia",
-      "weakness2": "Cargas temerarias",
-      "echo1": "Forte senso de justica",
-      "echo2": "Brilha em papeis de lideranca",
-      "echo3": "Instinto protetor forte",
-      "echo4": "Confianca e lealdade sao valores supremos",
-      "echoIcon1": "⚔️",
-      "echoIcon2": "👑",
-      "echoIcon3": "🛡️",
-      "echoIcon4": "🤝"
+      "era": "Europa Medieval (sec. XII) · Normandia, Franca"
     },
     "scholar": {
       "name": "Erudito Real",
-      "era": "Egito Antigo (sec. XV a.C.) · Tebas",
-      "description": "Sua vida passada foi um Erudito Real do Egito Antigo! Registrava historia ao lado do Farao e acumulava sabedoria observando as estrelas.",
-      "quote": "“O conhecimento e o verdadeiro poder”",
-      "strength1": "Sabedoria",
-      "strength2": "Observacao",
-      "strength3": "Paciencia",
-      "strength4": "Analise",
-      "weakness1": "Indecisao",
-      "weakness2": "Cautela excessiva",
-      "echo1": "Ama aprender e pensar profundamente",
-      "echo2": "Excelente em planejamento sistematico",
-      "echo3": "Melhor desempenho em ambientes tranquilos",
-      "echo4": "Encontra satisfacao em registrar e organizar",
-      "echoIcon1": "📚",
-      "echoIcon2": "📋",
-      "echoIcon3": "🧘",
-      "echoIcon4": "✍️"
+      "era": "Egito Antigo (sec. XV a.C.) · Tebas"
     },
     "painter": {
       "name": "Pintor Renascentista",
-      "era": "Renascimento (sec. XV) · Florenca, Italia",
-      "description": "Sua vida passada foi um genio pintor do Renascimento! Capturava a beleza do mundo em tela, dominando luz e sombra com maestria.",
-      "quote": "“O mundo renasce na ponta do meu pincel”",
-      "strength1": "Criatividade",
-      "strength2": "Senso estetico",
-      "strength3": "Sensibilidade",
-      "strength4": "Foco",
-      "weakness1": "Pouco pratico",
-      "weakness2": "Inconstante",
-      "echo1": "Emocionalmente rico e atraido pela beleza",
-      "echo2": "Transborda ideias originais",
-      "echo3": "Altos padroes esteticos no dia a dia",
-      "echo4": "Expressa emocoes honestamente",
-      "echoIcon1": "🎨",
-      "echoIcon2": "💡",
-      "echoIcon3": "✨",
-      "echoIcon4": "💖"
+      "era": "Renascimento (sec. XV) · Florenca, Italia"
     },
     "royal": {
       "name": "Monarca Sabio",
-      "era": "Imperio Bizantino (sec. VI) · Constantinopla",
-      "description": "Sua vida passada foi um Monarca Sabio do Imperio Bizantino! Governava um vasto imperio com excelencia em diplomacia e assuntos internos.",
-      "quote": "“So quem suporta o peso da coroa e verdadeiro rei”",
-      "strength1": "Carisma",
-      "strength2": "Diplomacia",
-      "strength3": "Comando",
-      "strength4": "Julgamento",
-      "weakness1": "Solidao",
-      "weakness2": "Desconfianca",
-      "echo1": "Presenca de lideranca natural",
-      "echo2": "As pessoas te seguem naturalmente",
-      "echo3": "Brilha ao tomar decisoes importantes",
-      "echo4": "Pensamento estrategico excelente",
-      "echoIcon1": "👑",
-      "echoIcon2": "🌟",
-      "echoIcon3": "⚖️",
-      "echoIcon4": "🎯"
+      "era": "Imperio Bizantino (sec. VI) · Constantinopla"
     },
     "explorer": {
       "name": "Grande Explorador",
-      "era": "Era das Exploracoes (sec. XVI) · Lisboa, Portugal",
-      "description": "Sua vida passada foi um Explorador da Era dos Descobrimentos! Icou velas rumo a mares desconhecidos e descobriu terras nunca antes visitadas.",
-      "quote": "“Alem do horizonte ha um mundo novo”",
-      "strength1": "Aventureiro",
-      "strength2": "Adaptabilidade",
-      "strength3": "Otimismo",
-      "strength4": "Coragem",
-      "weakness1": "Inquietacao",
-      "weakness2": "Falta de planejamento",
-      "echo1": "Ama novas experiencias e desafios",
-      "echo2": "Atraido por viagens e culturas estrangeiras",
-      "echo3": "Forte desejo de quebrar a rotina",
-      "echo4": "Espirito livre de coracao",
-      "echoIcon1": "🌍",
-      "echoIcon2": "✈️",
-      "echoIcon3": "🚀",
-      "echoIcon4": "🌬️"
+      "era": "Era das Exploracoes (sec. XVI) · Lisboa, Portugal"
     },
     "healer": {
       "name": "Curandeiro da Floresta",
-      "era": "Era Celta (sec. V) · Irlanda/Escocia",
-      "description": "Sua vida passada foi um Curandeiro Celta! Coletava ervas na floresta profunda e cuidava dos doentes com rituais de cura lunares.",
-      "quote": "“Para cada ferida, ha uma erva adequada”",
-      "strength1": "Empatia",
-      "strength2": "Paciencia",
-      "strength3": "Intuicao",
-      "strength4": "Dom de cura",
-      "weakness1": "Auto-sacrificio",
-      "weakness2": "Desgaste emocional",
-      "echo1": "Empatia excepcional e le emocoes bem",
-      "echo2": "Aptidao para aconselhamento, medicina ou educacao",
-      "echo3": "Recarrega energia na natureza",
-      "echo4": "E o conselheiro que todos procuram",
-      "echoIcon1": "💚",
-      "echoIcon2": "🌿",
-      "echoIcon3": "🌳",
-      "echoIcon4": "🩹"
+      "era": "Era Celta (sec. V) · Irlanda/Escocia"
     },
     "oracle": {
       "name": "Oraculo do Templo",
-      "era": "Grecia Antiga (sec. V a.C.) · Delfos",
-      "description": "Sua vida passada foi um Oraculo do Templo da Grecia Antiga! Entregava profecias no Templo de Delfos e lia o destino nas estrelas.",
-      "quote": "“Feche os olhos para ver o que realmente existe”",
-      "strength1": "Intuicao",
-      "strength2": "Perspicacia",
-      "strength3": "Meditacao",
-      "strength4": "Carisma mistico",
-      "weakness1": "Distanciamento",
-      "weakness2": "Solidao excessiva",
-      "echo1": "Intuicao forte e ve a essencia das coisas",
-      "echo2": "Interesse em psicologia, filosofia e espiritualidade",
-      "echo3": "Precisa absolutamente de tempo sozinho",
-      "echo4": "Le emocoes ocultas das pessoas",
-      "echoIcon1": "🔮",
-      "echoIcon2": "📚",
-      "echoIcon3": "🌙",
-      "echoIcon4": "👁️"
+      "era": "Grecia Antiga (sec. V a.C.) · Delfos"
     },
     "pirate": {
       "name": "Capitao Pirata",
-      "era": "Era de Ouro da Pirataria (sec. XVII) · Caribe",
-      "description": "Sua vida passada foi um Capitao Pirata do Caribe! Com paixao ardente pela liberdade, navegava os mares sem obedecer a ninguem.",
-      "quote": "“No mar, eu sou o rei”",
-      "strength1": "Ousadia",
-      "strength2": "Espirito livre",
-      "strength3": "Esperteza",
-      "strength4": "Carisma",
-      "weakness1": "Impulsivo",
-      "weakness2": "Odeia regras",
-      "echo1": "Recusa uma vida convencional",
-      "echo2": "Caminha seu proprio caminho",
-      "echo3": "Confia no instinto mais que nas regras",
-      "echo4": "Um toque de rebeldia e seu charme",
-      "echoIcon1": "🏴‍☠️",
-      "echoIcon2": "🌊",
-      "echoIcon3": "⚡",
-      "echoIcon4": "🔥"
+      "era": "Era de Ouro da Pirataria (sec. XVII) · Caribe"
     }
-  },
-  "share": {
-    "title": "Teste de Vida Passada",
-    "template": "{emoji} Apos viajar pelo Portal do Tempo, minha vida passada foi {type} em {era}! Qual e a sua?",
-    "copied": "Resultado copiado!",
-    "copyPrompt": "Copie o texto:"
-  },
-  "buttons": {
-    "share": "Compartilhar",
-    "save": "Salvar imagem",
-    "retry": "Viajar de novo"
-  },
-  "recommendations": {
-    "idleClicker": "Jogo Idle Clicker",
-    "emojiMerge": "Emoji Merge",
-    "zigzagRunner": "Zigzag Runner",
-    "loveFrequency": "Teste Frequencia do Amor",
-    "emotionTemp": "Termometro Emocional",
-    "mbtiLove": "Compatibilidade MBTI",
-    "brainType": "Teste Tipo de Cerebro",
-    "lottery": "Gerador de Loteria",
-    "whiteNoise": "Ruido Branco"
-  },
-  "related": {
-    "soulAge": "Idade da Alma",
-    "auraReading": "Leitura de Aura",
-    "numerology": "Numerologia",
-    "dailyTarot": "Taro Diario"
-  },
-  "ads": {
-    "banner": "AREA DE ANUNCIOS"
-  },
-  "game": {
-    "back": "Inicio DopaBrain"
-  },
-  "error": {
-    "storage": "Algumas funções podem ser limitadas no modo privado.",
-    "data": "Erro ao carregar dados. Atualize a página.",
-    "canvas": "Problema de renderização. Tente novamente.",
-    "audio": "Áudio indisponível. Você pode continuar.",
-    "network": "Verifique sua conexão e tente novamente.",
-    "general": "Algo deu errado. Atualize ou tente novamente."
-  },
-  "meta": {
-    "title": "Teste de Vida Passada Grátis | DopaBrain",
-    "description": "Quem você foi na vida passada? Viaje por 6 épocas históricas. Teste grátis!"
-  },
-  "about": {
-    "toggle": "Sobre o teste",
-    "heading1": "Como funciona o teste",
-    "text1": "O teste leva você através de 6 épocas históricas fundamentais. Em cada parada, você enfrenta uma escolha que define sua identidade de vida passada entre 8 arquétipos.",
-    "heading2": "Ecos do passado no presente",
-    "text2": "Seu resultado inclui ecos de personalidade que podem ressoar com sua vida atual."
   }
 }
